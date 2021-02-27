@@ -1,0 +1,25 @@
+{
+  "name": "es2077",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "bsb": "bsb -w",
+    "bsb:build": "bsb -make-world",
+    "bsb:clean": "bsb -clean"
+  },
+  "dependencies": {
+    "@rescript/react": "0.10.1",
+    "bs-css-emotion": "2.3.0",
+    "framer-motion": "3.3.0",
+    "next": "10.0.6",
+    "next-transpile-modules": "4.1.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "bs-platform": "8.4.2"
+  }
+}
