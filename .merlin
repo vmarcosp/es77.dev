@@ -9,12 +9,16 @@ S /home/bvihjcep/Projects/es2077-site/node_modules/bs-css/lib/ocaml
 B /home/bvihjcep/Projects/es2077-site/node_modules/bs-css/lib/ocaml
 S /home/bvihjcep/Projects/es2077-site/node_modules/bs-css-emotion/lib/ocaml
 B /home/bvihjcep/Projects/es2077-site/node_modules/bs-css-emotion/lib/ocaml
+S /home/bvihjcep/Projects/es2077-site/node_modules/rescript-polished/lib/ocaml
+B /home/bvihjcep/Projects/es2077-site/node_modules/rescript-polished/lib/ocaml
 S src
 B lib/bs/src
 S src/components/Text
 B lib/bs/src/components/Text
 S src/components/Layout
 B lib/bs/src/components/Layout
+S src/components/Menu
+B lib/bs/src/components/Menu
 S src/components/Logo
 B lib/bs/src/components/Logo
 S src/components/Header

@@ -3,13 +3,42 @@
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 
-var black = CssJs.hex("000000");
+var black = "#070707";
 
-var primary = CssJs.hex("FF3358");
+var purple = "#743AF0";
+
+var shape01 = "#3C3C3C";
+
+var gray1 = "7D7D7D";
+
+var ColorsRaw = {
+  black: black,
+  purple: purple,
+  shape01: shape01,
+  gray1: gray1
+};
+
+function toBsHex(color) {
+  return CssJs.hex(color.replace("#", ""));
+}
+
+var black$1 = toBsHex(black);
+
+var purple$1 = toBsHex(purple);
+
+var shape01$1 = toBsHex(shape01);
+
+var white = toBsHex("FAFAFA");
+
+var gray1$1 = toBsHex(gray1);
 
 var Colors = {
-  black: black,
-  primary: primary
+  toBsHex: toBsHex,
+  black: black$1,
+  purple: purple$1,
+  shape01: shape01$1,
+  white: white,
+  gray1: gray1$1
 };
 
 var maxWidth = CssJs.px(1200);
@@ -20,7 +49,9 @@ var Constants = {
 
 var ZIndex = {
   aboveAll: 100,
-  above: 50
+  above: 50,
+  base: 10,
+  hidden: -1
 };
 
 var xs = CssJs.rem(0.8);
@@ -41,8 +72,12 @@ var Spacing = {
   xlg: xlg
 };
 
+var fontFamily = "'Poppins', sans-serif";
+
+exports.ColorsRaw = ColorsRaw;
 exports.Colors = Colors;
 exports.Constants = Constants;
 exports.ZIndex = ZIndex;
 exports.Spacing = Spacing;
+exports.fontFamily = fontFamily;
 /* black Not a pure module */

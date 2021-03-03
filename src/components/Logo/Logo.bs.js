@@ -4,11 +4,7 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var React = require("react");
 
-var logo = CssJs.style([CssJs.width(CssJs.rem(30.0))]);
-
-var S = {
-  logo: logo
-};
+var logo = CssJs.style([CssJs.width(CssJs.rem(28.0))]);
 
 function Logo(Props) {
   return React.createElement("img", {
@@ -20,6 +16,6 @@ function Logo(Props) {
 
 var make = Logo;
 
-exports.S = S;
+exports.logo = logo;
 exports.make = make;
 /* logo Not a pure module */

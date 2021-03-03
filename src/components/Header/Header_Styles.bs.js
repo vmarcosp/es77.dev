@@ -7,9 +7,33 @@ var Theme = require("../../lib/Theme.bs.js");
 var wrapper = CssJs.style([
       CssJs.display("flex"),
       CssJs.alignItems("center"),
+      CssJs.justifyContent("spaceBetween"),
       CssJs.maxWidth(Theme.Constants.maxWidth),
       CssJs.margin2(CssJs.zero, "auto")
     ]);
 
+var text = CssJs.style([
+      CssJs.color(CssJs.white),
+      CssJs.fontFamily({
+            NAME: "custom",
+            VAL: Theme.fontFamily
+          }),
+      CssJs.fontSize(CssJs.rem(2.4)),
+      CssJs.fontWeight({
+            NAME: "num",
+            VAL: 600
+          }),
+      CssJs.position(CssJs.relative),
+      CssJs.top(CssJs.px(-6)),
+      CssJs.marginLeft(CssJs.rem(0.75))
+    ]);
+
+var comingSoonWrapper = CssJs.style([
+      CssJs.display("flex"),
+      CssJs.alignItems("center")
+    ]);
+
 exports.wrapper = wrapper;
+exports.text = text;
+exports.comingSoonWrapper = comingSoonWrapper;
 /* wrapper Not a pure module */

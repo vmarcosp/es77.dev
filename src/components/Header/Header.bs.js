@@ -2,13 +2,14 @@
 'use strict';
 
 var Logo = require("../Logo/Logo.bs.js");
+var Menu = require("../Menu/Menu.bs.js");
 var React = require("react");
 var Header_Styles = require("./Header_Styles.bs.js");
 
 function Header(Props) {
   return React.createElement("header", {
               className: Header_Styles.wrapper
-            }, React.createElement(Logo.make, {}));
+            }, React.createElement(Logo.make, {}), React.createElement(Menu.make, {}));
 }
 
 var make = Header;
