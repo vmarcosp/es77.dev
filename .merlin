@@ -23,6 +23,8 @@ S src/components/Logo
 B lib/bs/src/components/Logo
 S src/components/Header
 B lib/bs/src/components/Header
+S src/components/Hero
+B lib/bs/src/components/Hero
 S src/pages
 B lib/bs/src/pages
 S src/lib

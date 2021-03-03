@@ -4,7 +4,7 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var React = require("react");
 
-var wrapper = CssJs.style([CssJs.padding2(CssJs.rem(5.6), CssJs.rem(15.0))]);
+var wrapper = CssJs.style([]);
 
 var S = {
   wrapper: wrapper

@@ -2,14 +2,18 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
 var wrapper = CssJs.style([
       CssJs.display("flex"),
       CssJs.alignItems("center"),
       CssJs.justifyContent("spaceBetween"),
-      CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin2(CssJs.zero, "auto")
+      CssJs.padding2(CssJs.rem(4.5), CssJs.rem(4.5)),
+      Media.xl([
+            CssJs.margin2(CssJs.zero, "auto"),
+            CssJs.maxWidth(Theme.Constants.maxWidth)
+          ])
     ]);
 
 var text = CssJs.style([

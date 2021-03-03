@@ -5,7 +5,15 @@ var React = require("react");
 
 function $$Text(Props) {
   var children = Props.children;
-  return React.createElement(React.Fragment, undefined, children);
+  var tagOpt = Props.tag;
+  var tag = tagOpt !== undefined ? tagOpt : "fragment";
+  if (tag === "p") {
+    return React.createElement("p", undefined, children);
+  } else if (tag === "fragment") {
+    return React.createElement(React.Fragment, undefined, children);
+  } else {
+    return React.createElement("span", undefined, children);
+  }
 }
 
 var make = $$Text;

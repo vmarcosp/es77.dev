@@ -1,1 +1,1 @@
-let default = () => <Layout> <Header /> </Layout>
+let default = () => <Layout> <Header /> <Hero /> </Layout>
