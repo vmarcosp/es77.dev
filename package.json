@@ -8,8 +8,7 @@
     "start": "next start",
     "bsb": "bsb -w",
     "bsb:build": "bsb -make-world",
-    "bsb:clean": "bsb -clean",
-    "eslint": "eslint --fix"
+    "bsb:clean": "bsb -clean"
   },
   "dependencies": {
     "@rescript/react": "0.10.1",

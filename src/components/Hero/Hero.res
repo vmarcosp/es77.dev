@@ -9,7 +9,7 @@ module Symbol = {
 let make = () => {
   open Styles
 
-  <div className=wrapper>
+  <section className=wrapper>
     <div className=symbolWrapper> <Symbol /> </div>
     <Animated.FadeIn y=(0, -20) delay=1.75 duration=0.6>
       <h1 className=text>
@@ -22,5 +22,5 @@ let make = () => {
     <Animated.FadeIn y=(0, -20) delay=2.0 duration=0.6>
       <a href="#o-que-e-rescript" className=button> {"SAIBA MAIS"->React.string} </a>
     </Animated.FadeIn>
-  </div>
+  </section>
 }

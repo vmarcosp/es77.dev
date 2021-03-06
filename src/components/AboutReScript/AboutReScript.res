@@ -19,8 +19,8 @@ let make = () => {
   }, [inView])
 
   <Animated.FadeIn y={(0, -20)} delay=0.35 duration=0.6 controls={controls}>
-    <div id="o-que-e-rescript" ref=containerRef className=wrapper>
-      <SnippetExample showSnippets /> <div className=content> <Texts /> </div> //<a className=button> <span> {"Saiba mais"->React.string} </span> </a>
-    </div>
+    <section id="o-que-e-rescript" ref=containerRef className=wrapper>
+      <SnippetExample showSnippets /> <div className=content> <Texts /> </div>
+    </section>
   </Animated.FadeIn>
 }
