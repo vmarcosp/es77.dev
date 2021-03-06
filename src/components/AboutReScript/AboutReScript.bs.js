@@ -3,12 +3,30 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var Animated = require("../../lib/Animated/Animated.bs.js");
 var FramerMotion = require("framer-motion");
 var AboutRescript_Texts = require("./AboutRescript_Texts.bs.js");
 var AboutReScript_Styles = require("./AboutReScript_Styles.bs.js");
 var AboutRescript_Snippet = require("./AboutRescript_Snippet.bs.js");
 var ReactIntersectionObserver = require("react-intersection-observer");
+
+var variants_hidden = {
+  opacity: 0.0,
+  y: 20
+};
+
+var variants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.35
+  }
+};
+
+var variants = {
+  hidden: variants_hidden,
+  visible: variants_visible
+};
 
 function AboutReScript(Props) {
   var match = ReactIntersectionObserver.useInView();
@@ -27,24 +45,17 @@ function AboutReScript(Props) {
           }
           
         }), [inView]);
-  return React.createElement(Animated.FadeIn.make, {
-              children: React.createElement("section", {
-                    ref: match[0],
-                    className: AboutReScript_Styles.wrapper,
-                    id: "o-que-e-rescript"
-                  }, React.createElement(AboutRescript_Snippet.make, {
-                        showSnippets: match$1[0]
-                      }), React.createElement("div", {
-                        className: AboutReScript_Styles.content
-                      }, React.createElement(AboutRescript_Texts.make, {}))),
-              controls: controls,
-              y: [
-                0,
-                -20
-              ],
-              delay: 0.35,
-              duration: 0.6
-            });
+  return React.createElement("section", {
+              ref: match[0],
+              className: AboutReScript_Styles.wrapper,
+              id: "o-que-e-rescript"
+            }, React.createElement(AboutRescript_Snippet.make, {
+                  showSnippets: match$1[0]
+                }), React.createElement("div", {
+                  className: AboutReScript_Styles.content
+                }, React.createElement(AboutRescript_Texts.make, {
+                      controls: controls
+                    })));
 }
 
 var SnippetExample;
@@ -55,5 +66,6 @@ var make = AboutReScript;
 
 exports.SnippetExample = SnippetExample;
 exports.Texts = Texts;
+exports.variants = variants;
 exports.make = make;
 /* react Not a pure module */

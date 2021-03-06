@@ -16,7 +16,13 @@ function addStyles(param) {
         CssJs.fontSize(CssJs.px(10)),
         CssJs.unsafe("scroll-behavior", "smooth")
       ]);
-  return CssJs.$$global("*", [CssJs.boxSizing("borderBox")]);
+  return CssJs.$$global("*", [
+              CssJs.boxSizing("borderBox"),
+              CssJs.selection([CssJs.background(CssJs.rgba(116, 58, 240, {
+                              NAME: "percent",
+                              VAL: 55.0
+                            }))])
+            ]);
 }
 
 exports.addStyles = addStyles;

@@ -4,7 +4,6 @@ let addStyles = () => {
   global(.
     "html, body, #__next",
     [
-      //
       height(100.->pct),
       width(100.->pct),
       padding(zero),
@@ -18,6 +17,7 @@ let addStyles = () => {
     [
       //
       boxSizing(#borderBox),
+      selection([background(rgba(116, 58, 240, 55.0->#percent))]),
     ],
   )
 }

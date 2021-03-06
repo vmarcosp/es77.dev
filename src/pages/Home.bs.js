@@ -2,6 +2,7 @@
 'use strict';
 
 var Hero = require("../components/Hero/Hero.bs.js");
+var About = require("../components/About/About.bs.js");
 var React = require("react");
 var Header = require("../components/Header/Header.bs.js");
 var Layout = require("../components/Layout/Layout.bs.js");
@@ -10,7 +11,7 @@ var AboutReScript = require("../components/AboutReScript/AboutReScript.bs.js");
 function $$default(param) {
   return React.createElement(Layout.make, {
               children: null
-            }, React.createElement(Header.make, {}), React.createElement(Hero.make, {}), React.createElement(AboutReScript.make, {}), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined));
+            }, React.createElement(Header.make, {}), React.createElement(Hero.make, {}), React.createElement(AboutReScript.make, {}), React.createElement(About.make, {}), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement("br", undefined));
 }
 
 exports.$$default = $$default;

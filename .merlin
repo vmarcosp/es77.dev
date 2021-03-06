@@ -19,6 +19,8 @@ S src/components/Layout
 B lib/bs/src/components/Layout
 S src/components/Title
 B lib/bs/src/components/Title
+S src/components/About
+B lib/bs/src/components/About
 S src/components/Menu
 B lib/bs/src/components/Menu
 S src/components/Logo

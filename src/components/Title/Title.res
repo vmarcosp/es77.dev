@@ -16,7 +16,21 @@ let title = {
     ]),
   ])
 }
+
+let variants = {
+  open FramerMotion
+  {
+    hidden: variant(~opacity=0.0, ~y=20, ()),
+    visible: variant(
+      ~opacity=1.0,
+      ~y=0,
+      ~transition=transition(~delay=0.35, ~duration=0.6, ()),
+      (),
+    ),
+  }
+}
+
 @react.component
-let make = (~children) => {
-  <h1 className=title> {children->React.string} </h1>
+let make = (~children, ~animate=?, ~initial=?, ~variants=?) => {
+  <Motion.H1 ?initial ?animate ?variants className=title> {children->React.string} </Motion.H1>
 }

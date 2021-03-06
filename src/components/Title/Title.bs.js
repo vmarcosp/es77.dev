@@ -4,6 +4,8 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var React = require("react");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
 var title = CssJs.style([
       CssJs.color(CssJs.white),
@@ -27,15 +29,49 @@ var title = CssJs.style([
           ])
     ]);
 
+var variants_hidden = {
+  opacity: 0.0,
+  y: 20
+};
+
+var variants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.35
+  }
+};
+
+var variants = {
+  hidden: variants_hidden,
+  visible: variants_visible
+};
+
 function Title(Props) {
   var children = Props.children;
-  return React.createElement("h1", {
-              className: title
-            }, children);
+  var animate = Props.animate;
+  var initial = Props.initial;
+  var variants = Props.variants;
+  var tmp = {
+    className: title,
+    children: children
+  };
+  if (initial !== undefined) {
+    tmp.initial = Caml_option.valFromOption(initial);
+  }
+  if (variants !== undefined) {
+    tmp.variants = Caml_option.valFromOption(variants);
+  }
+  if (animate !== undefined) {
+    tmp.animate = Caml_option.valFromOption(animate);
+  }
+  return React.createElement(Motion.H1.make, tmp);
 }
 
 var make = Title;
 
 exports.title = title;
+exports.variants = variants;
 exports.make = make;
 /* title Not a pure module */
