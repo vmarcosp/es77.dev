@@ -14,7 +14,7 @@ var $$Symbol = {
 };
 
 function Hero(Props) {
-  return React.createElement("div", {
+  return React.createElement("section", {
               className: Hero_Styles.wrapper
             }, React.createElement("div", {
                   className: Hero_Styles.symbolWrapper

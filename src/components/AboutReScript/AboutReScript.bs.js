@@ -28,7 +28,7 @@ function AboutReScript(Props) {
           
         }), [inView]);
   return React.createElement(Animated.FadeIn.make, {
-              children: React.createElement("div", {
+              children: React.createElement("section", {
                     ref: match[0],
                     className: AboutReScript_Styles.wrapper,
                     id: "o-que-e-rescript"
