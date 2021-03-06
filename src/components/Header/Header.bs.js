@@ -4,15 +4,24 @@
 var Logo = require("../Logo/Logo.bs.js");
 var Menu = require("../Menu/Menu.bs.js");
 var React = require("react");
+var AnimatedJs = require("./Animated.js");
 var Header_Styles = require("./Header_Styles.bs.js");
 
+var make = AnimatedJs.Wrapper;
+
+var Wrapper = {
+  make: make
+};
+
 function Header(Props) {
-  return React.createElement("header", {
-              className: Header_Styles.wrapper
+  return React.createElement(make, {
+              className: Header_Styles.wrapper,
+              children: null
             }, React.createElement(Logo.make, {}), React.createElement(Menu.make, {}));
 }
 
-var make = Header;
+var make$1 = Header;
 
-exports.make = make;
-/* Logo Not a pure module */
+exports.Wrapper = Wrapper;
+exports.make = make$1;
+/* make Not a pure module */

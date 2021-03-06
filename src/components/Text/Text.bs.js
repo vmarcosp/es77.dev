@@ -2,21 +2,44 @@
 'use strict';
 
 var React = require("react");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
 function $$Text(Props) {
   var children = Props.children;
-  var tagOpt = Props.tag;
-  var tag = tagOpt !== undefined ? tagOpt : "fragment";
-  if (tag === "p") {
-    return React.createElement("p", undefined, children);
-  } else if (tag === "fragment") {
-    return React.createElement(React.Fragment, undefined, children);
-  } else {
-    return React.createElement("span", undefined, children);
-  }
+  return React.createElement(React.Fragment, undefined, children);
 }
+
+function Text$Span(Props) {
+  var children = Props.children;
+  var className = Props.className;
+  var tmp = {};
+  if (className !== undefined) {
+    tmp.className = Caml_option.valFromOption(className);
+  }
+  return React.createElement("span", tmp, children);
+}
+
+var Span = {
+  make: Text$Span
+};
+
+function Text$P(Props) {
+  var children = Props.children;
+  var className = Props.className;
+  var tmp = {};
+  if (className !== undefined) {
+    tmp.className = Caml_option.valFromOption(className);
+  }
+  return React.createElement("p", tmp, children);
+}
+
+var P = {
+  make: Text$P
+};
 
 var make = $$Text;
 
 exports.make = make;
+exports.Span = Span;
+exports.P = P;
 /* react Not a pure module */

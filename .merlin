@@ -17,6 +17,8 @@ S src/components/Text
 B lib/bs/src/components/Text
 S src/components/Layout
 B lib/bs/src/components/Layout
+S src/components/Title
+B lib/bs/src/components/Title
 S src/components/Menu
 B lib/bs/src/components/Menu
 S src/components/Logo
@@ -25,10 +27,16 @@ S src/components/Header
 B lib/bs/src/components/Header
 S src/components/Hero
 B lib/bs/src/components/Hero
+S src/components/AboutReScript
+B lib/bs/src/components/AboutReScript
 S src/pages
 B lib/bs/src/pages
 S src/lib
 B lib/bs/src/lib
+S src/lib/Animated
+B lib/bs/src/lib/Animated
 S src/bindings
 B lib/bs/src/bindings
+S src/bindings/FramerMotion
+B lib/bs/src/bindings/FramerMotion
 ####BSB GENERATED: NO EDIT}

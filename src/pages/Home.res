@@ -1,1 +1,2 @@
-let default = () => <Layout> <Header /> <Hero /> </Layout>
+let default = () =>
+  <Layout> <Header /> <Hero /> <AboutReScript /> <br /> <br /> <br /> <br /> <br /> </Layout>

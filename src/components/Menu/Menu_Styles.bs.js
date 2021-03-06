@@ -17,7 +17,7 @@ function createClasses(isOpen) {
         CssJs.zIndex(Theme.ZIndex.above),
         CssJs.backgroundColor(CssJs.rgba(7, 7, 7, {
                   NAME: "num",
-                  VAL: 0.85
+                  VAL: 0.95
                 })),
         CssJs.visibility(isOpen ? CssJs.visible : CssJs.hidden),
         CssJs.opacity(isOpen ? 1.0 : 0.0),
@@ -140,6 +140,13 @@ function burgerButton(isOpen) {
               CssJs.cursor(CssJs.pointer),
               CssJs.overflow(CssJs.visible),
               CssJs.zIndex(Theme.ZIndex.aboveAll),
+              CssJs.hover([CssJs.selector("&:after, &:before", [
+                          CssJs.backgroundColor(Theme.Colors.white),
+                          CssJs.transitions([
+                                Css_Js_Core.Transition.shorthand(200, undefined, undefined, "transform"),
+                                Css_Js_Core.Transition.shorthand(300, undefined, undefined, "background-color")
+                              ])
+                        ])]),
               CssJs.selector("&:after,&:before", [
                     CssJs.contentRule({
                           NAME: "text",
@@ -150,7 +157,10 @@ function burgerButton(isOpen) {
                     CssJs.backgroundColor(Theme.Colors.shape01),
                     CssJs.position(CssJs.absolute),
                     CssJs.borderRadius(CssJs.px(2)),
-                    CssJs.transition(200, undefined, undefined, "transform")
+                    CssJs.transitions([
+                          Css_Js_Core.Transition.shorthand(200, undefined, undefined, "transform"),
+                          Css_Js_Core.Transition.shorthand(300, undefined, undefined, "background-color")
+                        ])
                   ]),
               CssJs.after([
                     CssJs.left(CssJs.zero),

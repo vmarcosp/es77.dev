@@ -88,28 +88,3 @@ export const Symbol = () => {
     </motion.svg>
   )
 }
-
-const variants = {
-  hidden: { y: 20, opacity: 0,  },
-  visible: {
-    y:0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      delay: 1.75
-    }
-  }
-}
-
-export const Title = ({ children, className }) => (
-  <motion.h1 
-    variants={variants}
-    initial='hidden'
-    animate='visible'
-    className={className}
-  >
-    {children}
-  </motion.h1>
-)
-
-

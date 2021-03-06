@@ -152,7 +152,7 @@ module Image = {
     ~src: string,
     ~width: string=?,
     ~height: string=?,
-    ~layout: @string [#fill | #fixed | #responsive | #intrinsic]=?,
+    ~layout: [#fill | #fixed | #responsive | #intrinsic]=?,
     ~className: string=?,
     ~alt: string=?,
   ) => React.element = "default"

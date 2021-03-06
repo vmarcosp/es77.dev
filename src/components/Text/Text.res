@@ -1,12 +1,16 @@
 type tag = [#p | #span | #fragment]
 
 @react.component
-let make = (~children, ~tag=#fragment) => {
-  let text = children->React.string
+let make = (~children) => {
+  <> {children->React.string} </>
+}
 
-  switch tag {
-  | #p => <p> text </p>
-  | #span => <span> text </span>
-  | #fragment => <> text </>
-  }
+module Span = {
+  @react.component
+  let make = (~children, ~className=?) => <span ?className> {children->React.string} </span>
+}
+
+module P = {
+  @react.component
+  let make = (~children, ~className=?) => <p ?className> {children->React.string} </p>
 }

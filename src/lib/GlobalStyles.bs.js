@@ -12,7 +12,10 @@ function addStyles(param) {
         CssJs.margin(CssJs.zero),
         CssJs.backgroundColor(Theme.Colors.black)
       ]);
-  CssJs.$$global("html", [CssJs.fontSize(CssJs.px(10))]);
+  CssJs.$$global("html", [
+        CssJs.fontSize(CssJs.px(10)),
+        CssJs.unsafe("scroll-behavior", "smooth")
+      ]);
   return CssJs.$$global("*", [CssJs.boxSizing("borderBox")]);
 }
 

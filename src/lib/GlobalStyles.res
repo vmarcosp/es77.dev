@@ -12,7 +12,7 @@ let addStyles = () => {
       backgroundColor(Theme.Colors.black),
     ],
   )
-  global(. "html", [fontSize(10->px)])
+  global(. "html", [fontSize(10->px), unsafe("scroll-behavior", "smooth")])
   global(.
     "*",
     [

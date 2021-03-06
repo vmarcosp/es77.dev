@@ -1,5 +1,7 @@
 import ReScriptApp from '../src/App.bs'
 
-export default function App(props) {
+import './css/prism-theme.css'
+
+export default function App (props) {
   return <ReScriptApp {...props} />
 }

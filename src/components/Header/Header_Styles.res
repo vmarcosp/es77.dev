@@ -5,11 +5,7 @@ let wrapper = style(.[
   alignItems(#center),
   justifyContent(#spaceBetween),
   padding2(~v=4.5->rem, ~h=4.5->rem),
-  Media.xl([
-    //
-    margin2(~v=zero, ~h=#auto),
-    maxWidth(Theme.Constants.maxWidth),
-  ]),
+  Media.xl([margin2(~v=zero, ~h=#auto), maxWidth(Theme.Constants.maxWidth)]),
 ])
 
 let text = style(.[

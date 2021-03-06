@@ -1,6 +1,11 @@
 open Header_Styles
 
+module Wrapper = {
+  @react.component @module("./Animated.js")
+  external make: (~className: string, ~children: React.element) => React.element = "Wrapper"
+}
+
 @react.component
 let make = () => {
-  <header className=wrapper> <Logo /> <Menu /> </header>
+  <Wrapper className=wrapper> <Logo /> <Menu /> </Wrapper>
 }

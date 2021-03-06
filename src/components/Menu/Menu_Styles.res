@@ -16,7 +16,7 @@ let createClasses = (~isOpen) => {
     padding(zero),
     margin(zero),
     zIndex(Theme.ZIndex.above),
-    backgroundColor(rgba(7, 7, 7, #num(0.85))),
+    backgroundColor(rgba(7, 7, 7, #num(0.95))),
     visibility(isOpen ? visible : hidden),
     opacity(isOpen ? 1.0 : 0.0),
     transitionDuration(400),
@@ -113,6 +113,18 @@ let burgerButton = (~isOpen) => {
     cursor(pointer),
     overflow(visible),
     zIndex(Theme.ZIndex.aboveAll),
+    hover([
+      selector(
+        "&:after, &:before",
+        [
+          backgroundColor(Theme.Colors.white),
+          transitions([
+            Transition.shorthand(~duration=200, "transform"),
+            Transition.shorthand(~duration=300, "background-color"),
+          ]),
+        ],
+      ),
+    ]),
     selector(
       "&:after,&:before",
       [
@@ -122,7 +134,10 @@ let burgerButton = (~isOpen) => {
         backgroundColor(Theme.Colors.shape01),
         position(absolute),
         borderRadius(2->px),
-        transition(~duration=200, "transform"),
+        transitions([
+          Transition.shorthand(~duration=200, "transform"),
+          Transition.shorthand(~duration=300, "background-color"),
+        ]),
       ],
     ),
     after([

@@ -1,0 +1,52 @@
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: 'Fira Code', Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	font-size: 1.8rem;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+
+.token.class-name {
+	color: #FF68D5;
+}
+
+.token.decorator-symbol, .token.reserved {
+	color: #FF68D5;
+}
+
+.token.decorator-name {
+	color: #FFD057;
+}
+
+.token.r-variable{
+	color: #3ACAEA;
+}
+
+.token.jsx-tag {
+	color: #FFD057;
+}
+
+.token.function-name.plain, .token.punctuation, .token.operator {
+	color: #fff!important;
+}
+
+.token.plain, .token.function {
+	color: #3ACAEA!important;
+}
+
+.token.string {
+	color: #70FFA9!important;
+}
+
