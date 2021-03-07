@@ -3,17 +3,15 @@
 
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Render = require("../../lib/Render.bs.js");
 var About_Styles = require("./About_Styles.bs.js");
-var AnimatedJs = require("./Animated.js");
 var FramerMotion = require("framer-motion");
 var ReactIntersectionObserver = require("react-intersection-observer");
 
-var make = AnimatedJs.Topic;
-
-var Topic = {
-  make: make
-};
+function toFloat(prim) {
+  return prim;
+}
 
 var concepts = [
   "Filosofia e conceitos da linguagem",
@@ -25,6 +23,23 @@ var concepts = [
   "Integração com React",
   "Programação Funcional"
 ];
+
+function variants(index) {
+  return {
+          hidden: {
+            opacity: 0.0,
+            y: 20
+          },
+          visible: {
+            opacity: 1.0,
+            y: 0,
+            transition: {
+              duration: 0.6,
+              delay: index * 0.2
+            }
+          }
+        };
+}
 
 function About_Concepts(Props) {
   var controls = FramerMotion.useAnimation();
@@ -54,18 +69,23 @@ function About_Concepts(Props) {
                     })), React.createElement("ul", {
                   className: About_Styles.topicsList
                 }, Render.map(concepts, (function (text, index) {
-                        return React.createElement(make, {
+                        return React.createElement(Motion.Li.make, {
+                                    initial: "hidden",
+                                    variants: variants(index),
+                                    animate: {
+                                      NAME: "controlled",
+                                      VAL: controls
+                                    },
                                     children: text,
-                                    index: index,
-                                    animate: controls,
                                     key: Render.toString(index)
                                   });
                       }))));
 }
 
-var make$1 = About_Concepts;
+var make = About_Concepts;
 
-exports.Topic = Topic;
+exports.toFloat = toFloat;
 exports.concepts = concepts;
-exports.make = make$1;
-/* make Not a pure module */
+exports.variants = variants;
+exports.make = make;
+/* Text Not a pure module */

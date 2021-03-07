@@ -26,16 +26,20 @@ function variants(delay) {
 
 function AboutRescript_Texts(Props) {
   var controls = Props.controls;
+  var animate = {
+    NAME: "controlled",
+    VAL: controls
+  };
   return React.createElement("div", undefined, React.createElement(Title.make, {
                   children: "O que é ReScript?",
-                  animate: controls,
+                  animate: animate,
                   initial: "hidden",
                   variants: variants(1.0)
                 }), React.createElement(Motion.P.make, {
                   className: AboutReScript_Styles.text,
                   initial: "hidden",
                   variants: variants(3.0),
-                  animate: controls,
+                  animate: animate,
                   children: null
                 }, React.createElement($$Text.make, {
                       children: "ReScript"
@@ -47,13 +51,13 @@ function AboutRescript_Texts(Props) {
                   className: AboutReScript_Styles.text,
                   initial: "hidden",
                   variants: variants(6.0),
-                  animate: controls,
+                  animate: animate,
                   children: "Por compartilhar do mesmo criador do React, ReScript possui \n        diversas features pensadas do zero para integração com o mesmo, \n        contando inclusive com um ótimo suporte a JSX nativo no seu compilador."
                 }), React.createElement(Motion.P.make, {
                   className: AboutReScript_Styles.text,
                   initial: "hidden",
                   variants: variants(9.0),
-                  animate: controls,
+                  animate: animate,
                   children: "\n        Além disso, a linguagem foi pensada desde o início em interoperar com \n        códigos e bibliotecas escritas em JavaScript. O que significa, que \n        qualquer biblioteca JavaScript, pode ser utilizada com ReScript. \n      "
                 }));
 }

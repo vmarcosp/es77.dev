@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@rescript/react": "0.10.1",
-    "bs-css-emotion": "2.3.0",
+    "bs-css-emotion": "2.4.0",
     "framer-motion": "3.10.0",
     "next": "10.0.6",
     "next-transpile-modules": "4.1.0",

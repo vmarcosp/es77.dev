@@ -32,6 +32,6 @@ let make = () => {
   }, [inView])
 
   <section id="o-que-e-rescript" ref=containerRef className=wrapper>
-    <SnippetExample showSnippets /> <div className=content> <Texts controls /> </div>
+    <SnippetExample showSnippets controls /> <div className=content> <Texts controls /> </div>
   </section>
 }

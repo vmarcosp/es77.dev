@@ -2,59 +2,78 @@
 'use strict';
 
 var $$Text = require("../Text/Text.bs.js");
+var Hooks = require("../../lib/Hooks.bs.js");
 var React = require("react");
-var Animated = require("../../lib/Animated/Animated.bs.js");
-var Animated$1 = require("./Animated");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var Animated = require("./Animated");
 var Hero_Styles = require("./Hero_Styles.bs.js");
+var FramerMotion = require("framer-motion");
 
-var make = Animated$1.Symbol;
+var make = Animated.Symbol;
 
 var $$Symbol = {
   make: make
 };
 
+function variants(delay) {
+  return {
+          hidden: {
+            opacity: 0.0,
+            y: 20
+          },
+          visible: {
+            opacity: 1.0,
+            y: 0,
+            transition: {
+              duration: 0.6,
+              delay: delay
+            }
+          }
+        };
+}
+
 function Hero(Props) {
+  var controls = FramerMotion.useAnimation();
+  Hooks.useMount(function (param) {
+        return controls.start("visible");
+      });
   return React.createElement("section", {
               className: Hero_Styles.wrapper
             }, React.createElement("div", {
                   className: Hero_Styles.symbolWrapper
-                }, React.createElement(make, {})), React.createElement(Animated.FadeIn.make, {
-                  children: React.createElement("h1", {
-                        className: Hero_Styles.text
-                      }, React.createElement($$Text.make, {
-                            children: "Aprenda uma linguagem"
-                          }), React.createElement($$Text.Span.make, {
-                            children: " funcional "
-                          }), React.createElement($$Text.make, {
-                            children: "e focada em "
-                          }), React.createElement($$Text.Span.make, {
-                            children: "React"
-                          })),
-                  y: [
-                    0,
-                    -20
-                  ],
-                  delay: 1.75,
-                  duration: 0.6
-                }), React.createElement(Animated.FadeIn.make, {
-                  children: React.createElement("a", {
-                        className: Hero_Styles.button,
-                        href: "#o-que-e-rescript"
-                      }, "SAIBA MAIS"),
-                  y: [
-                    0,
-                    -20
-                  ],
-                  delay: 2.0,
-                  duration: 0.6
+                }, React.createElement(make, {})), React.createElement(Motion.H1.make, {
+                  className: Hero_Styles.text,
+                  initial: "hidden",
+                  variants: variants(1.75),
+                  animate: {
+                    NAME: "controlled",
+                    VAL: controls
+                  },
+                  children: null
+                }, React.createElement($$Text.make, {
+                      children: "Aprenda uma linguagem"
+                    }), React.createElement($$Text.Span.make, {
+                      children: " funcional "
+                    }), React.createElement($$Text.make, {
+                      children: "e focada em "
+                    }), React.createElement($$Text.Span.make, {
+                      children: "React"
+                    })), React.createElement(Motion.A.make, {
+                  className: Hero_Styles.button,
+                  initial: "hidden",
+                  variants: variants(2.0),
+                  animate: {
+                    NAME: "controlled",
+                    VAL: controls
+                  },
+                  href: "#o-que-e-rescript",
+                  children: "SAIBA MAIS"
                 }));
 }
 
-var Styles;
-
 var make$1 = Hero;
 
-exports.Styles = Styles;
 exports.$$Symbol = $$Symbol;
+exports.variants = variants;
 exports.make = make$1;
 /* make Not a pure module */

@@ -29,25 +29,6 @@ var title = CssJs.style([
           ])
     ]);
 
-var variants_hidden = {
-  opacity: 0.0,
-  y: 20
-};
-
-var variants_visible = {
-  opacity: 1.0,
-  y: 0,
-  transition: {
-    duration: 0.6,
-    delay: 0.35
-  }
-};
-
-var variants = {
-  hidden: variants_hidden,
-  visible: variants_visible
-};
-
 function Title(Props) {
   var children = Props.children;
   var animate = Props.animate;
@@ -72,6 +53,5 @@ function Title(Props) {
 var make = Title;
 
 exports.title = title;
-exports.variants = variants;
 exports.make = make;
 /* title Not a pure module */

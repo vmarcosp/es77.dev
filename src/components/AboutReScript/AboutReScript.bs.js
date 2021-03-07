@@ -50,7 +50,8 @@ function AboutReScript(Props) {
               className: AboutReScript_Styles.wrapper,
               id: "o-que-e-rescript"
             }, React.createElement(AboutRescript_Snippet.make, {
-                  showSnippets: match$1[0]
+                  showSnippets: match$1[0],
+                  controls: controls
                 }), React.createElement("div", {
                   className: AboutReScript_Styles.content
                 }, React.createElement(AboutRescript_Texts.make, {

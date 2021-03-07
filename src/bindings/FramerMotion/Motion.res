@@ -5,6 +5,11 @@ module Div = Components.MakeElement({
   external element: Components.motionElement = "div"
 })
 
+module Header = Components.MakeElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "header"
+})
+
 module Section = Components.MakeElement({
   @module("framer-motion") @scope("motion")
   external element: Components.motionElement = "section"
@@ -18,4 +23,14 @@ module H1 = Components.MakeElement({
 module P = Components.MakeElement({
   @module("framer-motion") @scope("motion")
   external element: Components.motionElement = "p"
+})
+
+module A = Components.MakeElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "a"
+})
+
+module Li = Components.MakeElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "li"
 })

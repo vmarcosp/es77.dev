@@ -2,7 +2,16 @@
 'use strict';
 
 var React = require("react");
+var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
+
+function unwrapAnimate(v) {
+  if (typeof v === "string" || v.NAME !== "controlled") {
+    return v;
+  } else {
+    return v.VAL;
+  }
+}
 
 function MakeElement(M) {
   var Motion_Components$MakeElement = function (Props) {
@@ -12,6 +21,7 @@ function MakeElement(M) {
     var animate = Props.animate;
     var innerRef = Props.innerRef;
     var id = Props.id;
+    var href = Props.href;
     var children = Props.children;
     var tmp = {};
     if (className !== undefined) {
@@ -23,14 +33,18 @@ function MakeElement(M) {
     if (id !== undefined) {
       tmp.id = Caml_option.valFromOption(id);
     }
+    if (href !== undefined) {
+      tmp.href = Caml_option.valFromOption(href);
+    }
     if (initial !== undefined) {
       tmp.initial = Caml_option.valFromOption(initial);
     }
     if (variants !== undefined) {
       tmp.variants = Caml_option.valFromOption(variants);
     }
-    if (animate !== undefined) {
-      tmp.animate = Caml_option.valFromOption(animate);
+    var tmp$1 = Belt_Option.map(animate, unwrapAnimate);
+    if (tmp$1 !== undefined) {
+      tmp.animate = Caml_option.valFromOption(tmp$1);
     }
     var props = tmp;
     return React.createElement(M.element, props, children);
@@ -40,5 +54,9 @@ function MakeElement(M) {
         };
 }
 
+var $$Option;
+
+exports.$$Option = $$Option;
+exports.unwrapAnimate = unwrapAnimate;
 exports.MakeElement = MakeElement;
 /* react Not a pure module */

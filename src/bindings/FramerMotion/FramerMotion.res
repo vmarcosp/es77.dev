@@ -1,9 +1,9 @@
+type animateValue
 type controlStatus = [#visible | #hidden]
 
 type controls = {start: (. controlStatus) => unit}
 
-@module("framer-motion")
-external useAnimation: unit => controls = "useAnimation"
+type animate = [#controlled(controls) | #visible | #hidden]
 
 @deriving(abstract)
 type transition = {
@@ -26,3 +26,6 @@ type variants = {
   hidden: variant,
   visible: variant,
 }
+
+@module("framer-motion")
+external useAnimation: unit => controls = "useAnimation"

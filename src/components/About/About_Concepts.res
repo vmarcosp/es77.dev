@@ -1,13 +1,5 @@
 open About_Styles
-
-module Topic = {
-  @react.component @module("./Animated.js")
-  external make: (
-    ~children: React.element,
-    ~index: int,
-    ~animate: FramerMotion.controls,
-  ) => React.element = "Topic"
-}
+let toFloat = Js.Int.toFloat
 
 let concepts = [
   j`Filosofia e conceitos da linguagem`,
@@ -19,6 +11,19 @@ let concepts = [
   j`Integração com React`,
   j`Programação Funcional`,
 ]
+
+let variants = index => {
+  open FramerMotion
+  {
+    hidden: variant(~opacity=0.0, ~y=20, ()),
+    visible: variant(
+      ~opacity=1.0,
+      ~y=0,
+      ~transition=transition(~delay=index->toFloat *. 0.2, ~duration=0.6, ()),
+      (),
+    ),
+  }
+}
 
 @react.component
 let make = () => {
@@ -44,7 +49,13 @@ let make = () => {
     </p>
     <ul className=topicsList>
       {concepts->Render.map((text, index) =>
-        <Topic animate=controls index key={index->Render.toString}> {text->React.string} </Topic>
+        <Motion.Li
+          animate=#controlled(controls)
+          variants={variants(index)}
+          initial=#hidden
+          key={index->Render.toString}>
+          {text->React.string}
+        </Motion.Li>
       )}
     </ul>
   </div>

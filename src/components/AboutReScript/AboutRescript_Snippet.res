@@ -7,12 +7,25 @@ module Snippet = {
 
 let link = "https://rescript-lang.org/try?code=AIJwpghgxgLgdFA9gWwA6IHZgzAUAGzBgAJkIBrMYgXmIAoBKGgPmIG9djjCS6BnABaIA7gBpifIgGUhwprQBKkWHACukqTAgwwdAPotiAMwj5JDTsQA8AEwCWAN2aWAkNdTO3XdoJHEA-MRK0PB8MCB2GADmdABEABJg+PiIAISxTABcQcrwGKrJAL6WXFYA9B64XtYARqowMJjEmADC+HZQ5NRsBtSskjAyIvqGqb5yhZ7e7MEqYRHRcW0d5MQCYOAZxdXldQ2YzqVl9k64hUA"
 
+let variants = {
+  open FramerMotion
+  {
+    hidden: variant(~opacity=0.0, ~y=20, ()),
+    visible: variant(
+      ~opacity=1.0,
+      ~y=0,
+      ~transition=transition(~delay=0.35, ~duration=0.6, ()),
+      (),
+    ),
+  }
+}
+
 @react.component
-let make = (~showSnippets) => {
-  <div className=snippetWrapper>
+let make = (~showSnippets, ~controls) => {
+  <Motion.Div initial=#hidden animate=#controlled(controls) variants className=snippetWrapper>
     <Snippet showSnippets />
     <a href=link target="_blank" className=playgroundLink>
       {"Abrir no playground"->React.string}
     </a>
-  </div>
+  </Motion.Div>
 }

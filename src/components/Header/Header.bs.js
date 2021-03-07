@@ -4,24 +4,40 @@
 var Logo = require("../Logo/Logo.bs.js");
 var Menu = require("../Menu/Menu.bs.js");
 var React = require("react");
-var AnimatedJs = require("./Animated.js");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Header_Styles = require("./Header_Styles.bs.js");
 
-var make = AnimatedJs.Wrapper;
+var variants_hidden = {
+  opacity: 0.0,
+  y: -20
+};
 
-var Wrapper = {
-  make: make
+var variants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.35
+  }
+};
+
+var variants = {
+  hidden: variants_hidden,
+  visible: variants_visible
 };
 
 function Header(Props) {
-  return React.createElement(make, {
+  return React.createElement(Motion.Header.make, {
               className: Header_Styles.wrapper,
+              initial: "hidden",
+              variants: variants,
+              animate: "visible",
               children: null
             }, React.createElement(Logo.make, {}), React.createElement(Menu.make, {}));
 }
 
-var make$1 = Header;
+var make = Header;
 
-exports.Wrapper = Wrapper;
-exports.make = make$1;
-/* make Not a pure module */
+exports.variants = variants;
+exports.make = make;
+/* Logo Not a pure module */

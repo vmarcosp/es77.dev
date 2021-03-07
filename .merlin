@@ -35,8 +35,6 @@ S src/pages
 B lib/bs/src/pages
 S src/lib
 B lib/bs/src/lib
-S src/lib/Animated
-B lib/bs/src/lib/Animated
 S src/bindings
 B lib/bs/src/bindings
 S src/bindings/FramerMotion

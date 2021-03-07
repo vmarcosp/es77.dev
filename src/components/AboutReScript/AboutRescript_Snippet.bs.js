@@ -2,6 +2,7 @@
 'use strict';
 
 var React = require("react");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var SnippetJs = require("./Snippet.js");
 var AboutReScript_Styles = require("./AboutReScript_Styles.bs.js");
 
@@ -13,10 +14,37 @@ var Snippet = {
 
 var link = "https://rescript-lang.org/try?code=AIJwpghgxgLgdFA9gWwA6IHZgzAUAGzBgAJkIBrMYgXmIAoBKGgPmIG9djjCS6BnABaIA7gBpifIgGUhwprQBKkWHACukqTAgwwdAPotiAMwj5JDTsQA8AEwCWAN2aWAkNdTO3XdoJHEA-MRK0PB8MCB2GADmdABEABJg+PiIAISxTABcQcrwGKrJAL6WXFYA9B64XtYARqowMJjEmADC+HZQ5NRsBtSskjAyIvqGqb5yhZ7e7MEqYRHRcW0d5MQCYOAZxdXldQ2YzqVl9k64hUA";
 
+var variants_hidden = {
+  opacity: 0.0,
+  y: 20
+};
+
+var variants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.35
+  }
+};
+
+var variants = {
+  hidden: variants_hidden,
+  visible: variants_visible
+};
+
 function AboutRescript_Snippet(Props) {
   var showSnippets = Props.showSnippets;
-  return React.createElement("div", {
-              className: AboutReScript_Styles.snippetWrapper
+  var controls = Props.controls;
+  return React.createElement(Motion.Div.make, {
+              className: AboutReScript_Styles.snippetWrapper,
+              initial: "hidden",
+              variants: variants,
+              animate: {
+                NAME: "controlled",
+                VAL: controls
+              },
+              children: null
             }, React.createElement(make, {
                   showSnippets: showSnippets
                 }), React.createElement("a", {
@@ -30,5 +58,6 @@ var make$1 = AboutRescript_Snippet;
 
 exports.Snippet = Snippet;
 exports.link = link;
+exports.variants = variants;
 exports.make = make$1;
 /* make Not a pure module */
