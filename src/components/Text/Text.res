@@ -1,3 +1,5 @@
+module Styles = Text_Styles
+
 type tag = [#p | #span | #fragment]
 
 @react.component
@@ -12,5 +14,6 @@ module Span = {
 
 module P = {
   @react.component
-  let make = (~children, ~className=?) => <p ?className> {children->React.string} </p>
+  let make = (~children, ~animate=?, ~initial=?, ~variants=?) =>
+    <Motion.P ?animate ?initial ?variants className=Styles.paragraph> {children} </Motion.P>
 }

@@ -54,8 +54,15 @@ function About_Concepts(Props) {
   return React.createElement("div", {
               ref: match[0],
               className: About_Styles.conceptsWrapper
-            }, React.createElement("p", {
-                  className: About_Styles.conceptsText
+            }, React.createElement(Motion.P.make, {
+                  className: About_Styles.conceptsText,
+                  initial: "hidden",
+                  variants: variants(1),
+                  animate: {
+                    NAME: "controlled",
+                    VAL: controls
+                  },
+                  children: null
                 }, React.createElement($$Text.make, {
                       children: "Você irá aprender de forma "
                     }), React.createElement($$Text.Span.make, {

@@ -31,23 +31,6 @@ var content = CssJs.style([
       CssJs.flexDirection(CssJs.column)
     ]);
 
-var text = CssJs.style([
-      CssJs.color(CssJs.white),
-      CssJs.fontFamily({
-            NAME: "custom",
-            VAL: Theme.fontFamily
-          }),
-      CssJs.color(Theme.Colors.text),
-      CssJs.fontSize(CssJs.rem(1.8)),
-      CssJs.selector("> span", [
-            CssJs.color(Theme.Colors.white),
-            CssJs.fontWeight({
-                  NAME: "num",
-                  VAL: 600
-                })
-          ])
-    ]);
-
 var button = CssJs.style([
       CssJs.borderStyle(CssJs.none),
       CssJs.boxShadow(CssJs.none),
@@ -158,7 +141,6 @@ var playgroundLink = CssJs.style([
 exports.wrapper = wrapper;
 exports.snippetWrapper = snippetWrapper;
 exports.content = content;
-exports.text = text;
 exports.button = button;
 exports.playgroundLink = playgroundLink;
 /* wrapper Not a pure module */

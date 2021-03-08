@@ -27,14 +27,6 @@ let snippetWrapper = style(.[
 
 let content = style(.[display(#flex), flexDirection(column)])
 
-let text = style(.[
-  color(white),
-  fontFamily(Theme.fontFamily->#custom),
-  color(Theme.Colors.text),
-  fontSize(1.8->rem),
-  selector("> span", [color(Theme.Colors.white), fontWeight(600->#num)]),
-])
-
 let button = style(.[
   borderStyle(none),
   boxShadow(none),

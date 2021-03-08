@@ -1,11 +1,31 @@
 open About_Styles
 module Concepts = About_Concepts
 
+let variants = delay => {
+  open FramerMotion
+  {
+    hidden: variant(~opacity=0.0, ~y=20, ()),
+    visible: variant(~opacity=1.0, ~y=0, ~transition=transition(~delay, ~duration=0.6, ()), ()),
+  }
+}
+
 @react.component
 let make = () => {
-  <section className=wrapper>
-    <Title> "Sobre o curso" </Title>
-    <p className=text>
+  let controls = FramerMotion.useAnimation()
+  let (containerRef, inView) = IntersectionObserver.useInView()
+
+  React.useEffect1(() => {
+    if inView {
+      controls.start(. #visible)
+    }
+    None
+  }, [inView])
+
+  <section ref=containerRef className=wrapper>
+    <Title initial=#hidden animate=#controlled(controls) variants={variants(0.2)}>
+      "Sobre o curso"
+    </Title>
+    <Text.P initial=#hidden animate=#controlled(controls) variants={variants(0.4)}>
       {j`
         O objetivo do curso é te ensinar do zero, como desenvolver aplicações com ReScript, 
         utilizando React e outras bibliotecas existentes, além das próprias ferramentas do 
@@ -14,7 +34,7 @@ let make = () => {
         Além dos módulos e conteúdo do curso, você terá acesso total ao suporte dos instrutores e acesso ao discord 
         oficial do curso, podendo entrar em contato para tirar dúvidas sempre que necessário.
       `->React.string}
-    </p>
+    </Text.P>
     <Concepts />
   </section>
 }

@@ -17,15 +17,6 @@ var conceptsWrapper = CssJs.style([
       CssJs.marginTop(CssJs.rem(6.4))
     ]);
 
-var text = CssJs.style([
-      CssJs.color(Theme.Colors.text),
-      CssJs.fontFamily({
-            NAME: "custom",
-            VAL: Theme.fontFamily
-          }),
-      CssJs.fontSize(CssJs.rem(1.8))
-    ]);
-
 var conceptsText = CssJs.style([
       CssJs.color(Theme.Colors.white),
       CssJs.fontSize(CssJs.rem(3.2)),
@@ -80,7 +71,6 @@ var $$Array;
 exports.$$Array = $$Array;
 exports.wrapper = wrapper;
 exports.conceptsWrapper = conceptsWrapper;
-exports.text = text;
 exports.conceptsText = conceptsText;
 exports.topicsList = topicsList;
 /* wrapper Not a pure module */

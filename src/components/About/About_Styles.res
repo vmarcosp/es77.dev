@@ -10,12 +10,6 @@ let conceptsWrapper = style(.[
   marginTop(6.4->rem),
 ])
 
-let text = style(.[
-  color(Theme.Colors.text),
-  fontFamily(Theme.fontFamily->#custom),
-  fontSize(1.8->rem),
-])
-
 let conceptsText = style(.[
   color(Theme.Colors.white),
   fontSize(3.2->rem),

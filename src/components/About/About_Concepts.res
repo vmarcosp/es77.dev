@@ -38,7 +38,8 @@ let make = () => {
   }, [inView])
 
   <div ref=containerRef className=conceptsWrapper>
-    <p className=conceptsText>
+    <Motion.P
+      initial=#hidden animate=#controlled(controls) variants={variants(1)} className=conceptsText>
       <Text> {j`Você irá aprender de forma `} </Text>
       <Text.Span> {j`prática`} </Text.Span>
       <Text> " e" </Text>
@@ -46,7 +47,7 @@ let make = () => {
       <Text>
         {j`, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.`}
       </Text>
-    </p>
+    </Motion.P>
     <ul className=topicsList>
       {concepts->Render.map((text, index) =>
         <Motion.Li
