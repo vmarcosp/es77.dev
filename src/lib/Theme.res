@@ -3,6 +3,7 @@ module ColorsRaw = {
   let purple = "#743AF0"
   let pink = "#FF68D5"
   let shape01 = "#3C3C3C"
+  let shape02 = "#0D0D0D"
   let gray1 = "7D7D7D"
 }
 
@@ -14,6 +15,7 @@ module Colors = {
   let purple = ColorsRaw.purple->toBsHex
   let pink = ColorsRaw.pink->toBsHex
   let shape01 = ColorsRaw.shape01->toBsHex
+  let shape02 = ColorsRaw.shape02->toBsHex
   let white = "FAFAFA"->toBsHex
   let gray1 = ColorsRaw.gray1->toBsHex
   let text = "CECECE"->toBsHex

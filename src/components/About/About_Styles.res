@@ -1,7 +1,10 @@
 open CssJs
 module Array = Belt.Array
 
-let wrapper = style(.[maxWidth(Theme.Constants.maxWidth), margin2(~v=zero, ~h=auto)])
+let wrapper = style(.[
+  maxWidth(Theme.Constants.maxWidth),
+  margin4(~top=zero, ~bottom=32.4->rem, ~left=auto, ~right=auto),
+])
 
 let conceptsWrapper = style(.[
   display(#flex),

@@ -8,7 +8,7 @@ var wrapper = CssJs.style([
       CssJs.maxWidth(Theme.Constants.maxWidth),
       CssJs.display("flex"),
       CssJs.alignItems("center"),
-      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(26.0), CssJs.auto)
+      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(32.4), CssJs.auto)
     ]);
 
 var snippetWrapper = CssJs.style([

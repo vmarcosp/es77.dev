@@ -11,6 +11,8 @@ var pink = "#FF68D5";
 
 var shape01 = "#3C3C3C";
 
+var shape02 = "#0D0D0D";
+
 var gray1 = "7D7D7D";
 
 var ColorsRaw = {
@@ -18,6 +20,7 @@ var ColorsRaw = {
   purple: purple,
   pink: pink,
   shape01: shape01,
+  shape02: shape02,
   gray1: gray1
 };
 
@@ -32,6 +35,8 @@ var purple$1 = toBsHex(purple);
 var pink$1 = toBsHex(pink);
 
 var shape01$1 = toBsHex(shape01);
+
+var shape02$1 = toBsHex(shape02);
 
 var white = toBsHex("FAFAFA");
 
@@ -103,6 +108,7 @@ var Colors = {
   purple: purple$1,
   pink: pink$1,
   shape01: shape01$1,
+  shape02: shape02$1,
   white: white,
   gray1: gray1$1,
   text: text,
