@@ -33,6 +33,8 @@ S src/components/Hero
 B lib/bs/src/components/Hero
 S src/components/AboutReScript
 B lib/bs/src/components/AboutReScript
+S src/components/Releasing
+B lib/bs/src/components/Releasing
 S src/pages
 B lib/bs/src/pages
 S src/lib

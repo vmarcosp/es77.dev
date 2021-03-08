@@ -21,8 +21,9 @@ let make = () => {
     None
   }, [inView])
 
-  <section ref=containerRef className=wrapper>
-    <Title initial=#hidden animate=#controlled(controls) variants={variants(0.2)}>
+  <section className=wrapper>
+    <Title
+      innerRef=containerRef initial=#hidden animate=#controlled(controls) variants={variants(0.2)}>
       "Sobre o curso"
     </Title>
     <Text.P initial=#hidden animate=#controlled(controls) variants={variants(0.4)}>

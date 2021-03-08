@@ -4,7 +4,8 @@ let wrapper = style(.[
   maxWidth(Theme.Constants.maxWidth),
   display(#flex),
   alignItems(#center),
-  margin4(~top=zero, ~bottom=32.4->rem, ~left=auto, ~right=auto),
+  margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+  padding2(~v=12.4->rem, ~h=zero),
 ])
 
 let snippetWrapper = style(.[

@@ -2,7 +2,9 @@ open CssJs
 
 let wrapper = style(.[
   maxWidth(Theme.Constants.maxWidth),
-  margin4(~top=zero, ~bottom=32.4->rem, ~left=auto, ~right=auto),
+  // border(1->px, solid, red),
+  margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+  padding2(~v=12.4->rem, ~h=zero),
   display(#flex),
   justifyContent(center),
   flexDirection(column),
@@ -50,11 +52,7 @@ let photo = style(.[
   marginBottom(2.4->rem),
 ])
 
-let cardsContainer = style(.[
-  //
-  display(#flex),
-  marginTop(5.6->rem),
-])
+let cardsContainer = style(.[display(#flex), marginTop(5.6->rem)])
 
 let title = style(.[
   color(Theme.Colors.white),

@@ -18,6 +18,8 @@ let title = {
 }
 
 @react.component
-let make = (~children, ~animate=?, ~initial=?, ~variants=?) => {
-  <Motion.H1 ?initial ?animate ?variants className=title> {children->React.string} </Motion.H1>
+let make = (~children, ~innerRef=?, ~animate=?, ~initial=?, ~variants=?) => {
+  <Motion.H1 ?initial ?animate ?innerRef ?variants className=title>
+    {children->React.string}
+  </Motion.H1>
 }

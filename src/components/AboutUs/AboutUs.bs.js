@@ -4,28 +4,67 @@
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
 var AboutUs_Card = require("./AboutUs_Card.bs.js");
+var FramerMotion = require("framer-motion");
 var AboutUs_Styles = require("./AboutUs_Styles.bs.js");
+var ReactIntersectionObserver = require("react-intersection-observer");
+
+var titleVariants_hidden = {
+  opacity: 0.0,
+  y: 20
+};
+
+var titleVariants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.35
+  }
+};
+
+var titleVariants = {
+  hidden: titleVariants_hidden,
+  visible: titleVariants_visible
+};
 
 function AboutUs(Props) {
+  var match = ReactIntersectionObserver.useInView();
+  var inView = match[1];
+  var controls = FramerMotion.useAnimation();
+  React.useEffect((function () {
+          if (inView) {
+            controls.start("visible");
+          }
+          
+        }), [inView]);
   return React.createElement(React.Fragment, undefined, React.createElement("img", {
                   className: AboutUs_Styles.triangle,
                   src: "assets/triangle-2.svg"
                 }), React.createElement("div", {
                   className: AboutUs_Styles.wrapper
                 }, React.createElement(Title.make, {
-                      children: "Quem somos nós"
+                      children: "Quem somos nós",
+                      innerRef: match[0],
+                      animate: {
+                        NAME: "controlled",
+                        VAL: controls
+                      },
+                      initial: "hidden",
+                      variants: titleVariants
                     }), React.createElement("div", {
                       className: AboutUs_Styles.cardsContainer
                     }, React.createElement(AboutUs_Card.make, {
                           name: "Marcos Oliveira",
                           description: "Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.",
                           role: "Developer na brainn.co",
-                          photo: "assets/marcos.jpeg"
+                          photo: "assets/marcos.jpeg",
+                          initialX: -40
                         }), React.createElement(AboutUs_Card.make, {
                           name: "Gabriel Rubens",
                           description: "Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.",
                           role: "CTO na Astrocoders",
-                          photo: "assets/gabriel.jpeg"
+                          photo: "assets/gabriel.jpeg",
+                          initialX: 40
                         }))));
 }
 
@@ -34,5 +73,6 @@ var Card;
 var make = AboutUs;
 
 exports.Card = Card;
+exports.titleVariants = titleVariants;
 exports.make = make;
 /* Title Not a pure module */

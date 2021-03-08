@@ -3,15 +3,53 @@
 
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var FramerMotion = require("framer-motion");
 var AboutUs_Styles = require("./AboutUs_Styles.bs.js");
+var ReactIntersectionObserver = require("react-intersection-observer");
+
+function variants(x) {
+  return {
+          hidden: {
+            opacity: 0.0,
+            x: x
+          },
+          visible: {
+            opacity: 1.0,
+            x: 0,
+            transition: {
+              duration: 0.6,
+              delay: 0.35
+            }
+          }
+        };
+}
 
 function AboutUs_Card(Props) {
   var name = Props.name;
   var description = Props.description;
   var role = Props.role;
   var src = Props.photo;
-  return React.createElement("div", {
-              className: AboutUs_Styles.card
+  var initialX = Props.initialX;
+  var match = ReactIntersectionObserver.useInView();
+  var inView = match[1];
+  var controls = FramerMotion.useAnimation();
+  React.useEffect((function () {
+          if (inView) {
+            controls.start("visible");
+          }
+          
+        }), [inView]);
+  return React.createElement(Motion.Div.make, {
+              className: AboutUs_Styles.card,
+              initial: "hidden",
+              variants: variants(initialX),
+              animate: {
+                NAME: "controlled",
+                VAL: controls
+              },
+              innerRef: match[0],
+              children: null
             }, React.createElement("img", {
                   className: AboutUs_Styles.photo,
                   alt: name,
@@ -27,5 +65,6 @@ function AboutUs_Card(Props) {
 
 var make = AboutUs_Card;
 
+exports.variants = variants;
 exports.make = make;
 /* Text Not a pure module */

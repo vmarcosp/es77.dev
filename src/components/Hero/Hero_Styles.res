@@ -7,8 +7,8 @@ let wrapper = style(.[
   flexDirection(column),
   alignItems(center),
   justifyContent(center),
-  paddingBottom(10.0->rem),
-  margin4(~top=7.2->rem, ~bottom=32.4->rem, ~left=auto, ~right=auto),
+  paddingBottom(12.4->rem),
+  margin4(~top=7.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
 ])
 
 let symbolWrapper = style(.[width(35.0->rem)])

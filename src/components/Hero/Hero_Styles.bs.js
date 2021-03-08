@@ -11,8 +11,8 @@ var wrapper = CssJs.style([
       CssJs.flexDirection(CssJs.column),
       CssJs.alignItems(CssJs.center),
       CssJs.justifyContent(CssJs.center),
-      CssJs.paddingBottom(CssJs.rem(10.0)),
-      CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(32.4), CssJs.auto)
+      CssJs.paddingBottom(CssJs.rem(12.4)),
+      CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto)
     ]);
 
 var symbolWrapper = CssJs.style([CssJs.width(CssJs.rem(35.0))]);

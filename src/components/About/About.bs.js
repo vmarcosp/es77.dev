@@ -37,10 +37,10 @@ function About(Props) {
           
         }), [inView]);
   return React.createElement("section", {
-              ref: match[0],
               className: About_Styles.wrapper
             }, React.createElement(Title.make, {
                   children: "Sobre o curso",
+                  innerRef: match[0],
                   animate: {
                     NAME: "controlled",
                     VAL: controls

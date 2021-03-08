@@ -31,6 +31,7 @@ var title = CssJs.style([
 
 function Title(Props) {
   var children = Props.children;
+  var innerRef = Props.innerRef;
   var animate = Props.animate;
   var initial = Props.initial;
   var variants = Props.variants;
@@ -46,6 +47,9 @@ function Title(Props) {
   }
   if (animate !== undefined) {
     tmp.animate = Caml_option.valFromOption(animate);
+  }
+  if (innerRef !== undefined) {
+    tmp.innerRef = Caml_option.valFromOption(innerRef);
   }
   return React.createElement(Motion.H1.make, tmp);
 }
