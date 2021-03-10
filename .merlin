@@ -23,6 +23,8 @@ S src/components/About
 B lib/bs/src/components/About
 S src/components/Menu
 B lib/bs/src/components/Menu
+S src/components/Reviews
+B lib/bs/src/components/Reviews
 S src/components/AboutUs
 B lib/bs/src/components/AboutUs
 S src/components/Logo

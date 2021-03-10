@@ -43,7 +43,7 @@ function AboutUs(Props) {
                 }), React.createElement("div", {
                   className: AboutUs_Styles.wrapper
                 }, React.createElement(Title.make, {
-                      children: "Quem somos nós",
+                      children: "Sobre os instrutores",
                       innerRef: match[0],
                       animate: {
                         NAME: "controlled",
@@ -61,7 +61,7 @@ function AboutUs(Props) {
                           initialX: -40
                         }), React.createElement(AboutUs_Card.make, {
                           name: "Gabriel Rubens",
-                          description: "Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.",
+                          description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
                           role: "CTO na Astrocoders",
                           photo: "assets/gabriel.jpeg",
                           initialX: 40

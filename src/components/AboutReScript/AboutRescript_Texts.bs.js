@@ -4,6 +4,8 @@
 var $$Text = require("../Text/Text.bs.js");
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
+var FramerMotion = require("framer-motion");
+var ReactIntersectionObserver = require("react-intersection-observer");
 
 function variants(delay) {
   return {
@@ -23,13 +25,22 @@ function variants(delay) {
 }
 
 function AboutRescript_Texts(Props) {
-  var controls = Props.controls;
+  var match = ReactIntersectionObserver.useInView();
+  var inView = match[1];
+  var controls = FramerMotion.useAnimation();
+  React.useEffect((function () {
+          if (inView) {
+            controls.start("visible");
+          }
+          
+        }), [inView]);
   var animate = {
     NAME: "controlled",
     VAL: controls
   };
   return React.createElement("div", undefined, React.createElement(Title.make, {
                   children: "O que é ReScript?",
+                  innerRef: match[0],
                   animate: animate,
                   initial: "hidden",
                   variants: variants(1.0)

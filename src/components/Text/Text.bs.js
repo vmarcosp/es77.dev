@@ -27,11 +27,13 @@ var Span = {
 
 function Text$P(Props) {
   var children = Props.children;
+  var classNameOpt = Props.className;
   var animate = Props.animate;
   var initial = Props.initial;
   var variants = Props.variants;
+  var className = classNameOpt !== undefined ? classNameOpt : "";
   var tmp = {
-    className: Text_Styles.paragraph,
+    className: Text_Styles.paragraph + " " + className,
     children: children
   };
   if (initial !== undefined) {

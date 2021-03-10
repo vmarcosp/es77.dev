@@ -21,8 +21,22 @@ let variants = {
 }
 
 @react.component
-let make = (~showSnippets, ~controls) => {
-  <Motion.Div initial=#hidden animate=#controlled(controls) variants className=snippetWrapper>
+let make = () => {
+  let (innerRef, inView) = IntersectionObserver.useInView()
+  let (showSnippets, setShowSnippets) = React.useState(_ => false)
+  let controls = FramerMotion.useAnimation()
+
+  React.useEffect1(() => {
+    if inView {
+      controls.start(. #visible)
+      setShowSnippets(_ => true)
+    }
+
+    None
+  }, [inView])
+
+  <Motion.Div
+    innerRef initial=#hidden animate=#controlled(controls) variants className=snippetWrapper>
     <Snippet showSnippets />
     <a href=link target="_blank" className=playgroundLink>
       {"Abrir no playground"->React.string}

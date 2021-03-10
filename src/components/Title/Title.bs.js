@@ -7,27 +7,31 @@ var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
-var title = CssJs.style([
-      CssJs.color(CssJs.white),
-      CssJs.fontFamily({
-            NAME: "custom",
-            VAL: Theme.fontFamily
-          }),
-      CssJs.fontSize(CssJs.rem(3.2)),
-      CssJs.position(CssJs.relative),
-      CssJs.paddingLeft(CssJs.rem(4.8)),
-      CssJs.marginBottom(CssJs.rem(3.2)),
-      CssJs.after([
-            CssJs.contentRule({
-                  NAME: "url",
-                  VAL: "assets/triangle-icon.svg"
-                }),
-            CssJs.width(CssJs.rem(3.2)),
-            CssJs.height(CssJs.rem(3.2)),
-            CssJs.position(CssJs.absolute),
-            CssJs.left(CssJs.zero)
-          ])
-    ]);
+function title(icon) {
+  var iconUrl = icon === "triangle" ? "assets/triangle-icon.svg" : "assets/voltage.svg";
+  return CssJs.style([
+              CssJs.color(CssJs.white),
+              CssJs.fontFamily({
+                    NAME: "custom",
+                    VAL: Theme.fontFamily
+                  }),
+              CssJs.fontSize(CssJs.rem(3.2)),
+              CssJs.position(CssJs.relative),
+              CssJs.paddingLeft(CssJs.rem(4.8)),
+              CssJs.marginBottom(CssJs.rem(3.2)),
+              CssJs.after([
+                    CssJs.contentRule({
+                          NAME: "url",
+                          VAL: iconUrl
+                        }),
+                    CssJs.width(CssJs.rem(3.2)),
+                    CssJs.height(CssJs.rem(3.2)),
+                    CssJs.position(CssJs.absolute),
+                    CssJs.left(CssJs.zero),
+                    CssJs.top(CssJs.px(4))
+                  ])
+            ]);
+}
 
 function Title(Props) {
   var children = Props.children;
@@ -35,8 +39,10 @@ function Title(Props) {
   var animate = Props.animate;
   var initial = Props.initial;
   var variants = Props.variants;
+  var iconOpt = Props.icon;
+  var icon = iconOpt !== undefined ? iconOpt : "triangle";
   var tmp = {
-    className: title,
+    className: title(icon),
     children: children
   };
   if (initial !== undefined) {
@@ -58,4 +64,4 @@ var make = Title;
 
 exports.title = title;
 exports.make = make;
-/* title Not a pure module */
+/* CssJs Not a pure module */

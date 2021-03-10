@@ -18,20 +18,7 @@ let variants = {
 
 @react.component
 let make = () => {
-  let (containerRef, inView) = IntersectionObserver.useInView()
-  let (showSnippets, setShowSnippets) = React.useState(_ => false)
-  let controls = FramerMotion.useAnimation()
-
-  React.useEffect1(() => {
-    if inView {
-      controls.start(. #visible)
-      setShowSnippets(_ => true)
-    }
-
-    None
-  }, [inView])
-
-  <section id="o-que-e-rescript" ref=containerRef className=wrapper>
-    <SnippetExample showSnippets controls /> <div className=content> <Texts controls /> </div>
+  <section id="o-que-e-rescript" className=wrapper>
+    <SnippetExample /> <div className=content> <Texts /> </div>
   </section>
 }

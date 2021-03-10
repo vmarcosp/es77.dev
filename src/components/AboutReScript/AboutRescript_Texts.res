@@ -12,10 +12,24 @@ let variants = delay => {
 }
 
 @react.component
-let make = (~controls) => {
+let make = () => {
+  let (innerRef, inView) = IntersectionObserver.useInView()
+  let controls = FramerMotion.useAnimation()
+
+  React.useEffect1(() => {
+    if inView {
+      controls.start(. #visible)
+    }
+
+    None
+  }, [inView])
+
   let animate = #controlled(controls)
+
   <div>
-    <Title initial=#hidden animate variants={variants(1.0)}> {j`O que é ReScript?`} </Title>
+    <Title innerRef initial=#hidden animate variants={variants(1.0)}>
+      {j`O que é ReScript?`}
+    </Title>
     <Text.P initial=#hidden animate variants={variants(3.0)}>
       <Text> "ReScript" </Text>
       <Text.Span> " (anteriormente ReasonML) " </Text.Span>

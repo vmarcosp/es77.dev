@@ -32,7 +32,7 @@ let make = () => {
     <img src="assets/triangle-2.svg" className=triangle />
     <div className=wrapper>
       <Title initial=#hidden animate=#controlled(controls) variants=titleVariants innerRef>
-        {j`Quem somos nós`}
+        {j`Sobre os instrutores`}
       </Title>
       <div className=cardsContainer>
         <Card
@@ -47,7 +47,7 @@ let make = () => {
           photo="assets/gabriel.jpeg"
           name="Gabriel Rubens"
           role="CTO na Astrocoders"
-          description=j`Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.`
+          description=j`CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`
         />
       </div>
     </div>
