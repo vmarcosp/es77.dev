@@ -5,6 +5,7 @@ let wrapper = style(.[
   background(Theme.Colors.darkGradient),
   padding2(~h=zero, ~v=7.2->rem),
   margin2(~v=12.4->rem, ~h=zero),
+  unsafe("cursor", Cursor.rocket),
 ])
 
 let content = style(.[
@@ -15,6 +16,7 @@ let content = style(.[
 
 let text = style(.[
   //
+  color("B399C8"->hex),
   selector(
     "> span",
     [

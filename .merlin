@@ -15,6 +15,8 @@ S src
 B lib/bs/src
 S src/components/Text
 B lib/bs/src/components/Text
+S src/components/Partners
+B lib/bs/src/components/Partners
 S src/components/Layout
 B lib/bs/src/components/Layout
 S src/components/Title

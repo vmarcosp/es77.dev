@@ -4,12 +4,14 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var Theme = require("../../lib/Theme.bs.js");
+var Cursor = require("../../lib/Cursor.bs.js");
 var Polished = require("rescript-polished/src/Polished.bs.js");
 
 var wrapper = CssJs.style([
       CssJs.background(Theme.Colors.darkGradient),
       CssJs.padding2(CssJs.rem(7.2), CssJs.zero),
-      CssJs.margin2(CssJs.rem(12.4), CssJs.zero)
+      CssJs.margin2(CssJs.rem(12.4), CssJs.zero),
+      CssJs.unsafe("cursor", Cursor.rocket)
     ]);
 
 var content = CssJs.style([
@@ -17,13 +19,16 @@ var content = CssJs.style([
       CssJs.margin2(CssJs.zero, CssJs.auto)
     ]);
 
-var text = CssJs.style([CssJs.selector("> span", [
+var text = CssJs.style([
+      CssJs.color(CssJs.hex("B399C8")),
+      CssJs.selector("> span", [
             CssJs.fontWeight({
                   NAME: "num",
                   VAL: 600
                 }),
             CssJs.color(Theme.Colors.pink)
-          ])]);
+          ])
+    ]);
 
 var form = CssJs.style([
       CssJs.display("flex"),

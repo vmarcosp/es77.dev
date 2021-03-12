@@ -10,7 +10,12 @@ var paragraph = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.fontSize(CssJs.rem(1.8))
+      CssJs.fontSize(CssJs.rem(1.8)),
+      CssJs.transition(400, undefined, undefined, "color"),
+      CssJs.hover([
+            CssJs.color(Theme.Colors.white),
+            CssJs.transition(400, undefined, undefined, "color")
+          ])
     ]);
 
 exports.paragraph = paragraph;
