@@ -20,6 +20,11 @@ module H1 = Components.MakeElement({
   external element: Components.motionElement = "h1"
 })
 
+module H2 = Components.MakeElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "h2"
+})
+
 module P = Components.MakeElement({
   @module("framer-motion") @scope("motion")
   external element: Components.motionElement = "p"
@@ -33,4 +38,9 @@ module A = Components.MakeElement({
 module Li = Components.MakeElement({
   @module("framer-motion") @scope("motion")
   external element: Components.motionElement = "li"
+})
+
+module Img = Components.MakeVoidElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "img"
 })

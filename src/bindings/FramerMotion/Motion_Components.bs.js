@@ -54,9 +54,50 @@ function MakeElement(M) {
         };
 }
 
+function MakeVoidElement(M) {
+  var Motion_Components$MakeVoidElement = function (Props) {
+    var className = Props.className;
+    var initial = Props.initial;
+    var variants = Props.variants;
+    var animate = Props.animate;
+    var innerRef = Props.innerRef;
+    var id = Props.id;
+    var src = Props.src;
+    var tmp = {};
+    if (className !== undefined) {
+      tmp.className = Caml_option.valFromOption(className);
+    }
+    if (innerRef !== undefined) {
+      tmp.ref = Caml_option.valFromOption(innerRef);
+    }
+    if (id !== undefined) {
+      tmp.id = Caml_option.valFromOption(id);
+    }
+    if (src !== undefined) {
+      tmp.src = Caml_option.valFromOption(src);
+    }
+    if (initial !== undefined) {
+      tmp.initial = Caml_option.valFromOption(initial);
+    }
+    if (variants !== undefined) {
+      tmp.variants = Caml_option.valFromOption(variants);
+    }
+    var tmp$1 = Belt_Option.map(animate, unwrapAnimate);
+    if (tmp$1 !== undefined) {
+      tmp.animate = Caml_option.valFromOption(tmp$1);
+    }
+    var props = tmp;
+    return React.createElement(M.element, props);
+  };
+  return {
+          make: Motion_Components$MakeVoidElement
+        };
+}
+
 var $$Option;
 
 exports.$$Option = $$Option;
 exports.unwrapAnimate = unwrapAnimate;
 exports.MakeElement = MakeElement;
+exports.MakeVoidElement = MakeVoidElement;
 /* react Not a pure module */

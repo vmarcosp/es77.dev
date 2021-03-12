@@ -4,14 +4,12 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var Theme = require("../../lib/Theme.bs.js");
-var Cursor = require("../../lib/Cursor.bs.js");
 var Polished = require("rescript-polished/src/Polished.bs.js");
 
 var wrapper = CssJs.style([
       CssJs.background(Theme.Colors.darkGradient),
       CssJs.padding2(CssJs.rem(7.2), CssJs.zero),
-      CssJs.margin2(CssJs.rem(12.4), CssJs.zero),
-      CssJs.unsafe("cursor", Cursor.rocket)
+      CssJs.margin2(CssJs.rem(12.4), CssJs.zero)
     ]);
 
 var content = CssJs.style([

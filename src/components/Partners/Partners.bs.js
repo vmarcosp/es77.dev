@@ -3,23 +3,90 @@
 
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
+var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Partners_Logo = require("./Partners_Logo.bs.js");
+var FramerMotion = require("framer-motion");
 var Partners_Styles = require("./Partners_Styles.bs.js");
+var ReactIntersectionObserver = require("react-intersection-observer");
+
+function variants(delay) {
+  return {
+          hidden: {
+            opacity: 0.0,
+            y: 20
+          },
+          visible: {
+            opacity: 1.0,
+            y: 0,
+            transition: {
+              duration: 0.6,
+              delay: delay
+            }
+          }
+        };
+}
 
 function Partners(Props) {
+  var match = ReactIntersectionObserver.useInView();
+  var inView = match[1];
+  var match$1 = ReactIntersectionObserver.useInView();
+  var partnersInView = match$1[1];
+  var titleControls = FramerMotion.useAnimation();
+  var partnerControls = FramerMotion.useAnimation();
+  React.useEffect((function () {
+          if (inView) {
+            titleControls.start("visible");
+          }
+          if (partnersInView) {
+            partnerControls.start("visible");
+          }
+          
+        }), [
+        inView,
+        partnersInView
+      ]);
   return React.createElement("div", {
               className: Partners_Styles.wrapper
             }, React.createElement(Title.make, {
-                  children: "Nossos parceiros"
+                  children: "Nossos parceiros",
+                  innerRef: match[0],
+                  animate: {
+                    NAME: "controlled",
+                    VAL: titleControls
+                  },
+                  initial: "hidden",
+                  variants: variants(0.2)
                 }), React.createElement("div", {
+                  ref: match$1[0],
                   className: Partners_Styles.partners
-                }, React.createElement("div", {
-                      className: Partners_Styles.partner
-                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co.")), React.createElement("div", {
-                      className: Partners_Styles.partner
-                    }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR")), React.createElement("div", {
-                      className: Partners_Styles.partner
-                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Astrocoders"))));
+                }, React.createElement(Motion.Div.make, {
+                      className: Partners_Styles.partner,
+                      initial: "hidden",
+                      variants: variants(0.4),
+                      animate: {
+                        NAME: "controlled",
+                        VAL: partnerControls
+                      },
+                      children: null
+                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co.")), React.createElement(Motion.Div.make, {
+                      className: Partners_Styles.partner,
+                      initial: "hidden",
+                      variants: variants(0.6),
+                      animate: {
+                        NAME: "controlled",
+                        VAL: partnerControls
+                      },
+                      children: null
+                    }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR")), React.createElement(Motion.Div.make, {
+                      className: Partners_Styles.partner,
+                      initial: "hidden",
+                      variants: variants(0.8),
+                      animate: {
+                        NAME: "controlled",
+                        VAL: partnerControls
+                      },
+                      children: null
+                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co."))));
 }
 
 var Logos;
@@ -27,5 +94,6 @@ var Logos;
 var make = Partners;
 
 exports.Logos = Logos;
+exports.variants = variants;
 exports.make = make;
 /* Title Not a pure module */

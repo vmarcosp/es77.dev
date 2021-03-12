@@ -20,6 +20,10 @@ var H1 = Motion_Components.MakeElement({
       element: FramerMotion.motion.h1
     });
 
+var H2 = Motion_Components.MakeElement({
+      element: FramerMotion.motion.h2
+    });
+
 var P = Motion_Components.MakeElement({
       element: FramerMotion.motion.p
     });
@@ -32,6 +36,10 @@ var Li = Motion_Components.MakeElement({
       element: FramerMotion.motion.li
     });
 
+var Img = Motion_Components.MakeVoidElement({
+      element: FramerMotion.motion.img
+    });
+
 var Components;
 
 exports.Components = Components;
@@ -39,7 +47,9 @@ exports.Div = Div;
 exports.Header = Header;
 exports.Section = Section;
 exports.H1 = H1;
+exports.H2 = H2;
 exports.P = P;
 exports.A = A;
 exports.Li = Li;
+exports.Img = Img;
 /* Div Not a pure module */

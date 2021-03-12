@@ -3,23 +3,18 @@
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
+var Cursor = require("../../lib/Cursor.bs.js");
+var Css_Js_Core = require("bs-css/src/Css_Js_Core.bs.js");
 
 var wrapper = CssJs.style([
       CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin2(CssJs.zero, CssJs.auto)
-    ]);
-
-var card = CssJs.style([
-      CssJs.backgroundColor(Theme.Colors.shape02),
-      CssJs.borderRadius(CssJs.px(6)),
-      CssJs.display("flex"),
-      CssJs.flexDirection(CssJs.column),
-      CssJs.padding(CssJs.rem(5.2))
+      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+      CssJs.padding2(CssJs.rem(12.4), CssJs.zero)
     ]);
 
 var _photo = CssJs.style([
-      CssJs.width(CssJs.rem(10.0)),
-      CssJs.height(CssJs.rem(10.0)),
+      CssJs.width(CssJs.rem(7.2)),
+      CssJs.height(CssJs.rem(7.2)),
       CssJs.borderRadius(CssJs.pct(50.0)),
       CssJs.marginRight(CssJs.rem(2.4))
     ]);
@@ -35,7 +30,7 @@ var _name = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.marginBottom(CssJs.rem(0.4))
+      CssJs.marginBottom(CssJs.rem(0.0))
     ]);
 
 var _role = CssJs.style([
@@ -49,18 +44,43 @@ var _role = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.margin(CssJs.zero)
+      CssJs.margin(CssJs.zero),
+      CssJs.letterSpacing(CssJs.em(-0.03))
     ]);
 
-var cardHeader = CssJs.style([
+var header = CssJs.style([
       CssJs.display("flex"),
       CssJs.alignItems(CssJs.center)
     ]);
 
 var _description = CssJs.style([
+      CssJs.fontSize(CssJs.rem(2.0)),
+      CssJs.fontWeight({
+            NAME: "num",
+            VAL: 600
+          }),
       CssJs.position(CssJs.relative),
-      CssJs.paddingLeft(CssJs.rem(2.6)),
       CssJs.marginTop(CssJs.rem(3.2)),
+      CssJs.color(CssJs.hex("A6A6A6")),
+      CssJs.selector("span", [
+            CssJs.unsafe("background", "linear-gradient(to right, " + Theme.ColorsRaw.purple + ", " + Theme.ColorsRaw.purple + " 50%, transparent 50%)"),
+            CssJs.transition(200, undefined, undefined, "background-position"),
+            CssJs.backgroundSize({
+                  NAME: "size",
+                  VAL: [
+                    CssJs.pct(200.0),
+                    CssJs.pct(100.0)
+                  ]
+                }),
+            CssJs.backgroundPosition({
+                  NAME: "percent",
+                  VAL: 100.0
+                }),
+            CssJs.transitions([
+                  Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
+                  Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
+                ])
+          ]),
       CssJs.before([
             CssJs.contentRule({
                   NAME: "url",
@@ -75,11 +95,38 @@ var _description = CssJs.style([
           ])
     ]);
 
+var reviews = CssJs.style([
+      CssJs.display("flex"),
+      CssJs.flexWrap("wrap"),
+      CssJs.flex3(1.0, 0.0, CssJs.pct(50.0))
+    ]);
+
+var review = CssJs.style([
+      CssJs.borderRadius(CssJs.px(6)),
+      CssJs.display("flex"),
+      CssJs.flexDirection(CssJs.column),
+      CssJs.padding(CssJs.rem(5.2)),
+      CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
+      CssJs.unsafe("cursor", Cursor.lighting),
+      CssJs.hover([
+            CssJs.selector("." + _description, [CssJs.color(Theme.Colors.white)]),
+            CssJs.selector("." + _description + " > span", [
+                  CssJs.unsafe("background-position", "0% 100%"),
+                  CssJs.transitionDuration(400),
+                  CssJs.transitions([
+                        Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
+                        Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
+                      ])
+                ])
+          ])
+    ]);
+
 exports.wrapper = wrapper;
-exports.card = card;
 exports._photo = _photo;
 exports._name = _name;
 exports._role = _role;
-exports.cardHeader = cardHeader;
+exports.header = header;
 exports._description = _description;
+exports.reviews = reviews;
+exports.review = review;
 /* wrapper Not a pure module */

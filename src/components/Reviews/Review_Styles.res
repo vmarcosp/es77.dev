@@ -3,22 +3,14 @@ open CssJs
 let wrapper = style(.[
   //
   maxWidth(Theme.Constants.maxWidth),
-  margin2(~v=zero, ~h=auto),
-])
-
-let card = style(.[
-  //
-  backgroundColor(Theme.Colors.shape02),
-  borderRadius(6->px),
-  display(#flex),
-  flexDirection(column),
-  padding(5.2->rem),
+  margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+  padding2(~v=12.4->rem, ~h=zero),
 ])
 
 let _photo = style(.[
   //
-  width(10.0->rem),
-  height(10.0->rem),
+  width(7.2->rem),
+  height(7.2->rem),
   borderRadius(50.0->pct),
   marginRight(2.4->rem),
 ])
@@ -29,7 +21,7 @@ let _name = style(.[
   fontSize(1.8->rem),
   fontWeight(700->#num),
   fontFamily(Theme.fontFamily->#custom),
-  marginBottom(0.4->rem),
+  marginBottom(0.0->rem),
 ])
 
 let _role = style(.[
@@ -39,20 +31,38 @@ let _role = style(.[
   fontWeight(500->#num),
   fontFamily(Theme.fontFamily->#custom),
   margin(zero),
+  letterSpacing(-0.03->em),
 ])
 
-let cardHeader = style(.[
+let header = style(.[
   //
   display(#flex),
   alignItems(center),
 ])
 
 let _description = style(.[
+  fontSize(2.0->rem),
+  fontWeight(600->#num),
   position(relative),
-  paddingLeft(2.6->rem),
   marginTop(3.2->rem),
+  color("A6A6A6"->hex),
+  selector(
+    "span",
+    [
+      unsafe(
+        "background",
+        j`linear-gradient(to right, ${Theme.ColorsRaw.purple}, ${Theme.ColorsRaw.purple} 50%, transparent 50%)`,
+      ),
+      transition(~duration=200, "background-position"),
+      backgroundSize(#size(200.0->pct, 100.0->pct)),
+      backgroundPosition(100.0->#percent),
+      transitions([
+        Transition.shorthand(~duration=400, "padding"),
+        Transition.shorthand(~duration=400, "background-position"),
+      ]),
+    ],
+  ),
   before([
-    //
     contentRule("assets/quotes.svg"->#url),
     position(absolute),
     top(-3->px),
@@ -60,5 +70,35 @@ let _description = style(.[
     width(2.0->rem),
     height(2.0->rem),
     whiteSpace(#pre),
+  ]),
+])
+
+let reviews = style(.[
+  //
+  display(#flex),
+  flexWrap(#wrap),
+  flex3(~grow=1.0, ~shrink=0.0, ~basis=50.0->pct),
+])
+
+let review = style(.[
+  borderRadius(6->px),
+  display(#flex),
+  flexDirection(column),
+  padding(5.2->rem),
+  flex3(~grow=1.0, ~shrink=0.0, ~basis=50.0->pct),
+  unsafe("cursor", Cursor.lighting),
+  hover([
+    selector(`.${_description}`, [color(Theme.Colors.white)]),
+    selector(
+      `.${_description} > span`,
+      [
+        unsafe("background-position", "0% 100%"),
+        transitionDuration(400),
+        transitions([
+          Transition.shorthand(~duration=400, "padding"),
+          Transition.shorthand(~duration=400, "background-position"),
+        ]),
+      ],
+    ),
   ]),
 ])

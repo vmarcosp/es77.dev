@@ -6,7 +6,7 @@ let default = () => {
     <About />
     <AboutUs />
     <Releasing />
-    // <Reviews />
+    <Reviews />
     <Partners />
     <br />
     <br />

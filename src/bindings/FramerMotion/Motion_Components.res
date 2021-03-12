@@ -10,6 +10,7 @@ type motionProps = {
   @optional @as("ref") innerRef: ReactDOM.domRef,
   @optional id: string,
   @optional href: string,
+  @optional src: string,
   @optional target: string,
   @optional initial: initial,
   @optional variants: FramerMotion.variants,
@@ -58,5 +59,30 @@ module MakeElement = (M: IMakeElement) => {
       (),
     )
     createElement(M.element, props, children)
+  }
+}
+
+module MakeVoidElement = (M: IMakeElement) => {
+  @react.component
+  let make = (
+    ~className=?,
+    ~initial=?,
+    ~variants=?,
+    ~animate: option<FramerMotion.animate>=?,
+    ~innerRef=?,
+    ~id=?,
+    ~src=?,
+  ) => {
+    let props = motionProps(
+      ~className?,
+      ~innerRef?,
+      ~id?,
+      ~initial?,
+      ~animate=?animate->Option.map(unwrapAnimate),
+      ~variants?,
+      ~src?,
+      (),
+    )
+    createVoidElement(M.element, props)
   }
 }

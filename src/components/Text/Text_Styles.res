@@ -5,9 +5,5 @@ let paragraph = style(.[
   fontFamily(Theme.fontFamily->#custom),
   fontSize(1.8->rem),
   transition(~duration=400, "color"),
-  hover([
-    //
-    color(Theme.Colors.white),
-    transition(~duration=400, "color"),
-  ]),
+  hover([transition(~duration=400, "color")]),
 ])

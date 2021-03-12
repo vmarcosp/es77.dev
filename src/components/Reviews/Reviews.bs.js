@@ -4,32 +4,69 @@
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
 var Render = require("../../lib/Render.bs.js");
-var ReviewCard = require("./ReviewCard.bs.js");
-var ReactSlick = require("react-slick").default;
+var ReviewItem = require("./ReviewItem.bs.js");
 var Review_Styles = require("./Review_Styles.bs.js");
+var FramerMotion = require("framer-motion");
 var Reviews_Content = require("./Reviews_Content.bs.js");
+var ReactIntersectionObserver = require("react-intersection-observer");
+
+var variants_hidden = {
+  opacity: 0.0,
+  y: 20
+};
+
+var variants_visible = {
+  opacity: 1.0,
+  y: 0,
+  transition: {
+    duration: 0.6,
+    delay: 0.2
+  }
+};
+
+var variants = {
+  hidden: variants_hidden,
+  visible: variants_visible
+};
 
 function Reviews(Props) {
+  var match = ReactIntersectionObserver.useInView();
+  var inView = match[1];
+  var controls = FramerMotion.useAnimation();
+  React.useEffect((function () {
+          if (inView) {
+            controls.start("visible");
+          }
+          
+        }), [inView]);
   return React.createElement("div", {
               className: Review_Styles.wrapper
             }, React.createElement(Title.make, {
-                  children: "Pessoas que acreditam no curso"
-                }), React.createElement(ReactSlick, {
-                  dots: true,
-                  slidesToShow: 2,
-                  children: Render.map(Reviews_Content.highlights, (function (review, id) {
-                          return React.createElement(ReviewCard.make, {
-                                      photo: review.photo,
-                                      name: review.name,
-                                      role: review.role,
-                                      description: review.description,
-                                      key: Render.toString(id)
-                                    });
-                        }))
-                }));
+                  children: "Pessoas que acreditam no curso",
+                  innerRef: match[0],
+                  animate: {
+                    NAME: "controlled",
+                    VAL: controls
+                  },
+                  initial: "hidden",
+                  variants: variants
+                }), React.createElement("div", {
+                  className: Review_Styles.reviews
+                }, Render.map(Reviews_Content.highlights, (function (review, id) {
+                        return React.createElement(ReviewItem.make, {
+                                    controls: controls,
+                                    id: id,
+                                    photo: review.photo,
+                                    name: review.name,
+                                    role: review.role,
+                                    description: review.description,
+                                    key: Render.toString(id)
+                                  });
+                      }))));
 }
 
 var make = Reviews;
 
+exports.variants = variants;
 exports.make = make;
 /* Title Not a pure module */
