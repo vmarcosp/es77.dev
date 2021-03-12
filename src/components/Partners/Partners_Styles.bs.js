@@ -51,7 +51,8 @@ var partner = CssJs.style([
                   NAME: "num",
                   VAL: 700
                 }),
-            CssJs.fontSize(CssJs.rem(2.4))
+            CssJs.fontSize(CssJs.rem(2.4)),
+            CssJs.color(CssJs.transparent)
           ]),
       CssJs.selector("svg", [CssJs.width(CssJs.rem(9.6))]),
       CssJs.selector("path", [CssJs.transition(400, undefined, undefined, "fill")])

@@ -47,6 +47,7 @@ let partner = style(.[
       fontFamily(Theme.fontFamily->#custom),
       fontWeight(700->#num),
       fontSize(2.4->rem),
+      color(transparent),
     ],
   ),
   selector("svg", [width(9.6->rem)]),
