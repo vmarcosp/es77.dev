@@ -31,14 +31,23 @@ var variants = {
 
 function Reviews(Props) {
   var match = ReactIntersectionObserver.useInView();
-  var inView = match[1];
+  var isHighlightsView = match[1];
+  var match$1 = ReactIntersectionObserver.useInView();
+  var isStudentsView = match$1[1];
   var controls = FramerMotion.useAnimation();
+  var studentsControls = FramerMotion.useAnimation();
   React.useEffect((function () {
-          if (inView) {
+          if (isHighlightsView) {
             controls.start("visible");
           }
           
-        }), [inView]);
+        }), [isHighlightsView]);
+  React.useEffect((function () {
+          if (isStudentsView) {
+            studentsControls.start("visible");
+          }
+          
+        }), [isStudentsView]);
   return React.createElement("div", {
               className: Review_Styles.wrapper
             }, React.createElement(Title.make, {
@@ -60,6 +69,22 @@ function Reviews(Props) {
                                     name: review.name,
                                     role: review.role,
                                     description: review.description,
+                                    key: Render.toString(id)
+                                  });
+                      }))), React.createElement("h2", {
+                  ref: match$1[0],
+                  className: Review_Styles.subtitle
+                }, Render.str("Alunos da primeira versão do curso")), React.createElement("div", {
+                  className: Review_Styles.reviews
+                }, Render.map(Reviews_Content.studentReviews, (function (review, id) {
+                        return React.createElement(ReviewItem.make, {
+                                    controls: studentsControls,
+                                    id: id,
+                                    photo: review.photo,
+                                    name: review.name,
+                                    role: review.role,
+                                    description: review.description,
+                                    isStudentReview: true,
                                     key: Render.toString(id)
                                   });
                       }))));

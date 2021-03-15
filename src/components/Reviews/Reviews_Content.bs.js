@@ -3,10 +3,11 @@
 
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
+var Render = require("../../lib/Render.bs.js");
 
 function Reviews_Content$TextWrapper(Props) {
   var children = Props.children;
-  return React.createElement(React.Fragment, undefined, "\u00a0 \u00a0 \u00a0 \u00a0", children);
+  return React.createElement(React.Fragment, undefined, Render.str("\u00a0 \u00a0 \u00a0 \u00a0"), children);
 }
 
 var TextWrapper = {
@@ -56,6 +57,42 @@ var highlights = [
   }
 ];
 
+var studentReviews = [
+  {
+    name: "João Miguel",
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: React.createElement(Reviews_Content$TextWrapper, {
+          children: null
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+  },
+  {
+    name: "João Miguel",
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: React.createElement(Reviews_Content$TextWrapper, {
+          children: null
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+  },
+  {
+    name: "João Miguel",
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: React.createElement(Reviews_Content$TextWrapper, {
+          children: null
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+  },
+  {
+    name: "João Miguel",
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: React.createElement(Reviews_Content$TextWrapper, {
+          children: null
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+  }
+];
+
 exports.TextWrapper = TextWrapper;
 exports.highlights = highlights;
+exports.studentReviews = studentReviews;
 /* highlights Not a pure module */

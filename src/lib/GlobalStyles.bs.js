@@ -18,10 +18,13 @@ function addStyles(param) {
       ]);
   return CssJs.$$global("*", [
               CssJs.boxSizing("borderBox"),
-              CssJs.selection([CssJs.background(CssJs.rgba(116, 58, 240, {
+              CssJs.selection([
+                    CssJs.color(Theme.Colors.purple),
+                    CssJs.background(CssJs.rgba(116, 58, 240, {
                               NAME: "percent",
-                              VAL: 55.0
-                            }))])
+                              VAL: 10.0
+                            }))
+                  ])
             ]);
 }
 

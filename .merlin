@@ -31,6 +31,8 @@ S src/components/AboutUs
 B lib/bs/src/components/AboutUs
 S src/components/Logo
 B lib/bs/src/components/Logo
+S src/components/FAQ
+B lib/bs/src/components/FAQ
 S src/components/Header
 B lib/bs/src/components/Header
 S src/components/Hero

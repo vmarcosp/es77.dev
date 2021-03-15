@@ -12,12 +12,14 @@ var wrapper = CssJs.style([
       CssJs.padding2(CssJs.rem(12.4), CssJs.zero)
     ]);
 
-var _photo = CssJs.style([
-      CssJs.width(CssJs.rem(7.2)),
-      CssJs.height(CssJs.rem(7.2)),
-      CssJs.borderRadius(CssJs.pct(50.0)),
-      CssJs.marginRight(CssJs.rem(2.4))
-    ]);
+function _photo(isStudentReview) {
+  return CssJs.style([
+              CssJs.width(isStudentReview ? CssJs.rem(6.0) : CssJs.rem(7.2)),
+              CssJs.height(isStudentReview ? CssJs.rem(6.0) : CssJs.rem(7.2)),
+              CssJs.borderRadius(CssJs.pct(50.0)),
+              CssJs.marginRight(CssJs.rem(2.4))
+            ]);
+}
 
 var _name = CssJs.style([
       CssJs.color(Theme.Colors.white),
@@ -30,7 +32,7 @@ var _name = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.marginBottom(CssJs.rem(0.0))
+      CssJs.margin(CssJs.zero)
     ]);
 
 var _role = CssJs.style([
@@ -53,47 +55,52 @@ var header = CssJs.style([
       CssJs.alignItems(CssJs.center)
     ]);
 
-var _description = CssJs.style([
-      CssJs.fontSize(CssJs.rem(2.0)),
-      CssJs.fontWeight({
-            NAME: "num",
-            VAL: 600
-          }),
-      CssJs.position(CssJs.relative),
-      CssJs.marginTop(CssJs.rem(3.2)),
-      CssJs.color(CssJs.hex("A6A6A6")),
-      CssJs.selector("span", [
-            CssJs.unsafe("background", "linear-gradient(to right, " + Theme.ColorsRaw.purple + ", " + Theme.ColorsRaw.purple + " 50%, transparent 50%)"),
-            CssJs.transition(200, undefined, undefined, "background-position"),
-            CssJs.backgroundSize({
-                  NAME: "size",
-                  VAL: [
-                    CssJs.pct(200.0),
-                    CssJs.pct(100.0)
-                  ]
-                }),
-            CssJs.backgroundPosition({
-                  NAME: "percent",
-                  VAL: 100.0
-                }),
-            CssJs.transitions([
-                  Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
-                  Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
-                ])
-          ]),
-      CssJs.before([
-            CssJs.contentRule({
-                  NAME: "url",
-                  VAL: "assets/quotes.svg"
-                }),
-            CssJs.position(CssJs.absolute),
-            CssJs.top(CssJs.px(-3)),
-            CssJs.left(CssJs.zero),
-            CssJs.width(CssJs.rem(2.0)),
-            CssJs.height(CssJs.rem(2.0)),
-            CssJs.whiteSpace("pre")
-          ])
-    ]);
+function _description(isStudentReview) {
+  return CssJs.style([
+              CssJs.fontSize(isStudentReview ? CssJs.rem(1.8) : CssJs.rem(2.0)),
+              CssJs.fontWeight(isStudentReview ? ({
+                        NAME: "num",
+                        VAL: 500
+                      }) : ({
+                        NAME: "num",
+                        VAL: 600
+                      })),
+              CssJs.position(CssJs.relative),
+              CssJs.marginTop(CssJs.rem(3.2)),
+              CssJs.color(CssJs.hex("A6A6A6")),
+              CssJs.selector("span", [
+                    CssJs.unsafe("background", "linear-gradient(to right, " + Theme.ColorsRaw.purple + ", " + Theme.ColorsRaw.purple + " 50%, transparent 50%)"),
+                    CssJs.transition(200, undefined, undefined, "background-position"),
+                    CssJs.backgroundSize({
+                          NAME: "size",
+                          VAL: [
+                            CssJs.pct(200.0),
+                            CssJs.pct(100.0)
+                          ]
+                        }),
+                    CssJs.backgroundPosition({
+                          NAME: "percent",
+                          VAL: 100.0
+                        }),
+                    CssJs.transitions([
+                          Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
+                          Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
+                        ])
+                  ]),
+              CssJs.before([
+                    CssJs.contentRule({
+                          NAME: "url",
+                          VAL: "assets/quotes.svg"
+                        }),
+                    CssJs.position(CssJs.absolute),
+                    CssJs.top(CssJs.px(-3)),
+                    CssJs.left(CssJs.zero),
+                    CssJs.width(CssJs.rem(2.0)),
+                    CssJs.height(CssJs.rem(2.0)),
+                    CssJs.whiteSpace("pre")
+                  ])
+            ]);
+}
 
 var reviews = CssJs.style([
       CssJs.display("flex"),
@@ -101,24 +108,41 @@ var reviews = CssJs.style([
       CssJs.flex3(1.0, 0.0, CssJs.pct(50.0))
     ]);
 
-var review = CssJs.style([
-      CssJs.borderRadius(CssJs.px(6)),
-      CssJs.display("flex"),
-      CssJs.flexDirection(CssJs.column),
-      CssJs.padding(CssJs.rem(5.2)),
-      CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
-      CssJs.unsafe("cursor", Cursor.lighting),
-      CssJs.hover([
-            CssJs.selector("." + _description, [CssJs.color(Theme.Colors.white)]),
-            CssJs.selector("." + _description + " > span", [
-                  CssJs.unsafe("background-position", "0% 100%"),
-                  CssJs.transitionDuration(400),
-                  CssJs.transitions([
-                        Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
-                        Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
-                      ])
-                ])
-          ])
+function review(isStudentReview) {
+  return CssJs.style([
+              CssJs.borderRadius(CssJs.px(6)),
+              CssJs.display("flex"),
+              CssJs.flexDirection(isStudentReview ? CssJs.columnReverse : CssJs.column),
+              CssJs.padding(CssJs.rem(5.2)),
+              CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
+              CssJs.unsafe("cursor", Cursor.lighting),
+              CssJs.hover([
+                    CssJs.selector("> p", [CssJs.color(Theme.Colors.white)]),
+                    CssJs.selector("> p > span", [
+                          CssJs.unsafe("background-position", "0% 100%"),
+                          CssJs.transitionDuration(400),
+                          CssJs.transitions([
+                                Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
+                                Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
+                              ])
+                        ])
+                  ])
+            ]);
+}
+
+var subtitle = CssJs.style([
+      CssJs.color(Theme.Colors.white),
+      CssJs.fontSize(CssJs.rem(2.4)),
+      CssJs.fontFamily({
+            NAME: "custom",
+            VAL: Theme.fontFamily
+          }),
+      CssJs.fontWeight({
+            NAME: "num",
+            VAL: 700
+          }),
+      CssJs.marginTop(CssJs.rem(11.2)),
+      CssJs.marginLeft(CssJs.rem(3.6))
     ]);
 
 exports.wrapper = wrapper;
@@ -129,4 +153,5 @@ exports.header = header;
 exports._description = _description;
 exports.reviews = reviews;
 exports.review = review;
+exports.subtitle = subtitle;
 /* wrapper Not a pure module */

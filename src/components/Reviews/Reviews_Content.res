@@ -1,3 +1,5 @@
+open Render
+
 type review = {
   name: string,
   role: string,
@@ -7,7 +9,7 @@ type review = {
 
 module TextWrapper = {
   @react.component
-  let make = (~children) => <> {`\u00a0 \u00a0 \u00a0 \u00a0`->React.string} children </>
+  let make = (~children) => <> {`\u00a0 \u00a0 \u00a0 \u00a0`->str} children </>
 }
 
 let highlights = [
@@ -56,6 +58,57 @@ let highlights = [
         {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->React.string}
         <Text.Span> {j` oportunidade de aprender de verdade `} </Text.Span>
         {j`com quem entende do assunto 😄`->React.string}
+      </TextWrapper>
+    },
+  },
+]
+
+let studentReviews = [
+  {
+    name: j`João Miguel`,
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: {
+      <TextWrapper>
+        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
+        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
+        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+      </TextWrapper>
+    },
+  },
+  {
+    name: j`João Miguel`,
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: {
+      <TextWrapper>
+        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
+        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
+        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+      </TextWrapper>
+    },
+  },
+  {
+    name: j`João Miguel`,
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: {
+      <TextWrapper>
+        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
+        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
+        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+      </TextWrapper>
+    },
+  },
+  {
+    name: j`João Miguel`,
+    role: "Developer na Lukin",
+    photo: "assets/reviews/daciuk.png",
+    description: {
+      <TextWrapper>
+        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
+        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
+        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
       </TextWrapper>
     },
   },

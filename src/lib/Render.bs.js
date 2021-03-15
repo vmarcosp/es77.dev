@@ -14,6 +14,11 @@ function map(items, fn) {
               }));
 }
 
+function str(prim) {
+  return prim;
+}
+
 exports.toString = toString;
 exports.map = map;
+exports.str = str;
 /* No side effect */

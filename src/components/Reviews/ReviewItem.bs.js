@@ -30,10 +30,13 @@ function ReviewItem(Props) {
   var name = Props.name;
   var role = Props.role;
   var description = Props.description;
+  var isStudentReviewOpt = Props.isStudentReview;
+  var isStudentReview = isStudentReviewOpt !== undefined ? isStudentReviewOpt : false;
+  var index = id;
   return React.createElement(Motion.Div.make, {
-              className: Review_Styles.review,
+              className: Review_Styles.review(isStudentReview),
               initial: "hidden",
-              variants: variants(id * 0.6),
+              variants: variants(index * 0.6),
               animate: {
                 NAME: "controlled",
                 VAL: controls
@@ -42,9 +45,9 @@ function ReviewItem(Props) {
             }, React.createElement("div", {
                   className: Review_Styles.header
                 }, React.createElement(Motion.Img.make, {
-                      className: Review_Styles._photo,
+                      className: Review_Styles._photo(isStudentReview),
                       initial: "hidden",
-                      variants: variants(0.4),
+                      variants: variants(index * 0.4),
                       animate: {
                         NAME: "controlled",
                         VAL: controls
@@ -53,7 +56,7 @@ function ReviewItem(Props) {
                     }), React.createElement("div", undefined, React.createElement(Motion.H2.make, {
                           className: Review_Styles._name,
                           initial: "hidden",
-                          variants: variants(0.5),
+                          variants: variants(index * 0.5),
                           animate: {
                             NAME: "controlled",
                             VAL: controls
@@ -62,7 +65,7 @@ function ReviewItem(Props) {
                         }), React.createElement(Motion.P.make, {
                           className: Review_Styles._role,
                           initial: "hidden",
-                          variants: variants(0.6),
+                          variants: variants(index * 0.6),
                           animate: {
                             NAME: "controlled",
                             VAL: controls
@@ -70,13 +73,13 @@ function ReviewItem(Props) {
                           children: role
                         }))), React.createElement($$Text.P.make, {
                   children: description,
-                  className: Review_Styles._description,
+                  className: Review_Styles._description(isStudentReview),
                   animate: {
                     NAME: "controlled",
                     VAL: controls
                   },
                   initial: "hidden",
-                  variants: variants(0.8)
+                  variants: variants(index * 0.7)
                 }));
 }
 

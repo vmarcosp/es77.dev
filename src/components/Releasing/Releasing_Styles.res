@@ -40,9 +40,16 @@ let form = style(.[
       fontFamily(Theme.fontFamily->#custom),
       outlineStyle(none),
       fontSize(1.6->rem),
+      fontWeight(600->#num),
       borderBottomLeftRadius(6->px),
       borderTopLeftRadius(6->px),
       placeholder([color("7D7D7D"->hex)]),
+      transition(~duration=300, "box-shadow"),
+      focus([
+        //
+        transition(~duration=300, "box-shadow"),
+        unsafe("box-shadow", `inset 0 0 0 2px ${Theme.ColorsRaw.purple}`),
+      ]),
     ],
   ),
   selector(

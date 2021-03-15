@@ -43,9 +43,18 @@ var form = CssJs.style([
                 }),
             CssJs.outlineStyle(CssJs.none),
             CssJs.fontSize(CssJs.rem(1.6)),
+            CssJs.fontWeight({
+                  NAME: "num",
+                  VAL: 600
+                }),
             CssJs.borderBottomLeftRadius(CssJs.px(6)),
             CssJs.borderTopLeftRadius(CssJs.px(6)),
-            CssJs.placeholder([CssJs.color(CssJs.hex("7D7D7D"))])
+            CssJs.placeholder([CssJs.color(CssJs.hex("7D7D7D"))]),
+            CssJs.transition(300, undefined, undefined, "box-shadow"),
+            CssJs.focus([
+                  CssJs.transition(300, undefined, undefined, "box-shadow"),
+                  CssJs.unsafe("box-shadow", "inset 0 0 0 2px " + Theme.ColorsRaw.purple)
+                ])
           ]),
       CssJs.selector("> button", [
             CssJs.cursor(CssJs.pointer),

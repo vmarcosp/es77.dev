@@ -8,6 +8,7 @@ let default = () => {
     <Releasing />
     <Reviews />
     <Partners />
+    <FAQ />
     <br />
     <br />
     <br />
