@@ -59,34 +59,49 @@ function Partners(Props) {
                 }), React.createElement("div", {
                   ref: match$1[0],
                   className: Partners_Styles.partners
-                }, React.createElement(Motion.Div.make, {
-                      className: Partners_Styles.partner,
-                      initial: "hidden",
-                      variants: variants(0.4),
-                      animate: {
-                        NAME: "controlled",
-                        VAL: partnerControls
-                      },
-                      children: null
-                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co.")), React.createElement(Motion.Div.make, {
-                      className: Partners_Styles.partner,
-                      initial: "hidden",
-                      variants: variants(0.6),
-                      animate: {
-                        NAME: "controlled",
-                        VAL: partnerControls
-                      },
-                      children: null
-                    }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR")), React.createElement(Motion.Div.make, {
-                      className: Partners_Styles.partner,
-                      initial: "hidden",
-                      variants: variants(0.8),
-                      animate: {
-                        NAME: "controlled",
-                        VAL: partnerControls
-                      },
-                      children: null
-                    }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co."))));
+                }, React.createElement("a", {
+                      className: Partners_Styles.link,
+                      href: "https://brainn.co",
+                      rel: "noopeneer noreferrer",
+                      target: "_blank"
+                    }, React.createElement(Motion.Div.make, {
+                          className: Partners_Styles.partner,
+                          initial: "hidden",
+                          variants: variants(0.4),
+                          animate: {
+                            NAME: "controlled",
+                            VAL: partnerControls
+                          },
+                          children: null
+                        }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co."))), React.createElement("a", {
+                      className: Partners_Styles.link,
+                      href: "https://twitter.com/reasonmlbrasil",
+                      rel: "noopeneer noreferrer",
+                      target: "_blank"
+                    }, React.createElement(Motion.Div.make, {
+                          className: Partners_Styles.partner,
+                          initial: "hidden",
+                          variants: variants(0.6),
+                          animate: {
+                            NAME: "controlled",
+                            VAL: partnerControls
+                          },
+                          children: null
+                        }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR"))), React.createElement("a", {
+                      className: Partners_Styles.link,
+                      href: "https://astrocoders.com",
+                      rel: "noopeneer noreferrer",
+                      target: "_blank"
+                    }, React.createElement(Motion.Div.make, {
+                          className: Partners_Styles.partner,
+                          initial: "hidden",
+                          variants: variants(0.8),
+                          animate: {
+                            NAME: "controlled",
+                            VAL: partnerControls
+                          },
+                          children: null
+                        }, React.createElement(Partners_Logo.Astrocoders.make, {}), React.createElement("p", undefined, "Astrocoders")))));
 }
 
 var Logos;

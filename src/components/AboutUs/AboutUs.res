@@ -15,6 +15,9 @@ let titleVariants = {
   }
 }
 
+let makeTelegramUrl = username =>
+  `https://t.me/${username}?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20curso%20ES2077`
+
 @react.component
 let make = () => {
   let (innerRef, inView) = IntersectionObserver.useInView()
@@ -36,13 +39,19 @@ let make = () => {
       </Title>
       <div className=cardsContainer>
         <Card
+          github="https://github.com/vmarcosp"
+          twitter="https://github.com/vmaarcosp"
+          telegram={makeTelegramUrl("vmarcosp")}
           initialX={-40}
           photo="assets/marcos.jpeg"
           name="Marcos Oliveira"
           role="Developer na brainn.co"
-          description=j`Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.`
+          description=j`CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`
         />
         <Card
+          github="https://github.com/fakenickels"
+          twitter="https://github.com/fakenickels"
+          telegram={makeTelegramUrl("fakenickels")}
           initialX={40}
           photo="assets/gabriel.jpeg"
           name="Gabriel Rubens"

@@ -1,4 +1,5 @@
 open Releasing_Styles
+module Content = Releasing_Content
 
 let variants = delay => {
   open FramerMotion
@@ -33,9 +34,7 @@ let make = () => {
         {j`Pré lançamento`}
       </Title>
       <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
-        {j`Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. No momento, estamos desenvolvendo os 2 primeiros módulos e o lançamento oficial deverá ocorrer no dia `->React.string}
-        <Text.Span> "30/04/2020" </Text.Span>
-        {j`. Caso você não queira perder o lançamento, nós podemos lhe comunicar via e-mail com antecedência.`->React.string}
+        {Content.releasingText}
       </Text.P>
       <Motion.Div
         animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=form>

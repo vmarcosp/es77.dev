@@ -6,11 +6,6 @@ var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Text_Styles = require("./Text_Styles.bs.js");
 
-function $$Text(Props) {
-  var children = Props.children;
-  return React.createElement(React.Fragment, undefined, children);
-}
-
 function Text$Span(Props) {
   var children = Props.children;
   var className = Props.className;
@@ -54,10 +49,7 @@ var P = {
 
 var Styles;
 
-var make = $$Text;
-
 exports.Styles = Styles;
-exports.make = make;
 exports.Span = Span;
 exports.P = P;
 /* react Not a pure module */

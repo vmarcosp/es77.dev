@@ -2,7 +2,6 @@ open CssJs
 
 let wrapper = style(.[
   maxWidth(Theme.Constants.maxWidth),
-  // border(1->px, solid, red),
   margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
   padding2(~v=12.4->rem, ~h=zero),
   display(#flex),
@@ -22,12 +21,7 @@ let wrapper = style(.[
   before([]),
 ])
 
-let triangle = style(.[
-  //
-  position(absolute),
-  zIndex(Theme.ZIndex.base - 1),
-  left(zero),
-])
+let triangle = style(.[position(absolute), zIndex(Theme.ZIndex.base - 1), left(zero)])
 
 let card = style(.[
   background(Theme.Colors.shape02),
@@ -68,4 +62,19 @@ let subtitle = style(.[
   fontSize(1.6->rem),
   fontFamily(Theme.fontFamily->#custom),
   margin(zero),
+])
+
+let iconsWrapper = style(.[display(#flex), marginTop(1.6->rem)])
+
+let icon = style(.[
+  width(2.4->rem),
+  display(block),
+  selector(":not(:last-child)", [marginRight(2.0->rem)]),
+  selector("svg > path", [transition(~duration=300, "fill")]),
+  hover([
+    selector(
+      "svg > path",
+      [transition(~duration=300, "fill"), unsafe("fill", Theme.ColorsRaw.purple)],
+    ),
+  ]),
 ])

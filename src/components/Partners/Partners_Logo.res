@@ -28,3 +28,10 @@ module ReasonBR = {
     </svg>
   }
 }
+
+module Astrocoders = {
+  @react.component
+  let make = () => {
+    <img src="assets/astrocoders.png" />
+  }
+}

@@ -27,6 +27,10 @@ var titleVariants = {
   visible: titleVariants_visible
 };
 
+function makeTelegramUrl(username) {
+  return "https://t.me/" + username + "?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20curso%20ES2077";
+}
+
 function AboutUs(Props) {
   var match = ReactIntersectionObserver.useInView();
   var inView = match[1];
@@ -55,15 +59,21 @@ function AboutUs(Props) {
                       className: AboutUs_Styles.cardsContainer
                     }, React.createElement(AboutUs_Card.make, {
                           name: "Marcos Oliveira",
-                          description: "Eu como instrutor, prezo sempre pela didática acima de tudo. Existem muitos cursos onde a qualidade de áudio/imagem/edição são o grande foco, mas o ensino nem tanto. Com o Vedovelli posso dizer que é tudo muito bem feito, em todos os aspectos.",
+                          description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
                           role: "Developer na brainn.co",
                           photo: "assets/marcos.jpeg",
+                          github: "https://github.com/vmarcosp",
+                          telegram: "https://t.me/" + "vmarcosp" + "?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20curso%20ES2077",
+                          twitter: "https://github.com/vmaarcosp",
                           initialX: -40
                         }), React.createElement(AboutUs_Card.make, {
                           name: "Gabriel Rubens",
                           description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
                           role: "CTO na Astrocoders",
                           photo: "assets/gabriel.jpeg",
+                          github: "https://github.com/fakenickels",
+                          telegram: "https://t.me/" + "fakenickels" + "?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20curso%20ES2077",
+                          twitter: "https://github.com/fakenickels",
                           initialX: 40
                         }))));
 }
@@ -74,5 +84,6 @@ var make = AboutUs;
 
 exports.Card = Card;
 exports.titleVariants = titleVariants;
+exports.makeTelegramUrl = makeTelegramUrl;
 exports.make = make;
 /* Title Not a pure module */

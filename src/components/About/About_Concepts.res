@@ -1,4 +1,6 @@
 open About_Styles
+module Content = About_Content
+
 let toFloat = Js.Int.toFloat
 
 let concepts = [
@@ -40,13 +42,7 @@ let make = () => {
   <div ref=containerRef className=conceptsWrapper>
     <Motion.P
       initial=#hidden animate=#controlled(controls) variants={variants(1)} className=conceptsText>
-      <Text> {j`Você irá aprender de forma `} </Text>
-      <Text.Span> {j`prática`} </Text.Span>
-      <Text> " e" </Text>
-      <Text.Span> " descomplicada" </Text.Span>
-      <Text>
-        {j`, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.`}
-      </Text>
+      {Content.descriptionText}
     </Motion.P>
     <ul className=topicsList>
       {concepts->Render.map((text, index) =>

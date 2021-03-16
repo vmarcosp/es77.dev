@@ -1,7 +1,6 @@
 open CssJs
 
 let wrapper = style(.[
-  //
   maxWidth(Theme.Constants.maxWidth),
   margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
   padding2(~v=12.4->rem, ~h=zero),
@@ -11,8 +10,13 @@ let wrapper = style(.[
   flexDirection(column),
 ])
 
-let partner = style(.[
+let link = style(.[
   //
+  cursor(pointer),
+  textDecoration(none),
+])
+
+let partner = style(.[
   padding(11.8->rem),
   display(#flex),
   justifyContent(#center),
@@ -23,17 +27,11 @@ let partner = style(.[
   position(relative),
   marginRight(3.2->rem),
   hover([
-    background("201F1F"->hex),
+    background("0f0f0f"->hex),
     transition(~duration=400, "background"),
     selector("path", [unsafe("fill", "#ffffff"), transition(~duration=400, "fill")]),
-    selector(
-      "p",
-      [
-        //
-        transition(~duration=400, "color"),
-        color(Theme.Colors.white),
-      ],
-    ),
+    selector("p", [transition(~duration=400, "color"), color(Theme.Colors.white)]),
+    selector("img", [transitionDuration(400), unsafe("filter", "brightness(5.5)")]),
   ]),
   selector(
     "p",
@@ -50,12 +48,9 @@ let partner = style(.[
       color(transparent),
     ],
   ),
-  selector("svg", [width(9.6->rem)]),
+  selector("svg, img", [width(9.6->rem)]),
+  selector("img", [transitionDuration(400), unsafe("filter", "contrast(0.5%)")]),
   selector("path", [transition(~duration=400, "fill")]),
 ])
 
-let partners = style(.[
-  //
-  display(#flex),
-  marginTop(5.2->rem),
-])
+let partners = style(.[display(#flex), marginTop(5.2->rem)])

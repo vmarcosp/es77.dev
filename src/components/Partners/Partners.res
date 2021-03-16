@@ -33,27 +33,37 @@ let make = () => {
       "Nossos parceiros"
     </Title>
     <div className=partners ref=partnersRef>
-      <Motion.Div
-        initial=#hidden
-        animate=#controlled(partnerControls)
-        variants={variants(0.4)}
-        className=partner>
-        <Logos.Brainn /> <p> {`Brainn Co.`->React.string} </p>
-      </Motion.Div>
-      <Motion.Div
-        initial=#hidden
-        animate=#controlled(partnerControls)
-        variants={variants(0.6)}
-        className=partner>
-        <Logos.ReasonBR /> <p> {`ReasonBR`->React.string} </p>
-      </Motion.Div>
-      <Motion.Div
-        initial=#hidden
-        animate=#controlled(partnerControls)
-        variants={variants(0.8)}
-        className=partner>
-        <Logos.Brainn /> <p> {`Brainn Co.`->React.string} </p>
-      </Motion.Div>
+      <a className=link href="https://brainn.co" target="_blank" rel="noopeneer noreferrer">
+        <Motion.Div
+          initial=#hidden
+          animate=#controlled(partnerControls)
+          variants={variants(0.4)}
+          className=partner>
+          <Logos.Brainn /> <p> {`Brainn Co.`->React.string} </p>
+        </Motion.Div>
+      </a>
+      <a
+        className=link
+        href="https://twitter.com/reasonmlbrasil"
+        target="_blank"
+        rel="noopeneer noreferrer">
+        <Motion.Div
+          initial=#hidden
+          animate=#controlled(partnerControls)
+          variants={variants(0.6)}
+          className=partner>
+          <Logos.ReasonBR /> <p> {`ReasonBR`->React.string} </p>
+        </Motion.Div>
+      </a>
+      <a className=link href="https://astrocoders.com" target="_blank" rel="noopeneer noreferrer">
+        <Motion.Div
+          initial=#hidden
+          animate=#controlled(partnerControls)
+          variants={variants(0.8)}
+          className=partner>
+          <Logos.Astrocoders /> <p> {`Astrocoders`->React.string} </p>
+        </Motion.Div>
+      </a>
     </div>
   </div>
 }

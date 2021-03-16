@@ -1,5 +1,7 @@
 open Hero_Styles
 
+module Content = Hero_Content
+
 module Symbol = {
   @react.component @module("./Animated")
   external make: unit => React.element = "Symbol"
@@ -23,10 +25,7 @@ let make = () => {
     <div className=symbolWrapper> <Symbol /> </div>
     <Motion.H1
       initial=#hidden animate=#controlled(controls) variants={variants(1.75)} className=text>
-      <Text> "Aprenda uma linguagem" </Text>
-      <Text.Span> " funcional " </Text.Span>
-      <Text> "e focada em " </Text>
-      <Text.Span> "React" </Text.Span>
+      {Content.heroText}
     </Motion.H1>
     <Motion.A
       initial=#hidden

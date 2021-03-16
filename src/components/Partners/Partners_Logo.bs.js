@@ -39,6 +39,17 @@ var ReasonBR = {
   make: Partners_Logo$ReasonBR
 };
 
+function Partners_Logo$Astrocoders(Props) {
+  return React.createElement("img", {
+              src: "assets/astrocoders.png"
+            });
+}
+
+var Astrocoders = {
+  make: Partners_Logo$Astrocoders
+};
+
 exports.Brainn = Brainn;
 exports.ReasonBR = ReasonBR;
+exports.Astrocoders = Astrocoders;
 /* react Not a pure module */

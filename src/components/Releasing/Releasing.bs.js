@@ -7,6 +7,7 @@ var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var FramerMotion = require("framer-motion");
 var Releasing_Styles = require("./Releasing_Styles.bs.js");
+var Releasing_Content = require("./Releasing_Content.bs.js");
 var ReactIntersectionObserver = require("react-intersection-observer");
 
 function variants(delay) {
@@ -57,7 +58,7 @@ function Releasing(Props) {
                         variants: variants(0.4),
                         icon: "lighting"
                       }), React.createElement($$Text.P.make, {
-                        children: null,
+                        children: Releasing_Content.releasingText,
                         className: Releasing_Styles.text,
                         animate: {
                           NAME: "controlled",
@@ -65,9 +66,7 @@ function Releasing(Props) {
                         },
                         initial: "hidden",
                         variants: variants(0.2)
-                      }, "Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. No momento, estamos desenvolvendo os 2 primeiros módulos e o lançamento oficial deverá ocorrer no dia ", React.createElement($$Text.Span.make, {
-                            children: "30/04/2020"
-                          }), ". Caso você não queira perder o lançamento, nós podemos lhe comunicar via e-mail com antecedência."), React.createElement(Motion.Div.make, {
+                      }), React.createElement(Motion.Div.make, {
                         className: Releasing_Styles.form,
                         initial: "hidden",
                         variants: variants(0.2),
@@ -82,8 +81,11 @@ function Releasing(Props) {
             });
 }
 
+var Content;
+
 var make = Releasing;
 
+exports.Content = Content;
 exports.variants = variants;
 exports.make = make;
 /* Text Not a pure module */

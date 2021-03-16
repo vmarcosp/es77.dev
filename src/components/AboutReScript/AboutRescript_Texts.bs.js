@@ -4,6 +4,7 @@
 var $$Text = require("../Text/Text.bs.js");
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
+var Render = require("../../lib/Render.bs.js");
 var FramerMotion = require("framer-motion");
 var ReactIntersectionObserver = require("react-intersection-observer");
 
@@ -49,19 +50,15 @@ function AboutRescript_Texts(Props) {
                   animate: animate,
                   initial: "hidden",
                   variants: variants(3.0)
-                }, React.createElement($$Text.make, {
-                      children: "ReScript"
-                    }), React.createElement($$Text.Span.make, {
+                }, Render.str("ReScript"), React.createElement($$Text.Span.make, {
                       children: " (anteriormente ReasonML) "
-                    }), React.createElement($$Text.make, {
-                      children: "é uma linguagem focada em React \n          e no ecossistema JavaScropt. Criada dentro do Facebook, a linguagem tem \n          como objetivo trazer uma síntaxe amigável aos desenvolvedores(as) JavaScript, \n          com um poderoso sistema de tipos e diversas features de programação funcional."
-                    })), React.createElement($$Text.P.make, {
-                  children: "Por compartilhar do mesmo criador do React, ReScript possui \n        diversas features pensadas do zero para integração com o mesmo, \n        contando inclusive com um ótimo suporte a JSX nativo no seu compilador.",
+                    }), Render.str("é uma linguagem focada em React \n        e no ecossistema JavaScropt. Criada dentro do Facebook, a linguagem tem \n        como objetivo trazer uma síntaxe amigável aos desenvolvedores(as) JavaScript, \n        com um poderoso sistema de tipos e diversas features de programação funcional.")), React.createElement($$Text.P.make, {
+                  children: Render.str("Por compartilhar do mesmo criador do React, ReScript possui \n        diversas features pensadas do zero para integração com o mesmo, \n        contando inclusive com um ótimo suporte a JSX nativo no seu compilador."),
                   animate: animate,
                   initial: "hidden",
                   variants: variants(6.0)
                 }), React.createElement($$Text.P.make, {
-                  children: "\n        Além disso, a linguagem foi pensada desde o início em interoperar com \n        códigos e bibliotecas escritas em JavaScript. O que significa, que \n        qualquer biblioteca JavaScript, pode ser utilizada com ReScript. \n      ",
+                  children: Render.str("\n        Além disso, a linguagem foi pensada desde o início em interoperar com \n        códigos e bibliotecas escritas em JavaScript. O que significa, que \n        qualquer biblioteca JavaScript, pode ser utilizada com ReScript. \n      "),
                   animate: animate,
                   initial: "hidden",
                   variants: variants(9.0)

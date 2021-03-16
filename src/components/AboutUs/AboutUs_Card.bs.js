@@ -4,6 +4,7 @@
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var AboutUs_Icons = require("./AboutUs_Icons.bs.js");
 var FramerMotion = require("framer-motion");
 var AboutUs_Styles = require("./AboutUs_Styles.bs.js");
 var ReactIntersectionObserver = require("react-intersection-observer");
@@ -30,6 +31,9 @@ function AboutUs_Card(Props) {
   var description = Props.description;
   var role = Props.role;
   var src = Props.photo;
+  var github = Props.github;
+  var telegram = Props.telegram;
+  var twitter = Props.twitter;
   var initialX = Props.initialX;
   var match = ReactIntersectionObserver.useInView();
   var inView = match[1];
@@ -58,13 +62,27 @@ function AboutUs_Card(Props) {
                   className: AboutUs_Styles.title
                 }, name), React.createElement("p", {
                   className: AboutUs_Styles.subtitle
-                }, role), React.createElement($$Text.P.make, {
+                }, role), React.createElement("div", {
+                  className: AboutUs_Styles.iconsWrapper
+                }, React.createElement("a", {
+                      className: AboutUs_Styles.icon,
+                      href: github
+                    }, React.createElement(AboutUs_Icons.Github.make, {})), React.createElement("a", {
+                      className: AboutUs_Styles.icon,
+                      href: telegram
+                    }, React.createElement(AboutUs_Icons.Telegram.make, {})), React.createElement("a", {
+                      className: AboutUs_Styles.icon,
+                      href: twitter
+                    }, React.createElement(AboutUs_Icons.Twitter.make, {}))), React.createElement($$Text.P.make, {
                   children: description
                 }));
 }
 
+var Icons;
+
 var make = AboutUs_Card;
 
+exports.Icons = Icons;
 exports.variants = variants;
 exports.make = make;
 /* Text Not a pure module */

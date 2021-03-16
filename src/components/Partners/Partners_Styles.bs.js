@@ -14,6 +14,11 @@ var wrapper = CssJs.style([
       CssJs.flexDirection(CssJs.column)
     ]);
 
+var link = CssJs.style([
+      CssJs.cursor(CssJs.pointer),
+      CssJs.textDecoration(CssJs.none)
+    ]);
+
 var partner = CssJs.style([
       CssJs.padding(CssJs.rem(11.8)),
       CssJs.display("flex"),
@@ -25,7 +30,7 @@ var partner = CssJs.style([
       CssJs.position(CssJs.relative),
       CssJs.marginRight(CssJs.rem(3.2)),
       CssJs.hover([
-            CssJs.background(CssJs.hex("201F1F")),
+            CssJs.background(CssJs.hex("0f0f0f")),
             CssJs.transition(400, undefined, undefined, "background"),
             CssJs.selector("path", [
                   CssJs.unsafe("fill", "#ffffff"),
@@ -34,6 +39,10 @@ var partner = CssJs.style([
             CssJs.selector("p", [
                   CssJs.transition(400, undefined, undefined, "color"),
                   CssJs.color(Theme.Colors.white)
+                ]),
+            CssJs.selector("img", [
+                  CssJs.transitionDuration(400),
+                  CssJs.unsafe("filter", "brightness(5.5)")
                 ])
           ]),
       CssJs.selector("p", [
@@ -54,7 +63,11 @@ var partner = CssJs.style([
             CssJs.fontSize(CssJs.rem(2.4)),
             CssJs.color(CssJs.transparent)
           ]),
-      CssJs.selector("svg", [CssJs.width(CssJs.rem(9.6))]),
+      CssJs.selector("svg, img", [CssJs.width(CssJs.rem(9.6))]),
+      CssJs.selector("img", [
+            CssJs.transitionDuration(400),
+            CssJs.unsafe("filter", "contrast(0.5%)")
+          ]),
       CssJs.selector("path", [CssJs.transition(400, undefined, undefined, "fill")])
     ]);
 
@@ -64,6 +77,7 @@ var partners = CssJs.style([
     ]);
 
 exports.wrapper = wrapper;
+exports.link = link;
 exports.partner = partner;
 exports.partners = partners;
 /* wrapper Not a pure module */

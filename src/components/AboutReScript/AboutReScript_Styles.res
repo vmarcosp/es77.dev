@@ -79,7 +79,6 @@ let button = style(.[
 ])
 
 let playgroundLink = style(.[
-  //
   position(absolute),
   right(3.2->rem),
   bottom(2.8->rem),

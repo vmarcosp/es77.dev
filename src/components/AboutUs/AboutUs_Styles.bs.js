@@ -87,6 +87,22 @@ var subtitle = CssJs.style([
       CssJs.margin(CssJs.zero)
     ]);
 
+var iconsWrapper = CssJs.style([
+      CssJs.display("flex"),
+      CssJs.marginTop(CssJs.rem(1.6))
+    ]);
+
+var icon = CssJs.style([
+      CssJs.width(CssJs.rem(2.4)),
+      CssJs.display(CssJs.block),
+      CssJs.selector(":not(:last-child)", [CssJs.marginRight(CssJs.rem(2.0))]),
+      CssJs.selector("svg > path", [CssJs.transition(300, undefined, undefined, "fill")]),
+      CssJs.hover([CssJs.selector("svg > path", [
+                  CssJs.transition(300, undefined, undefined, "fill"),
+                  CssJs.unsafe("fill", Theme.ColorsRaw.purple)
+                ])])
+    ]);
+
 exports.wrapper = wrapper;
 exports.triangle = triangle;
 exports.card = card;
@@ -94,4 +110,6 @@ exports.photo = photo;
 exports.cardsContainer = cardsContainer;
 exports.title = title;
 exports.subtitle = subtitle;
+exports.iconsWrapper = iconsWrapper;
+exports.icon = icon;
 /* wrapper Not a pure module */
