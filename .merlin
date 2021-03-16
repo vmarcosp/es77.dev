@@ -25,6 +25,8 @@ S src/components/About
 B lib/bs/src/components/About
 S src/components/Menu
 B lib/bs/src/components/Menu
+S src/components/Footer
+B lib/bs/src/components/Footer
 S src/components/Reviews
 B lib/bs/src/components/Reviews
 S src/components/AboutUs

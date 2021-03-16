@@ -9,10 +9,6 @@ let default = () => {
     <Reviews />
     <Partners />
     <FAQ />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <Footer />
   </Layout>
 }
