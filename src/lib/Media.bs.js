@@ -82,11 +82,20 @@ function xl(param) {
 
 var partial_arg$5 = {
   TAG: /* Min */1,
-  _0: 1600
+  _0: 1400
 };
 
 function xxl(param) {
   return CssJs.media(ofString(partial_arg$5), param);
+}
+
+var partial_arg$6 = {
+  TAG: /* Min */1,
+  _0: 1600
+};
+
+function xxxl(param) {
+  return CssJs.media(ofString(partial_arg$6), param);
 }
 
 exports.ofString = ofString;
@@ -99,4 +108,5 @@ exports.md = md;
 exports.lg = lg;
 exports.xl = xl;
 exports.xxl = xxl;
+exports.xxxl = xxxl;
 /* CssJs Not a pure module */

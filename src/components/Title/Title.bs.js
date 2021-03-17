@@ -2,6 +2,7 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
@@ -19,16 +20,24 @@ function title(icon) {
               CssJs.position(CssJs.relative),
               CssJs.paddingLeft(CssJs.rem(4.8)),
               CssJs.marginBottom(CssJs.rem(3.2)),
+              Media.xs([CssJs.fontSize(CssJs.rem(2.2))]),
               CssJs.after([
                     CssJs.contentRule({
                           NAME: "url",
                           VAL: iconUrl
                         }),
-                    CssJs.width(CssJs.rem(3.2)),
-                    CssJs.height(CssJs.rem(3.2)),
                     CssJs.position(CssJs.absolute),
                     CssJs.left(CssJs.zero),
-                    CssJs.top(CssJs.px(4))
+                    Media.xs([
+                          CssJs.top(CssJs.px(2)),
+                          CssJs.width(CssJs.rem(2.4)),
+                          CssJs.height(CssJs.rem(2.4))
+                        ]),
+                    Media.sm([
+                          CssJs.top(CssJs.px(4)),
+                          CssJs.width(CssJs.rem(3.2)),
+                          CssJs.height(CssJs.rem(3.2))
+                        ])
                   ])
             ]);
 }

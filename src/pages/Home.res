@@ -1,3 +1,7 @@
+let desktopContainer = {
+  open CssJs
+  style(.[display(#none), Media.xl([display(block)])])
+}
 let default = () => {
   <Layout>
     <Header />
@@ -6,9 +10,6 @@ let default = () => {
     <About />
     <AboutUs />
     <Releasing />
-    <Reviews />
-    <Partners />
-    <FAQ />
-    <Footer />
+    <div className=desktopContainer> <Reviews /> <Partners /> <FAQ /> <Footer /> </div>
   </Layout>
 }

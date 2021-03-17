@@ -4,8 +4,16 @@ let wrapper = style(.[
   display(#flex),
   alignItems(#center),
   justifyContent(#spaceBetween),
-  padding2(~v=4.5->rem, ~h=4.5->rem),
-  Media.xl([margin2(~v=zero, ~h=#auto), maxWidth(Theme.Constants.maxWidth)]),
+  Media.xs([
+    padding2(~v=4.5->rem, ~h=3.2->rem),
+    margin2(~v=zero, ~h=#auto),
+    maxWidth(Theme.Constants.maxWidth),
+  ]),
+  Media.sm([
+    padding2(~v=4.5->rem, ~h=3.2->rem),
+    margin2(~v=zero, ~h=#auto),
+    maxWidth(Theme.Constants.maxWidth),
+  ]),
 ])
 
 let text = style(.[

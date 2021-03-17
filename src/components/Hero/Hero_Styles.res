@@ -7,24 +7,37 @@ let wrapper = style(.[
   flexDirection(column),
   alignItems(center),
   justifyContent(center),
-  paddingBottom(12.4->rem),
-  margin4(~top=7.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+  Media.xs([
+    margin4(~top=5.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=3.2->rem),
+  ]),
+  Media.sm([
+    margin4(~top=5.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=3.2->rem),
+  ]),
+  Media.sm([
+    margin4(~top=7.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    paddingBottom(12.4->rem),
+  ]),
 ])
 
-let symbolWrapper = style(.[width(35.0->rem)])
+let symbolWrapper = style(.[Media.xs([width(28.0->rem)]), Media.sm([width(35.0->rem)])])
 
 let text = style(.[
   color(Theme.Colors.white),
   fontFamily(Theme.fontFamily->#custom),
-  fontSize(6.0->rem),
   textAlign(#center),
-  maxWidth(1000->px),
   position(relative),
   top(-100->px),
   selector(
     "> span",
     [background(Theme.Colors.gradient)]->Array.concat(Theme.Constants.clipBackground),
   ),
+  Media.xs([fontSize(3.2->rem)]),
+  Media.sm([fontSize(3.8->rem)]),
+  Media.md([maxWidth(60.0->rem), fontSize(4.2->rem)]),
+  Media.lg([maxWidth(75.2->rem), fontSize(5.2->rem)]),
+  Media.xl([fontSize(5.8->rem), maxWidth(900->px)]),
 ])
 
 let arrowAnimation = keyframes(.[
@@ -45,8 +58,9 @@ let button = style(.
     fontWeight(600->#num),
     position(relative),
     cursor(pointer),
-    top(-50->px),
     textDecoration(none),
+    Media.xs([top(-20->px)]),
+    Media.lg([position(absolute), bottom(5.6->rem)]),
     after([
       contentRule("assets/arrow-down.svg"->#url),
       position(absolute),

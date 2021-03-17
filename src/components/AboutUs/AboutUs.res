@@ -45,7 +45,7 @@ let make = () => {
           initialX={-40}
           photo="assets/marcos.jpeg"
           name="Marcos Oliveira"
-          role="Developer na brainn.co"
+          role="Developer na Brainn Co."
           description=j`CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`
         />
         <Card

@@ -13,13 +13,28 @@ let title = (~icon) => {
     position(relative),
     paddingLeft(4.8->rem),
     marginBottom(3.2->rem),
+    Media.xs([
+      //
+      fontSize(2.2->rem),
+    ]),
     after([
       contentRule(iconUrl->#url),
-      width(3.2->rem),
-      height(3.2->rem),
       position(absolute),
       left(zero),
-      top(4->px),
+      Media.xs([
+        //
+
+        top(2->px),
+        width(2.4->rem),
+        height(2.4->rem),
+      ]),
+      Media.sm([
+        //
+
+        top(4->px),
+        width(3.2->rem),
+        height(3.2->rem),
+      ]),
     ]),
   ])
 }

@@ -2,12 +2,10 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
 var wrapper = CssJs.style([
-      CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-      CssJs.padding2(CssJs.rem(12.4), CssJs.zero),
       CssJs.display("flex"),
       CssJs.justifyContent(CssJs.center),
       CssJs.flexDirection(CssJs.column),
@@ -22,10 +20,25 @@ var wrapper = CssJs.style([
             CssJs.height(CssJs.rem(40.2)),
             CssJs.position(CssJs.absolute),
             CssJs.zIndex(Theme.ZIndex.base - 1 | 0),
-            CssJs.right(CssJs.zero),
+            CssJs.right(CssJs.px(32)),
             CssJs.bottom(CssJs.rem(10.0))
           ]),
-      CssJs.before([])
+      Media.xs([
+            CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.sm([
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.lg([
+            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.zero),
+            CssJs.after([CssJs.display("block")])
+          ])
     ]);
 
 var triangle = CssJs.style([
@@ -42,24 +55,47 @@ var card = CssJs.style([
       CssJs.flexDirection(CssJs.column),
       CssJs.alignItems(CssJs.center),
       CssJs.textAlign(CssJs.center),
-      CssJs.padding2(CssJs.rem(5.6), CssJs.rem(5.6)),
-      CssJs.maxWidth(CssJs.rem(40.0)),
       CssJs.borderRadius(Theme.Radius.xs),
-      CssJs.firstChild([CssJs.marginRight(CssJs.rem(3.2))]),
       CssJs.position(CssJs.relative),
-      CssJs.zIndex(Theme.ZIndex.base)
+      CssJs.zIndex(Theme.ZIndex.base),
+      Media.xs([
+            CssJs.width(CssJs.pct(100.0)),
+            CssJs.firstChild([CssJs.marginBottom(CssJs.rem(3.2))]),
+            CssJs.padding(CssJs.rem(3.2))
+          ]),
+      Media.sm([
+            CssJs.width(CssJs.pct(100.0)),
+            CssJs.firstChild([CssJs.marginBottom(CssJs.rem(3.2))]),
+            CssJs.padding2(CssJs.rem(5.6), CssJs.rem(5.6))
+          ]),
+      Media.lg([
+            CssJs.maxWidth(CssJs.rem(40.0)),
+            CssJs.firstChild([
+                  CssJs.marginBottom(CssJs.zero),
+                  CssJs.marginRight(CssJs.rem(3.2))
+                ])
+          ])
     ]);
 
 var photo = CssJs.style([
-      CssJs.width(CssJs.rem(13.5)),
-      CssJs.height(CssJs.rem(13.5)),
+      Media.xs([
+            CssJs.width(CssJs.rem(10.0)),
+            CssJs.height(CssJs.rem(10.0))
+          ]),
+      Media.sm([
+            CssJs.width(CssJs.rem(13.5)),
+            CssJs.height(CssJs.rem(13.5))
+          ]),
       CssJs.borderRadius(CssJs.pct(50.0)),
       CssJs.marginBottom(CssJs.rem(2.4))
     ]);
 
 var cardsContainer = CssJs.style([
       CssJs.display("flex"),
-      CssJs.marginTop(CssJs.rem(5.6))
+      CssJs.marginTop(CssJs.rem(5.6)),
+      CssJs.flexDirection("column"),
+      Media.xs([CssJs.marginTop(CssJs.rem(3.2))]),
+      Media.lg([CssJs.flexDirection("row")])
     ]);
 
 var title = CssJs.style([

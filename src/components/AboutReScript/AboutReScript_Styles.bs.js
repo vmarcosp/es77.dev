@@ -2,26 +2,49 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
 var wrapper = CssJs.style([
-      CssJs.maxWidth(Theme.Constants.maxWidth),
       CssJs.display("flex"),
       CssJs.alignItems("center"),
-      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-      CssJs.padding2(CssJs.rem(12.4), CssJs.zero)
+      Media.xs([
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2)),
+            CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)
+          ]),
+      Media.sm([
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6)),
+            CssJs.flexDirection("columnReverse")
+          ]),
+      Media.xl([
+            CssJs.flexDirection("row"),
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.padding2(CssJs.zero, CssJs.rem(5.6))
+          ]),
+      Media.xxl([CssJs.padding2(CssJs.zero, CssJs.zero)])
     ]);
 
 var snippetWrapper = CssJs.style([
-      CssJs.minWidth(CssJs.rem(62.0)),
       CssJs.position(CssJs.relative),
-      CssJs.left(CssJs.rem(-8.0)),
+      Media.xs([CssJs.display("none")]),
+      Media.sm([
+            CssJs.display("block"),
+            CssJs.marginTop(CssJs.rem(4.2)),
+            CssJs.minWidth(CssJs.pct(100.0))
+          ]),
+      Media.xl([
+            CssJs.minWidth(CssJs.rem(62.0)),
+            CssJs.left(CssJs.rem(-5.6))
+          ]),
       CssJs.selector("pre", [
+            Media.xl([CssJs.minWidth(CssJs.rem(62.0))]),
             CssJs.important(CssJs.margin(CssJs.zero)),
             CssJs.background(Theme.Colors.darkGradient),
             CssJs.borderRadius(Theme.Radius.xs),
+            CssJs.fontSize(CssJs.rem(1.8)),
             CssJs.important(CssJs.padding4(CssJs.rem(1.8), CssJs.rem(3.2), CssJs.zero, CssJs.rem(3.2))),
-            CssJs.minWidth(CssJs.rem(62.0)),
             CssJs.height(CssJs.rem(42.0))
           ]),
       CssJs.selector(".Cursor", [CssJs.display(CssJs.none)])

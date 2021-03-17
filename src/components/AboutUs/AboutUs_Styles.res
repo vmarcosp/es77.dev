@@ -1,9 +1,6 @@
 open CssJs
 
 let wrapper = style(.[
-  maxWidth(Theme.Constants.maxWidth),
-  margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
-  padding2(~v=12.4->rem, ~h=zero),
   display(#flex),
   justifyContent(center),
   flexDirection(column),
@@ -15,10 +12,25 @@ let wrapper = style(.[
     height(40.2->rem),
     position(absolute),
     zIndex(Theme.ZIndex.base - 1),
-    right(zero),
+    right(32->px),
     bottom(10.0->rem),
   ]),
-  before([]),
+  Media.xs([
+    margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=3.2->rem),
+    after([display(#none)]),
+  ]),
+  Media.sm([
+    maxWidth(Theme.Constants.maxWidth),
+    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=4.6->rem),
+    after([display(#none)]),
+  ]),
+  Media.lg([
+    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=zero),
+    after([display(#block)]),
+  ]),
 ])
 
 let triangle = style(.[position(absolute), zIndex(Theme.ZIndex.base - 1), left(zero)])
@@ -31,22 +43,37 @@ let card = style(.[
   flexDirection(column),
   alignItems(center),
   textAlign(center),
-  padding2(~h=5.6->rem, ~v=5.6->rem),
-  maxWidth(40.0->rem),
   borderRadius(Theme.Radius.xs),
-  firstChild([marginRight(3.2->rem)]),
   position(relative),
   zIndex(Theme.ZIndex.base),
+  Media.xs([width(100.0->pct), firstChild([marginBottom(3.2->rem)]), padding(3.2->rem)]),
+  Media.sm([
+    width(100.0->pct),
+    firstChild([marginBottom(3.2->rem)]),
+    padding2(~h=5.6->rem, ~v=5.6->rem),
+  ]),
+  Media.lg([maxWidth(40.0->rem), firstChild([marginBottom(zero), marginRight(3.2->rem)])]),
 ])
 
 let photo = style(.[
-  width(13.5->rem),
-  height(13.5->rem),
+  Media.xs([width(10.0->rem), height(10.0->rem)]),
+  Media.sm([
+    //
+    width(13.5->rem),
+    height(13.5->rem),
+  ]),
   borderRadius(50.0->pct),
   marginBottom(2.4->rem),
 ])
 
-let cardsContainer = style(.[display(#flex), marginTop(5.6->rem)])
+let cardsContainer = style(.[
+  //
+  display(#flex),
+  marginTop(5.6->rem),
+  flexDirection(#column),
+  Media.xs([marginTop(3.2->rem)]),
+  Media.lg([flexDirection(#row)]),
+])
 
 let title = style(.[
   color(Theme.Colors.white),

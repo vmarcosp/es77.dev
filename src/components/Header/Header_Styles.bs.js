@@ -9,8 +9,13 @@ var wrapper = CssJs.style([
       CssJs.display("flex"),
       CssJs.alignItems("center"),
       CssJs.justifyContent("spaceBetween"),
-      CssJs.padding2(CssJs.rem(4.5), CssJs.rem(4.5)),
-      Media.xl([
+      Media.xs([
+            CssJs.padding2(CssJs.rem(4.5), CssJs.rem(3.2)),
+            CssJs.margin2(CssJs.zero, "auto"),
+            CssJs.maxWidth(Theme.Constants.maxWidth)
+          ]),
+      Media.sm([
+            CssJs.padding2(CssJs.rem(4.5), CssJs.rem(3.2)),
             CssJs.margin2(CssJs.zero, "auto"),
             CssJs.maxWidth(Theme.Constants.maxWidth)
           ])

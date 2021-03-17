@@ -2,6 +2,7 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 
@@ -11,11 +12,24 @@ var wrapper = CssJs.style([
       CssJs.flexDirection(CssJs.column),
       CssJs.alignItems(CssJs.center),
       CssJs.justifyContent(CssJs.center),
-      CssJs.paddingBottom(CssJs.rem(12.4)),
-      CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto)
+      Media.xs([
+            CssJs.margin4(CssJs.rem(5.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2))
+          ]),
+      Media.sm([
+            CssJs.margin4(CssJs.rem(5.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2))
+          ]),
+      Media.sm([
+            CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.paddingBottom(CssJs.rem(12.4))
+          ])
     ]);
 
-var symbolWrapper = CssJs.style([CssJs.width(CssJs.rem(35.0))]);
+var symbolWrapper = CssJs.style([
+      Media.xs([CssJs.width(CssJs.rem(28.0))]),
+      Media.sm([CssJs.width(CssJs.rem(35.0))])
+    ]);
 
 var text = CssJs.style([
       CssJs.color(Theme.Colors.white),
@@ -23,12 +37,24 @@ var text = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.fontSize(CssJs.rem(6.0)),
       CssJs.textAlign("center"),
-      CssJs.maxWidth(CssJs.px(1000)),
       CssJs.position(CssJs.relative),
       CssJs.top(CssJs.px(-100)),
-      CssJs.selector("> span", Belt_Array.concat([CssJs.background(Theme.Colors.gradient)], Theme.Constants.clipBackground))
+      CssJs.selector("> span", Belt_Array.concat([CssJs.background(Theme.Colors.gradient)], Theme.Constants.clipBackground)),
+      Media.xs([CssJs.fontSize(CssJs.rem(3.2))]),
+      Media.sm([CssJs.fontSize(CssJs.rem(3.8))]),
+      Media.md([
+            CssJs.maxWidth(CssJs.rem(60.0)),
+            CssJs.fontSize(CssJs.rem(4.2))
+          ]),
+      Media.lg([
+            CssJs.maxWidth(CssJs.rem(75.2)),
+            CssJs.fontSize(CssJs.rem(5.2))
+          ]),
+      Media.xl([
+            CssJs.fontSize(CssJs.rem(5.8)),
+            CssJs.maxWidth(CssJs.px(900))
+          ])
     ]);
 
 var arrowAnimation = CssJs.keyframes([
@@ -63,8 +89,12 @@ var button = CssJs.style(Belt_Array.concat([
               }),
           CssJs.position(CssJs.relative),
           CssJs.cursor(CssJs.pointer),
-          CssJs.top(CssJs.px(-50)),
           CssJs.textDecoration(CssJs.none),
+          Media.xs([CssJs.top(CssJs.px(-20))]),
+          Media.lg([
+                CssJs.position(CssJs.absolute),
+                CssJs.bottom(CssJs.rem(5.6))
+              ]),
           CssJs.after([
                 CssJs.contentRule({
                       NAME: "url",

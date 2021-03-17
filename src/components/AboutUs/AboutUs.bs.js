@@ -60,7 +60,7 @@ function AboutUs(Props) {
                     }, React.createElement(AboutUs_Card.make, {
                           name: "Marcos Oliveira",
                           description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
-                          role: "Developer na brainn.co",
+                          role: "Developer na Brainn Co.",
                           photo: "assets/marcos.jpeg",
                           github: "https://github.com/vmarcosp",
                           telegram: "https://t.me/" + "vmarcosp" + "?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20curso%20ES2077",

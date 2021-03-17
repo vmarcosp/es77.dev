@@ -2,6 +2,7 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
 var paragraph = CssJs.style([
@@ -10,9 +11,10 @@ var paragraph = CssJs.style([
             NAME: "custom",
             VAL: Theme.fontFamily
           }),
-      CssJs.fontSize(CssJs.rem(1.8)),
       CssJs.transition(400, undefined, undefined, "color"),
-      CssJs.hover([CssJs.transition(400, undefined, undefined, "color")])
+      CssJs.hover([CssJs.transition(400, undefined, undefined, "color")]),
+      Media.xs([CssJs.fontSize(CssJs.rem(1.6))]),
+      Media.sm([CssJs.fontSize(CssJs.rem(1.8))])
     ]);
 
 exports.paragraph = paragraph;

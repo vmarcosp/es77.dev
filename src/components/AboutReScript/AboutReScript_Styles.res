@@ -1,25 +1,40 @@
 open CssJs
 
 let wrapper = style(.[
-  maxWidth(Theme.Constants.maxWidth),
   display(#flex),
   alignItems(#center),
-  margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
-  padding2(~v=12.4->rem, ~h=zero),
+  Media.xs([
+    padding2(~v=zero, ~h=3.2->rem),
+    margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto),
+  ]),
+  Media.sm([
+    maxWidth(Theme.Constants.maxWidth),
+    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=4.6->rem),
+    flexDirection(#columnReverse),
+  ]),
+  Media.xl([
+    flexDirection(#row),
+    maxWidth(Theme.Constants.maxWidth),
+    padding2(~v=zero, ~h=5.6->rem),
+  ]),
+  Media.xxl([padding2(~v=zero, ~h=zero)]),
 ])
 
 let snippetWrapper = style(.[
-  minWidth(62.0->rem),
   position(relative),
-  left(-8.0->rem),
+  Media.xs([display(#none)]),
+  Media.sm([display(#block), marginTop(4.2->rem), minWidth(100.0->pct)]),
+  Media.xl([minWidth(62.0->rem), left(-5.6->rem)]),
   selector(
     "pre",
     [
+      Media.xl([minWidth(62.0->rem)]),
       margin(zero)->important,
       background(Theme.Colors.darkGradient),
       borderRadius(Theme.Radius.xs),
+      fontSize(1.8->rem),
       padding4(~top=1.8->rem, ~bottom=zero, ~left=3.2->rem, ~right=3.2->rem)->important,
-      minWidth(62.0->rem),
       height(42.0->rem),
     ],
   ),

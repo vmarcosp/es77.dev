@@ -3,18 +3,23 @@
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Curry = require("bs-platform/lib/js/curry.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var Polished = require("rescript-polished/src/Polished.bs.js");
 
 var wrapper = CssJs.style([
       CssJs.background(Theme.Colors.darkGradient),
       CssJs.padding2(CssJs.rem(7.2), CssJs.zero),
-      CssJs.margin2(CssJs.rem(12.4), CssJs.zero)
+      CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)
     ]);
 
 var content = CssJs.style([
-      CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin2(CssJs.zero, CssJs.auto)
+      Media.xs([CssJs.padding2(CssJs.zero, CssJs.rem(3.2))]),
+      Media.sm([CssJs.padding2(CssJs.zero, CssJs.rem(4.6))]),
+      Media.lg([
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin2(CssJs.zero, CssJs.auto)
+          ])
     ]);
 
 var text = CssJs.style([
@@ -31,8 +36,11 @@ var text = CssJs.style([
 var form = CssJs.style([
       CssJs.display("flex"),
       CssJs.marginTop(CssJs.rem(3.2)),
+      Media.xs([CssJs.flexDirection("column")]),
+      Media.sm([CssJs.maxWidth(CssJs.rem(52.0))]),
       CssJs.selector("> input", [
             CssJs.color(Theme.Colors.white),
+            CssJs.width(CssJs.pct(100.0)),
             CssJs.padding2(CssJs.rem(1.2), CssJs.rem(1.8)),
             CssJs.backgroundColor(CssJs.hex("211C2B")),
             CssJs.borderStyle(CssJs.none),
@@ -54,9 +62,15 @@ var form = CssJs.style([
             CssJs.focus([
                   CssJs.transition(300, undefined, undefined, "box-shadow"),
                   CssJs.unsafe("box-shadow", "inset 0 0 0 2px " + Theme.ColorsRaw.purple)
+                ]),
+            Media.xs([
+                  CssJs.marginBottom(CssJs.rem(1.6)),
+                  CssJs.padding2(CssJs.rem(1.2), CssJs.rem(1.8)),
+                  CssJs.borderRadius(CssJs.px(6))
                 ])
           ]),
       CssJs.selector("> button", [
+            CssJs.textTransform(CssJs.uppercase),
             CssJs.cursor(CssJs.pointer),
             CssJs.color(Theme.Colors.white),
             CssJs.fontFamily({
@@ -65,11 +79,19 @@ var form = CssJs.style([
                 }),
             CssJs.fontSize(CssJs.rem(1.6)),
             CssJs.borderStyle(CssJs.none),
+            CssJs.fontWeight({
+                  NAME: "num",
+                  VAL: 600
+                }),
             CssJs.background(Theme.Colors.purple),
             CssJs.padding2(CssJs.zero, CssJs.rem(3.2)),
+            CssJs.transition(300, undefined, undefined, "background"),
             CssJs.borderBottomRightRadius(CssJs.px(6)),
             CssJs.borderTopRightRadius(CssJs.px(6)),
-            CssJs.transition(300, undefined, undefined, "background"),
+            Media.xs([
+                  CssJs.padding2(CssJs.rem(1.2), CssJs.rem(1.8)),
+                  CssJs.borderRadius(CssJs.px(6))
+                ]),
             CssJs.hover([
                   CssJs.transition(300, undefined, undefined, "background"),
                   CssJs.background(Theme.Colors.toBsHex(Curry._2(Polished.Color.darken, Theme.ColorsRaw.purple, 0.05)))
