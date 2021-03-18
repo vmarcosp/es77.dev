@@ -10,7 +10,10 @@ var Polished = require("rescript-polished/src/Polished.bs.js");
 var wrapper = CssJs.style([
       CssJs.background(Theme.Colors.darkGradient),
       CssJs.padding2(CssJs.rem(7.2), CssJs.zero),
-      CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)
+      Media.xs([CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)]),
+      Media.sm([CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto)]),
+      Media.md([CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.zero, CssJs.auto)]),
+      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
     ]);
 
 var content = CssJs.style([

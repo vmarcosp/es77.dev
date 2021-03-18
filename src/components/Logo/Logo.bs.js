@@ -6,7 +6,8 @@ var Media = require("../../lib/Media.bs.js");
 var React = require("react");
 
 var logo = CssJs.style([
-      CssJs.width(CssJs.rem(28.0)),
+      Media.md([CssJs.width(CssJs.rem(28.0))]),
+      Media.sm([CssJs.width(CssJs.rem(26.0))]),
       Media.xs([CssJs.display("none")])
     ]);
 

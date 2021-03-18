@@ -30,15 +30,13 @@ var wrapper = CssJs.style([
           ]),
       Media.sm([
             CssJs.maxWidth(Theme.Constants.maxWidth),
-            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6)),
             CssJs.after([CssJs.display("none")])
           ]),
-      Media.lg([
-            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-            CssJs.padding2(CssJs.zero, CssJs.zero),
-            CssJs.after([CssJs.display("block")])
-          ])
+      Media.md([CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto)]),
+      Media.lg([CssJs.after([CssJs.display("block")])]),
+      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
     ]);
 
 var triangle = CssJs.style([

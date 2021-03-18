@@ -1,6 +1,6 @@
 let logo = {
   open CssJs
-  style(.[width(28.0->rem), Media.xs([display(#none)])])
+  style(.[Media.md([width(28.0->rem)]), Media.sm([width(26.0->rem)]), Media.xs([display(#none)])])
 }
 
 let logoMinimal = {

@@ -51,7 +51,7 @@ function Reviews(Props) {
   return React.createElement("div", {
               className: Review_Styles.wrapper
             }, React.createElement(Title.make, {
-                  children: "Pessoas que acreditam no curso",
+                  children: "Quem acredita no curso",
                   innerRef: match[0],
                   animate: {
                     NAME: "controlled",
@@ -60,7 +60,7 @@ function Reviews(Props) {
                   initial: "hidden",
                   variants: variants
                 }), React.createElement("div", {
-                  className: Review_Styles.reviews
+                  className: Review_Styles.reviews(false)
                 }, Render.map(Reviews_Content.highlights, (function (review, id) {
                         return React.createElement(ReviewItem.make, {
                                     controls: controls,
@@ -74,8 +74,8 @@ function Reviews(Props) {
                       }))), React.createElement("h2", {
                   ref: match$1[0],
                   className: Review_Styles.subtitle
-                }, Render.str("Alunos da primeira versão do curso")), React.createElement("div", {
-                  className: Review_Styles.reviews
+                }, Render.str("Alunos do curso")), React.createElement("div", {
+                  className: Review_Styles.reviews(true)
                 }, Render.map(Reviews_Content.studentReviews, (function (review, id) {
                         return React.createElement(ReviewItem.make, {
                                     controls: studentsControls,

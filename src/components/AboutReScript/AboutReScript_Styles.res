@@ -9,12 +9,17 @@ let wrapper = style(.[
   ]),
   Media.sm([
     maxWidth(Theme.Constants.maxWidth),
-    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=22.4->rem, ~bottom=zero, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
     flexDirection(#columnReverse),
   ]),
+  Media.md([
+    margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=4.6->rem),
+  ]),
   Media.xl([
     flexDirection(#row),
+    margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto),
     maxWidth(Theme.Constants.maxWidth),
     padding2(~v=zero, ~h=5.6->rem),
   ]),

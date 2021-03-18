@@ -7,15 +7,18 @@ let wrapper = style(.[
     margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto),
   ]),
   Media.sm([
-    maxWidth(Theme.Constants.maxWidth),
-    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=22.4->rem, ~bottom=zero, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
   ]),
   Media.md([
-    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    maxWidth(Theme.Constants.maxWidth),
+    margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
   ]),
-  Media.xl([padding2(~v=zero, ~h=5.6->rem)]),
+  Media.xl([
+    margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto),
+    padding2(~v=zero, ~h=5.6->rem),
+  ]),
   Media.xxl([padding2(~v=zero, ~h=zero)]),
 ])
 

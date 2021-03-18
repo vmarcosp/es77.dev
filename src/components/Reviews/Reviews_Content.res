@@ -19,9 +19,9 @@ let highlights = [
     photo: "assets/reviews/daciuk.png",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->React.string}
+        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->str}
         <Text.Span> {j` oportunidade de aprender de verdade `} </Text.Span>
-        {j`com quem entende do assunto 😄`->React.string}
+        {j`com quem entende do assunto 😄`->str}
       </TextWrapper>
     },
   },
@@ -31,9 +31,9 @@ let highlights = [
     photo: "assets/reviews/guilherme.jpeg",
     description: {
       <TextWrapper>
-        {j`Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o `->React.string}
+        {j`Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o `->str}
         <Text.Span> {j`melhor material de aprendizado disponível no mercado `} </Text.Span>
-        {`🚀`->React.string}
+        {`🚀`->str}
       </TextWrapper>
     },
   },
@@ -43,21 +43,26 @@ let highlights = [
     photo: "assets/reviews/moretti.jpeg",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->React.string}
+        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->str}
         <Text.Span> {j` oportunidade de aprender de verdade `} </Text.Span>
-        {j`com quem entende do assunto 😄`->React.string}
+        {j`com quem entende do assunto 😄`->str}
       </TextWrapper>
     },
   },
   {
     name: "Vitor Mendrone",
-    role: "CTO na Portolab",
+    role: "Head of Engineering na Portolab",
     photo: "assets/reviews/mendrone.jpeg",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->React.string}
-        <Text.Span> {j` oportunidade de aprender de verdade `} </Text.Span>
-        {j`com quem entende do assunto 😄`->React.string}
+        {j`Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em `->str}
+        <Text.Span> {j`ReScript`} </Text.Span>
+        {j` e `->str}
+        <Text.Span> {j`Programação Funcional`} </Text.Span>
+        {j` como um todo é impressionante, muito acima da média e`->str}
+        <Text.Span>
+          {j` caminha de mãos dadas com a boa didática que ele desenvolveu sendo um evangelizador informal da linguagem. `}
+        </Text.Span>
       </TextWrapper>
     },
   },

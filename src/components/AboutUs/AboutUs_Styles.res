@@ -22,15 +22,13 @@ let wrapper = style(.[
   ]),
   Media.sm([
     maxWidth(Theme.Constants.maxWidth),
-    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=22.4->rem, ~bottom=zero, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
     after([display(#none)]),
   ]),
-  Media.lg([
-    margin4(~top=zero, ~bottom=0.0->rem, ~left=auto, ~right=auto),
-    padding2(~v=zero, ~h=zero),
-    after([display(#block)]),
-  ]),
+  Media.md([margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto)]),
+  Media.lg([after([display(#block)])]),
+  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let triangle = style(.[position(absolute), zIndex(Theme.ZIndex.base - 1), left(zero)])

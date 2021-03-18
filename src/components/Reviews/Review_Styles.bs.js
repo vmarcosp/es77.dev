@@ -2,14 +2,28 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var Cursor = require("../../lib/Cursor.bs.js");
 var Css_Js_Core = require("bs-css/src/Css_Js_Core.bs.js");
 
 var wrapper = CssJs.style([
-      CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-      CssJs.padding2(CssJs.rem(12.4), CssJs.zero)
+      Media.xs([
+            CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.sm([
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.md([
+            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
+          ]),
+      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
     ]);
 
 function _photo(isStudentReview) {
@@ -74,7 +88,7 @@ function _description(isStudentReview) {
                     CssJs.backgroundSize({
                           NAME: "size",
                           VAL: [
-                            CssJs.pct(200.0),
+                            CssJs.pct(210.0),
                             CssJs.pct(100.0)
                           ]
                         }),
@@ -102,30 +116,39 @@ function _description(isStudentReview) {
             ]);
 }
 
-var reviews = CssJs.style([
-      CssJs.display("flex"),
-      CssJs.flexWrap("wrap"),
-      CssJs.flex3(1.0, 0.0, CssJs.pct(50.0))
-    ]);
+function reviews(isStudentReview) {
+  return CssJs.style([
+              CssJs.display("flex"),
+              CssJs.flexWrap("wrap"),
+              Media.xs([CssJs.marginTop(isStudentReview ? CssJs.rem(3.2) : CssJs.rem(9.2))]),
+              Media.sm([CssJs.marginTop(isStudentReview ? CssJs.rem(4.6) : CssJs.rem(7.2))])
+            ]);
+}
 
 function review(isStudentReview) {
   return CssJs.style([
               CssJs.borderRadius(CssJs.px(6)),
               CssJs.display("flex"),
               CssJs.flexDirection(isStudentReview ? CssJs.columnReverse : CssJs.column),
-              CssJs.padding(CssJs.rem(5.2)),
-              CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
               CssJs.unsafe("cursor", Cursor.lighting),
               CssJs.hover([
                     CssJs.selector("> p", [CssJs.color(Theme.Colors.white)]),
-                    CssJs.selector("> p > span", [
-                          CssJs.unsafe("background-position", "0% 100%"),
-                          CssJs.transitionDuration(400),
-                          CssJs.transitions([
-                                Css_Js_Core.Transition.shorthand(400, undefined, undefined, "padding"),
-                                Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")
-                              ])
-                        ])
+                    Media.sm([CssJs.selector("> p > span", [
+                                CssJs.unsafe("background-position", "0% 100%"),
+                                CssJs.transitionDuration(400),
+                                CssJs.transitions([Css_Js_Core.Transition.shorthand(400, undefined, undefined, "background-position")])
+                              ])])
+                  ]),
+              Media.xs([
+                    CssJs.marginBottom(CssJs.rem(3.2)),
+                    CssJs.selector("> p", [CssJs.color(Theme.Colors.white)])
+                  ]),
+              Media.sm([CssJs.marginBottom(CssJs.rem(4.6))]),
+              Media.md([
+                    CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
+                    CssJs.marginBottom(CssJs.rem(7.2)),
+                    CssJs.nthChild("odd", [CssJs.paddingRight(CssJs.rem(5.6))]),
+                    CssJs.nthChild("even", [CssJs.paddingLeft(CssJs.rem(5.6))])
                   ])
             ]);
 }
@@ -141,8 +164,7 @@ var subtitle = CssJs.style([
             NAME: "num",
             VAL: 700
           }),
-      CssJs.marginTop(CssJs.rem(11.2)),
-      CssJs.marginLeft(CssJs.rem(3.6))
+      CssJs.marginTop(CssJs.rem(11.2))
     ]);
 
 exports.wrapper = wrapper;

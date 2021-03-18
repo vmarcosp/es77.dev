@@ -35,9 +35,9 @@ let make = () => {
 
   <div className=wrapper>
     <Title animate=#controlled(controls) initial=#hidden variants innerRef=highlightsRef>
-      "Pessoas que acreditam no curso"
+      "Quem acredita no curso"
     </Title>
-    <div className=reviews>
+    <div className={reviews(~isStudentReview=false)}>
       {highlights->map((review, id) =>
         <ReviewItem
           id
@@ -50,8 +50,8 @@ let make = () => {
         />
       )}
     </div>
-    <h2 className=subtitle ref=studentsRef> {`Alunos da primeira versão do curso`->str} </h2>
-    <div className=reviews>
+    <h2 className=subtitle ref=studentsRef> {`Alunos do curso`->str} </h2>
+    <div className={reviews(~isStudentReview=true)}>
       {studentReviews->map((review, id) =>
         <ReviewItem
           id

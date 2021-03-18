@@ -12,15 +12,18 @@ var wrapper = CssJs.style([
             CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)
           ]),
       Media.sm([
-            CssJs.maxWidth(Theme.Constants.maxWidth),
-            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
       Media.md([
-            CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
-      Media.xl([CssJs.padding2(CssJs.zero, CssJs.rem(5.6))]),
+      Media.xl([
+            CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(5.6))
+          ]),
       Media.xxl([CssJs.padding2(CssJs.zero, CssJs.zero)])
     ]);
 

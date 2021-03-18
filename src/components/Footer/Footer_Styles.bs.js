@@ -2,17 +2,25 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
-var wrapper = CssJs.style([CssJs.background(Theme.Colors.darkGradient)]);
+var wrapper = CssJs.style([
+      CssJs.background(Theme.Colors.darkGradient),
+      CssJs.marginTop(CssJs.rem(7.2))
+    ]);
 
 var content = CssJs.style([
       CssJs.maxWidth(Theme.Constants.maxWidth),
       CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.zero, CssJs.auto),
-      CssJs.padding2(CssJs.rem(6.4), CssJs.zero),
       CssJs.display("flex"),
       CssJs.alignItems("center"),
-      CssJs.justifyContent("spaceBetween")
+      CssJs.justifyContent("spaceBetween"),
+      Media.xs([
+            CssJs.flexDirection(CssJs.column),
+            CssJs.padding2(CssJs.rem(5.6), CssJs.rem(3.2))
+          ]),
+      Media.sm([CssJs.padding2(CssJs.rem(5.6), CssJs.rem(3.2))])
     ]);
 
 var madeBy = CssJs.style([
@@ -22,6 +30,7 @@ var madeBy = CssJs.style([
           }),
       CssJs.fontSize(CssJs.rem(1.6)),
       CssJs.color(CssJs.hex("AD9FC6")),
+      Media.xs([CssJs.marginTop(CssJs.rem(4.2))]),
       CssJs.selector("> a", [
             CssJs.fontWeight({
                   NAME: "num",

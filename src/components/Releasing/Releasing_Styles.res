@@ -3,7 +3,10 @@ open CssJs
 let wrapper = style(.[
   background(Theme.Colors.darkGradient),
   padding2(~h=zero, ~v=7.2->rem),
-  margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto),
+  Media.xs([margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
+  Media.sm([margin4(~top=22.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
+  Media.md([margin4(~top=27.2->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
+  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let content = style(.[

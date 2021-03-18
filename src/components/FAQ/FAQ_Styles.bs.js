@@ -2,12 +2,27 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 
 var wrapper = CssJs.style([
-      CssJs.maxWidth(Theme.Constants.maxWidth),
-      CssJs.margin4(CssJs.zero, CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-      CssJs.padding2(CssJs.rem(12.4), CssJs.zero)
+      Media.xs([
+            CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(3.2)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.sm([
+            CssJs.maxWidth(Theme.Constants.maxWidth),
+            CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6)),
+            CssJs.after([CssJs.display("none")])
+          ]),
+      Media.md([
+            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
+          ]),
+      Media.lg([CssJs.after([CssJs.display("block")])]),
+      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
     ]);
 
 var listWrapper = CssJs.style([
@@ -16,9 +31,11 @@ var listWrapper = CssJs.style([
     ]);
 
 var faqWrapper = CssJs.style([
-      CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
-      CssJs.nthChild("odd", [CssJs.paddingRight(CssJs.rem(7.0))]),
-      CssJs.nthChild("even", [CssJs.paddingLeft(CssJs.rem(7.0))]),
+      Media.md([
+            CssJs.flex3(1.0, 0.0, CssJs.pct(50.0)),
+            CssJs.nthChild("odd", [CssJs.paddingRight(CssJs.rem(7.0))]),
+            CssJs.nthChild("even", [CssJs.paddingLeft(CssJs.rem(7.0))])
+          ]),
       CssJs.marginBottom(CssJs.rem(6.4))
     ]);
 

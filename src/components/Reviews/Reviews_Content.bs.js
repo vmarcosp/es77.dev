@@ -21,9 +21,9 @@ var highlights = [
     photo: "assets/reviews/daciuk.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, "Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua", React.createElement($$Text.Span.make, {
+        }, Render.str("Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua"), React.createElement($$Text.Span.make, {
               children: " oportunidade de aprender de verdade "
-            }), "com quem entende do assunto 😄")
+            }), Render.str("com quem entende do assunto 😄"))
   },
   {
     name: "Guilherme Decampo",
@@ -31,9 +31,9 @@ var highlights = [
     photo: "assets/reviews/guilherme.jpeg",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, "Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o ", React.createElement($$Text.Span.make, {
+        }, Render.str("Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o "), React.createElement($$Text.Span.make, {
               children: "melhor material de aprendizado disponível no mercado "
-            }), "🚀")
+            }), Render.str("🚀"))
   },
   {
     name: "Diogo Moretti",
@@ -41,19 +41,23 @@ var highlights = [
     photo: "assets/reviews/moretti.jpeg",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, "Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua", React.createElement($$Text.Span.make, {
+        }, Render.str("Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua"), React.createElement($$Text.Span.make, {
               children: " oportunidade de aprender de verdade "
-            }), "com quem entende do assunto 😄")
+            }), Render.str("com quem entende do assunto 😄"))
   },
   {
     name: "Vitor Mendrone",
-    role: "CTO na Portolab",
+    role: "Head of Engineering na Portolab",
     photo: "assets/reviews/mendrone.jpeg",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, "Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua", React.createElement($$Text.Span.make, {
-              children: " oportunidade de aprender de verdade "
-            }), "com quem entende do assunto 😄")
+        }, Render.str("Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em "), React.createElement($$Text.Span.make, {
+              children: "ReScript"
+            }), Render.str(" e "), React.createElement($$Text.Span.make, {
+              children: "Programação Funcional"
+            }), Render.str(" como um todo é impressionante, muito acima da média e"), React.createElement($$Text.Span.make, {
+              children: " caminha de mãos dadas com a boa didática que ele desenvolveu sendo um evangelizador informal da linguagem. "
+            }))
   }
 ];
 

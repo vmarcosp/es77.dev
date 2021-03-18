@@ -4,8 +4,6 @@
 var FAQ = require("../components/FAQ/FAQ.bs.js");
 var Hero = require("../components/Hero/Hero.bs.js");
 var About = require("../components/About/About.bs.js");
-var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
-var Media = require("../lib/Media.bs.js");
 var React = require("react");
 var Footer = require("../components/Footer/Footer.bs.js");
 var Header = require("../components/Header/Header.bs.js");
@@ -16,21 +14,13 @@ var Partners = require("../components/Partners/Partners.bs.js");
 var Releasing = require("../components/Releasing/Releasing.bs.js");
 var AboutReScript = require("../components/AboutReScript/AboutReScript.bs.js");
 
-var desktopContainer = CssJs.style([
-      CssJs.display("none"),
-      Media.xl([CssJs.display(CssJs.block)])
-    ]);
-
 function $$default(param) {
   return React.createElement(Layout.make, {
               children: null
-            }, React.createElement(Header.make, {}), React.createElement(Hero.make, {}), React.createElement(AboutReScript.make, {}), React.createElement(About.make, {}), React.createElement(AboutUs.make, {}), React.createElement(Releasing.make, {}), React.createElement("div", {
-                  className: desktopContainer
-                }, React.createElement(Reviews.make, {}), React.createElement(Partners.make, {}), React.createElement(FAQ.make, {}), React.createElement(Footer.make, {})));
+            }, React.createElement(Header.make, {}), React.createElement(Hero.make, {}), React.createElement(AboutReScript.make, {}), React.createElement(About.make, {}), React.createElement(AboutUs.make, {}), React.createElement(Releasing.make, {}), React.createElement(Reviews.make, {}), React.createElement(Partners.make, {}), React.createElement(FAQ.make, {}), React.createElement(Footer.make, {}));
 }
 
-exports.desktopContainer = desktopContainer;
 exports.$$default = $$default;
 exports.default = $$default;
 exports.__esModule = true;
-/* desktopContainer Not a pure module */
+/* FAQ Not a pure module */
