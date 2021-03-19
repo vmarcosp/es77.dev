@@ -4,6 +4,7 @@
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
 var Render = require("../../lib/Render.bs.js");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
 function Reviews_Content$TextWrapper(Props) {
   var children = Props.children;
@@ -23,7 +24,8 @@ var highlights = [
           children: null
         }, Render.str("Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua"), React.createElement($$Text.Span.make, {
               children: " oportunidade de aprender de verdade "
-            }), Render.str("com quem entende do assunto 😄"))
+            }), Render.str("com quem entende do assunto 😄")),
+    translatedDescription: undefined
   },
   {
     name: "Guilherme Decampo",
@@ -33,17 +35,27 @@ var highlights = [
           children: null
         }, Render.str("Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o "), React.createElement($$Text.Span.make, {
               children: "melhor material de aprendizado disponível no mercado "
-            }), Render.str("🚀"))
+            }), Render.str("🚀")),
+    translatedDescription: undefined
   },
   {
-    name: "Diogo Moretti",
-    role: "Developer Relations na Brainn Co.",
-    photo: "assets/reviews/moretti.jpeg",
+    name: "Gabriel Nordeborn",
+    role: "Partner na Arizon Consulting",
+    photo: "assets/reviews/zth.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua"), React.createElement($$Text.Span.make, {
-              children: " oportunidade de aprender de verdade "
-            }), Render.str("com quem entende do assunto 😄"))
+        }, Render.str("Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built "), React.createElement($$Text.Span.make, {
+              children: "excellent libraries like ReForm, lenses-ppx and more"
+            }), Render.str(". Having Gabriel by your side on your ReScript journey "), React.createElement($$Text.Span.make, {
+              children: "means you’re in excellent hands!"
+            })),
+    translatedDescription: Caml_option.some(React.createElement(Reviews_Content$TextWrapper, {
+              children: null
+            }, Render.str("Gabriel não tem apenas um nome incrível (😂), ele também é parte integrante da comunidade ReScript, tendo construído "), React.createElement($$Text.Span.make, {
+                  children: "bibliotecas excelentes como ReForm, lenses-ppx e muito mais"
+                }), Render.str(". Ter Gabriel ao seu lado em sua jornada ReScript "), React.createElement($$Text.Span.make, {
+                  children: "significa que você está em excelentes mãos!"
+                })))
   },
   {
     name: "Vitor Mendrone",
@@ -57,7 +69,8 @@ var highlights = [
               children: "Programação Funcional"
             }), Render.str(" como um todo é impressionante, muito acima da média e"), React.createElement($$Text.Span.make, {
               children: " caminha de mãos dadas com a boa didática que ele desenvolveu sendo um evangelizador informal da linguagem. "
-            }))
+            })),
+    translatedDescription: undefined
   }
 ];
 
@@ -68,7 +81,8 @@ var studentReviews = [
     photo: "assets/reviews/daciuk.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+    translatedDescription: undefined
   },
   {
     name: "João Miguel",
@@ -76,7 +90,8 @@ var studentReviews = [
     photo: "assets/reviews/daciuk.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+    translatedDescription: undefined
   },
   {
     name: "João Miguel",
@@ -84,7 +99,8 @@ var studentReviews = [
     photo: "assets/reviews/daciuk.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+    translatedDescription: undefined
   },
   {
     name: "João Miguel",
@@ -92,7 +108,8 @@ var studentReviews = [
     photo: "assets/reviews/daciuk.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!"))
+        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+    translatedDescription: undefined
   }
 ];
 

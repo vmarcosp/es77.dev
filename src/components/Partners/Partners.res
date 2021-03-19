@@ -28,7 +28,7 @@ let make = () => {
     None
   }, (inView, partnersInView))
 
-  <div className=wrapper>
+  <div id="parceiros" className=wrapper>
     <Title innerRef animate=#controlled(titleControls) variants={variants(0.2)} initial=#hidden>
       "Nossos parceiros"
     </Title>

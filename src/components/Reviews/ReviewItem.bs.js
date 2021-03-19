@@ -2,8 +2,11 @@
 'use strict';
 
 var $$Text = require("../Text/Text.bs.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var Render = require("../../lib/Render.bs.js");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Review_Styles = require("./Review_Styles.bs.js");
 
 function variants(delay) {
@@ -30,8 +33,19 @@ function ReviewItem(Props) {
   var name = Props.name;
   var role = Props.role;
   var description = Props.description;
+  var translatedDescription = Props.translatedDescription;
   var isStudentReviewOpt = Props.isStudentReview;
   var isStudentReview = isStudentReviewOpt !== undefined ? isStudentReviewOpt : false;
+  var match = React.useState(function () {
+        return false;
+      });
+  var setShowTranslation = match[1];
+  var showTranslation = match[0];
+  var toggleTranslation = function (param) {
+    return Curry._1(setShowTranslation, (function (param) {
+                  return !showTranslation;
+                }));
+  };
   var index = id;
   return React.createElement(Motion.Div.make, {
               className: Review_Styles.review(isStudentReview),
@@ -71,16 +85,28 @@ function ReviewItem(Props) {
                             VAL: controls
                           },
                           children: role
-                        }))), React.createElement($$Text.P.make, {
-                  children: description,
-                  className: Review_Styles._description(isStudentReview),
-                  animate: {
-                    NAME: "controlled",
-                    VAL: controls
-                  },
-                  initial: "hidden",
-                  variants: variants(index * 0.7)
-                }));
+                        }))), translatedDescription !== undefined ? React.createElement($$Text.P.make, {
+                    children: showTranslation ? Caml_option.valFromOption(translatedDescription) : description,
+                    className: Review_Styles._description(isStudentReview),
+                    animate: {
+                      NAME: "controlled",
+                      VAL: controls
+                    },
+                    initial: "hidden",
+                    variants: variants(index * 0.7)
+                  }) : React.createElement($$Text.P.make, {
+                    children: description,
+                    className: Review_Styles._description(isStudentReview),
+                    animate: {
+                      NAME: "controlled",
+                      VAL: controls
+                    },
+                    initial: "hidden",
+                    variants: variants(index * 0.7)
+                  }), translatedDescription !== undefined ? React.createElement("button", {
+                    className: Review_Styles.translateButton,
+                    onClick: toggleTranslation
+                  }, showTranslation ? Render.str("Ver original") : Render.str("Ver tradução")) : null);
 }
 
 var make = ReviewItem;

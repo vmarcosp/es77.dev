@@ -46,7 +46,8 @@ function Partners(Props) {
         partnersInView
       ]);
   return React.createElement("div", {
-              className: Partners_Styles.wrapper
+              className: Partners_Styles.wrapper,
+              id: "parceiros"
             }, React.createElement(Title.make, {
                   children: "Nossos parceiros",
                   innerRef: match[0],

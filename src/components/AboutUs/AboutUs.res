@@ -33,7 +33,7 @@ let make = () => {
 
   <>
     <img src="assets/triangle-2.svg" className=triangle />
-    <div className=wrapper>
+    <div id="#instrutores" className=wrapper>
       <Title initial=#hidden animate=#controlled(controls) variants=titleVariants innerRef>
         {j`Sobre os instrutores`}
       </Title>

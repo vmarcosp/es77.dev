@@ -5,6 +5,7 @@ type review = {
   role: string,
   photo: string,
   description: React.element,
+  translatedDescription: option<React.element>,
 }
 
 module TextWrapper = {
@@ -24,6 +25,7 @@ let highlights = [
         {j`com quem entende do assunto 😄`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
   {
     name: "Guilherme Decampo",
@@ -36,17 +38,29 @@ let highlights = [
         {`🚀`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
   {
-    name: "Diogo Moretti",
-    role: "Developer Relations na Brainn Co.",
-    photo: "assets/reviews/moretti.jpeg",
+    name: "Gabriel Nordeborn",
+    role: "Partner na Arizon Consulting",
+    photo: "assets/reviews/zth.png",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->str}
-        <Text.Span> {j` oportunidade de aprender de verdade `} </Text.Span>
-        {j`com quem entende do assunto 😄`->str}
+        {j`Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built `->str}
+        <Text.Span> {j`excellent libraries like ReForm, lenses-ppx and more`} </Text.Span>
+        {j`. Having Gabriel by your side on your ReScript journey `->str}
+        <Text.Span> {j`means you’re in excellent hands!`} </Text.Span>
       </TextWrapper>
+    },
+    translatedDescription: {
+      Some(
+        <TextWrapper>
+          {j`Gabriel não tem apenas um nome incrível (😂), ele também é parte integrante da comunidade ReScript, tendo construído `->str}
+          <Text.Span> {j`bibliotecas excelentes como ReForm, lenses-ppx e muito mais`} </Text.Span>
+          {j`. Ter Gabriel ao seu lado em sua jornada ReScript `->str}
+          <Text.Span> {j`significa que você está em excelentes mãos!`} </Text.Span>
+        </TextWrapper>,
+      )
     },
   },
   {
@@ -65,6 +79,7 @@ let highlights = [
         </Text.Span>
       </TextWrapper>
     },
+    translatedDescription: None,
   },
 ]
 
@@ -80,6 +95,7 @@ let studentReviews = [
         {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
   {
     name: j`João Miguel`,
@@ -92,6 +108,7 @@ let studentReviews = [
         {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
   {
     name: j`João Miguel`,
@@ -104,6 +121,7 @@ let studentReviews = [
         {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
   {
     name: j`João Miguel`,
@@ -116,5 +134,6 @@ let studentReviews = [
         {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
       </TextWrapper>
     },
+    translatedDescription: None,
   },
 ]

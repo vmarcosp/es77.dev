@@ -41,7 +41,8 @@ function FAQ(Props) {
           
         }), [inView]);
   return React.createElement("div", {
-              className: FAQ_Styles.wrapper
+              className: FAQ_Styles.wrapper,
+              id: "faq"
             }, React.createElement(Title.make, {
                   children: "FAQ",
                   innerRef: match[0],

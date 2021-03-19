@@ -21,7 +21,7 @@ let make = () => {
     None
   }, [inView])
 
-  <section className=wrapper>
+  <section id="sobre-o-curso" className=wrapper>
     <Title
       innerRef=containerRef initial=#hidden animate=#controlled(controls) variants={variants(0.2)}>
       "Sobre o curso"

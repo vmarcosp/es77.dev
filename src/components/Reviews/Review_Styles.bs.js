@@ -112,7 +112,8 @@ function _description(isStudentReview) {
                     CssJs.width(CssJs.rem(2.0)),
                     CssJs.height(CssJs.rem(2.0)),
                     CssJs.whiteSpace("pre")
-                  ])
+                  ]),
+              Media.xs([CssJs.fontSize(CssJs.rem(1.8))])
             ]);
 }
 
@@ -127,6 +128,7 @@ function reviews(isStudentReview) {
 
 function review(isStudentReview) {
   return CssJs.style([
+              CssJs.position(CssJs.relative),
               CssJs.borderRadius(CssJs.px(6)),
               CssJs.display("flex"),
               CssJs.flexDirection(isStudentReview ? CssJs.columnReverse : CssJs.column),
@@ -140,7 +142,7 @@ function review(isStudentReview) {
                               ])])
                   ]),
               Media.xs([
-                    CssJs.marginBottom(CssJs.rem(3.2)),
+                    CssJs.marginBottom(CssJs.rem(7.2)),
                     CssJs.selector("> p", [CssJs.color(Theme.Colors.white)])
                   ]),
               Media.sm([CssJs.marginBottom(CssJs.rem(4.6))]),
@@ -167,6 +169,35 @@ var subtitle = CssJs.style([
       CssJs.marginTop(CssJs.rem(11.2))
     ]);
 
+var translateButton = CssJs.style([
+      CssJs.outlineStyle(CssJs.none),
+      CssJs.background(CssJs.none),
+      CssJs.borderStyle(CssJs.none),
+      CssJs.padding(CssJs.zero),
+      CssJs.position(CssJs.absolute),
+      CssJs.right(CssJs.rem(1.6)),
+      CssJs.bottom(CssJs.rem(1.6)),
+      CssJs.color(Theme.Colors.pink),
+      CssJs.fontFamily({
+            NAME: "custom",
+            VAL: Theme.fontFamily
+          }),
+      CssJs.fontSize(CssJs.rem(1.4)),
+      CssJs.fontWeight("bold"),
+      CssJs.cursor(CssJs.pointer),
+      CssJs.opacity(0.7),
+      CssJs.transition(300, undefined, undefined, "opacity"),
+      CssJs.textDecoration(CssJs.none),
+      CssJs.hover([
+            CssJs.opacity(1.0),
+            CssJs.transition(300, undefined, undefined, "opacity"),
+            CssJs.after([
+                  CssJs.right(CssJs.px(-4)),
+                  CssJs.transition(300, undefined, undefined, "right")
+                ])
+          ])
+    ]);
+
 exports.wrapper = wrapper;
 exports._photo = _photo;
 exports._name = _name;
@@ -176,4 +207,5 @@ exports._description = _description;
 exports.reviews = reviews;
 exports.review = review;
 exports.subtitle = subtitle;
+exports.translateButton = translateButton;
 /* wrapper Not a pure module */

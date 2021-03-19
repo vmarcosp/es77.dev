@@ -7,40 +7,46 @@ type link = {
 }
 
 let links = [
-  {sectionId: "", label: j`Início`},
   {
-    sectionId: "",
+    sectionId: "#o-que-e-rescript",
     label: j`O que é ReScript?`,
   },
   {
-    sectionId: "",
+    sectionId: "#sobre-o-curso",
     label: "Sobre o curso",
   },
   {
-    sectionId: "",
-    label: "Depoimentos",
+    sectionId: "#instrutores",
+    label: "Instrutores",
   },
   {
-    sectionId: "",
-    label: "Apoiadores",
+    sectionId: "#reviews",
+    label: "Reviews",
   },
   {
-    sectionId: "",
-    label: "FAQ",
+    sectionId: "#parceiros",
+    label: "Parceiros",
+  },
+  {
+    sectionId: "#faq",
+    label: "Perguntas frequentes",
   },
 ]
 
 module Link = {
   @react.component
-  let make = (~label, ~href) => {
-    <li className=S.link> <a href> {label->React.string} </a> </li>
+  let make = (~label, ~href, ~onClick) => {
+    let handleClick = _ => {
+      onClick()
+    }
+    <li className=S.link> <a href onClick={handleClick}> {label->React.string} </a> </li>
   }
 }
 
 @react.component
 let make = () => {
   let (isOpen, setIsOpen) = React.useState(_ => false)
-
+  let onClick = () => setIsOpen(_ => false)
   let toggleMenu = _ => setIsOpen(_ => !isOpen)
   let classes = S.createClasses(~isOpen)
   <>
@@ -49,7 +55,7 @@ let make = () => {
       <div className={classes.menuWrapper}>
         <ul>
           {links->Render.map(({sectionId, label}, id) =>
-            <Link href={sectionId} key={id->Render.toString} label />
+            <Link href={sectionId} key={id->Render.toString} onClick label />
           )}
         </ul>
         <a href="mailto:contato@es77.dev" className={classes.email}>

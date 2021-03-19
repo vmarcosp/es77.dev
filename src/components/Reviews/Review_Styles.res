@@ -78,6 +78,7 @@ let _description = (~isStudentReview) =>
       height(2.0->rem),
       whiteSpace(#pre),
     ]),
+    Media.xs([fontSize(1.8->rem)]),
   ])
 
 let reviews = (~isStudentReview) =>
@@ -90,6 +91,7 @@ let reviews = (~isStudentReview) =>
 
 let review = (~isStudentReview) =>
   style(.[
+    position(relative),
     borderRadius(6->px),
     display(#flex),
     flexDirection(isStudentReview ? columnReverse : column),
@@ -107,7 +109,7 @@ let review = (~isStudentReview) =>
         ),
       ]),
     ]),
-    Media.xs([marginBottom(3.2->rem), selector("> p", [color(Theme.Colors.white)])]),
+    Media.xs([marginBottom(7.2->rem), selector("> p", [color(Theme.Colors.white)])]),
     Media.sm([marginBottom(4.6->rem)]),
     Media.md([
       flex3(~grow=1.0, ~shrink=0.0, ~basis=50.0->pct),
@@ -123,4 +125,28 @@ let subtitle = style(.[
   fontFamily(Theme.fontFamily->#custom),
   fontWeight(700->#num),
   marginTop(11.2->rem),
+])
+
+let translateButton = style(.[
+  //
+  outlineStyle(none),
+  background(none),
+  borderStyle(none),
+  padding(zero),
+  position(absolute),
+  right(1.6->rem),
+  bottom(1.6->rem),
+  color(Theme.Colors.pink),
+  fontFamily(Theme.fontFamily->#custom),
+  fontSize(1.4->rem),
+  fontWeight(#bold),
+  cursor(pointer),
+  opacity(0.7),
+  transition(~duration=300, "opacity"),
+  textDecoration(none),
+  hover([
+    opacity(1.0),
+    transition(~duration=300, "opacity"),
+    after([right(-4->px), transition(~duration=300, "right")]),
+  ]),
 ])

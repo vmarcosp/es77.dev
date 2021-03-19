@@ -2,6 +2,7 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
+var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var Css_Js_Core = require("bs-css/src/Css_Js_Core.bs.js");
 
@@ -23,7 +24,9 @@ function createClasses(isOpen) {
         CssJs.opacity(isOpen ? 1.0 : 0.0),
         CssJs.transitionDuration(400),
         CssJs.display("flex"),
-        CssJs.alignItems("center")
+        CssJs.alignItems("center"),
+        Media.xs([CssJs.padding2(CssJs.zero, CssJs.rem(3.2))]),
+        Media.sm([CssJs.padding2(CssJs.zero, CssJs.rem(4.6))])
       ]);
   var menuWrapper = CssJs.style([
         CssJs.maxWidth(Theme.Constants.maxWidth),
@@ -31,7 +34,20 @@ function createClasses(isOpen) {
         CssJs.margin2(CssJs.zero, CssJs.auto),
         CssJs.display("flex"),
         CssJs.alignItems("flexEnd"),
-        CssJs.justifyContent(CssJs.spaceBetween)
+        CssJs.justifyContent(CssJs.spaceBetween),
+        CssJs.selector("ul", [CssJs.padding(CssJs.zero)]),
+        Media.xs([
+              CssJs.justifyContent(CssJs.center),
+              CssJs.alignItems(CssJs.center),
+              CssJs.flexDirection(CssJs.column),
+              CssJs.selector("ul", [
+                    CssJs.padding(CssJs.zero),
+                    CssJs.display("flex"),
+                    CssJs.flexDirection(CssJs.column),
+                    CssJs.alignItems(CssJs.center),
+                    CssJs.justifyContent(CssJs.center)
+                  ])
+            ])
       ]);
   var email = CssJs.style([
         CssJs.color(Theme.Colors.gray1),
@@ -61,7 +77,9 @@ var link = CssJs.style([
       CssJs.marginBottom(CssJs.rem(4.2)),
       CssJs.position(CssJs.relative),
       CssJs.selector("> a", [
-            CssJs.fontSize(CssJs.rem(3.2)),
+            Media.xs([CssJs.fontSize(CssJs.rem(2.4))]),
+            Media.sm([CssJs.fontSize(CssJs.rem(2.4))]),
+            Media.md([CssJs.fontSize(CssJs.rem(3.2))]),
             CssJs.fontWeight({
                   NAME: "num",
                   VAL: 700

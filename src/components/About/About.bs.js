@@ -37,7 +37,8 @@ function About(Props) {
           
         }), [inView]);
   return React.createElement("section", {
-              className: About_Styles.wrapper
+              className: About_Styles.wrapper,
+              id: "sobre-o-curso"
             }, React.createElement(Title.make, {
                   children: "Sobre o curso",
                   innerRef: match[0],

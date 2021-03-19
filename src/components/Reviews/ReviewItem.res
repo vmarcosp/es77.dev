@@ -1,4 +1,5 @@
 open Review_Styles
+open Render
 
 let variants = delay => {
   open FramerMotion
@@ -9,7 +10,20 @@ let variants = delay => {
 }
 
 @react.component
-let make = (~controls, ~id, ~photo, ~name, ~role, ~description, ~isStudentReview=false) => {
+let make = (
+  ~controls,
+  ~id,
+  ~photo,
+  ~name,
+  ~role,
+  ~description,
+  ~translatedDescription=?,
+  ~isStudentReview=false,
+) => {
+  let (showTranslation, setShowTranslation) = React.useState(_ => false)
+
+  let toggleTranslation = _ => setShowTranslation(_ => !showTranslation)
+
   let index = id->float_of_int
   <Motion.Div
     animate=#controlled(controls)
@@ -41,12 +55,31 @@ let make = (~controls, ~id, ~photo, ~name, ~role, ~description, ~isStudentReview
         </Motion.P>
       </div>
     </div>
-    <Text.P
-      animate=#controlled(controls)
-      initial=#hidden
-      variants={variants(index *. 0.7)}
-      className={_description(~isStudentReview)}>
-      description
-    </Text.P>
+    {switch translatedDescription {
+    | None =>
+      <Text.P
+        animate=#controlled(controls)
+        initial=#hidden
+        variants={variants(index *. 0.7)}
+        className={_description(~isStudentReview)}>
+        description
+      </Text.P>
+
+    | Some(translated) =>
+      <Text.P
+        animate=#controlled(controls)
+        initial=#hidden
+        variants={variants(index *. 0.7)}
+        className={_description(~isStudentReview)}>
+        {showTranslation ? translated : description}
+      </Text.P>
+    }}
+    {switch translatedDescription {
+    | None => React.null
+    | Some(_) =>
+      <button onClick=toggleTranslation className=translateButton>
+        {showTranslation ? j`Ver original`->str : j`Ver tradução`->str}
+      </button>
+    }}
   </Motion.Div>
 }

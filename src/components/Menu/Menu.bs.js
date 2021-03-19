@@ -9,38 +9,43 @@ var Menu_BurgerButton = require("./Menu_BurgerButton.bs.js");
 
 var links = [
   {
-    sectionId: "",
-    label: "Início"
-  },
-  {
-    sectionId: "",
+    sectionId: "#o-que-e-rescript",
     label: "O que é ReScript?"
   },
   {
-    sectionId: "",
+    sectionId: "#sobre-o-curso",
     label: "Sobre o curso"
   },
   {
-    sectionId: "",
-    label: "Depoimentos"
+    sectionId: "#instrutores",
+    label: "Instrutores"
   },
   {
-    sectionId: "",
-    label: "Apoiadores"
+    sectionId: "#reviews",
+    label: "Reviews"
   },
   {
-    sectionId: "",
-    label: "FAQ"
+    sectionId: "#parceiros",
+    label: "Parceiros"
+  },
+  {
+    sectionId: "#faq",
+    label: "Perguntas frequentes"
   }
 ];
 
 function Menu$Link(Props) {
   var label = Props.label;
   var href = Props.href;
+  var onClick = Props.onClick;
+  var handleClick = function (param) {
+    return Curry._1(onClick, undefined);
+  };
   return React.createElement("li", {
               className: Menu_Styles.link
             }, React.createElement("a", {
-                  href: href
+                  href: href,
+                  onClick: handleClick
                 }, label));
 }
 
@@ -54,6 +59,11 @@ function Menu(Props) {
       });
   var setIsOpen = match[1];
   var isOpen = match[0];
+  var onClick = function (param) {
+    return Curry._1(setIsOpen, (function (param) {
+                  return false;
+                }));
+  };
   var toggleMenu = function (param) {
     return Curry._1(setIsOpen, (function (param) {
                   return !isOpen;
@@ -71,6 +81,7 @@ function Menu(Props) {
                                 return React.createElement(Menu$Link, {
                                             label: param.label,
                                             href: param.sectionId,
+                                            onClick: onClick,
                                             key: Render.toString(id)
                                           });
                               }))), React.createElement("a", {

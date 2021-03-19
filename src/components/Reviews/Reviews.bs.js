@@ -5,6 +5,7 @@ var Title = require("../Title/Title.bs.js");
 var React = require("react");
 var Render = require("../../lib/Render.bs.js");
 var ReviewItem = require("./ReviewItem.bs.js");
+var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Review_Styles = require("./Review_Styles.bs.js");
 var FramerMotion = require("framer-motion");
 var Reviews_Content = require("./Reviews_Content.bs.js");
@@ -49,7 +50,8 @@ function Reviews(Props) {
           
         }), [isStudentsView]);
   return React.createElement("div", {
-              className: Review_Styles.wrapper
+              className: Review_Styles.wrapper,
+              id: "reviews"
             }, React.createElement(Title.make, {
                   children: "Quem acredita no curso",
                   innerRef: match[0],
@@ -62,15 +64,19 @@ function Reviews(Props) {
                 }), React.createElement("div", {
                   className: Review_Styles.reviews(false)
                 }, Render.map(Reviews_Content.highlights, (function (review, id) {
-                        return React.createElement(ReviewItem.make, {
-                                    controls: controls,
-                                    id: id,
-                                    photo: review.photo,
-                                    name: review.name,
-                                    role: review.role,
-                                    description: review.description,
-                                    key: Render.toString(id)
-                                  });
+                        var tmp = {
+                          controls: controls,
+                          id: id,
+                          photo: review.photo,
+                          name: review.name,
+                          role: review.role,
+                          description: review.description,
+                          key: Render.toString(id)
+                        };
+                        if (review.translatedDescription !== undefined) {
+                          tmp.translatedDescription = Caml_option.valFromOption(review.translatedDescription);
+                        }
+                        return React.createElement(ReviewItem.make, tmp);
                       }))), React.createElement("h2", {
                   ref: match$1[0],
                   className: Review_Styles.subtitle

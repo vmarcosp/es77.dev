@@ -22,6 +22,8 @@ let createClasses = (~isOpen) => {
     transitionDuration(400),
     display(#flex),
     alignItems(#center),
+    Media.xs([padding2(~v=zero, ~h=3.2->rem)]),
+    Media.sm([padding2(~v=zero, ~h=4.6->rem)]),
   ])
 
   let menuWrapper = style(.[
@@ -31,6 +33,23 @@ let createClasses = (~isOpen) => {
     display(#flex),
     alignItems(#flexEnd),
     justifyContent(spaceBetween),
+    selector("ul", [padding(zero)]),
+    Media.xs([
+      //
+      justifyContent(center),
+      alignItems(center),
+      flexDirection(column),
+      selector(
+        "ul",
+        [
+          padding(zero),
+          display(#flex),
+          flexDirection(column),
+          alignItems(center),
+          justifyContent(center),
+        ],
+      ),
+    ]),
   ])
 
   let email = style(.[
@@ -54,7 +73,9 @@ let link = style(.[
   selector(
     "> a",
     [
-      fontSize(3.2->rem),
+      Media.xs([fontSize(2.4->rem)]),
+      Media.sm([fontSize(2.4->rem)]),
+      Media.md([fontSize(3.2->rem)]),
       fontWeight(700->#num),
       textDecoration(none),
       color(Theme.Colors.white),

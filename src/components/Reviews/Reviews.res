@@ -33,7 +33,7 @@ let make = () => {
     None
   }, [isStudentsView])
 
-  <div className=wrapper>
+  <div id="reviews" className=wrapper>
     <Title animate=#controlled(controls) initial=#hidden variants innerRef=highlightsRef>
       "Quem acredita no curso"
     </Title>
@@ -47,6 +47,7 @@ let make = () => {
           name=review.name
           role=review.role
           description=review.description
+          translatedDescription=?review.translatedDescription
         />
       )}
     </div>
