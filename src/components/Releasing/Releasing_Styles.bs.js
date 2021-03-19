@@ -56,7 +56,7 @@ var form = CssJs.style([
             CssJs.fontSize(CssJs.rem(1.6)),
             CssJs.fontWeight({
                   NAME: "num",
-                  VAL: 600
+                  VAL: 500
                 }),
             CssJs.borderBottomLeftRadius(CssJs.px(6)),
             CssJs.borderTopLeftRadius(CssJs.px(6)),

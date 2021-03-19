@@ -31,7 +31,7 @@ let make = () => {
         variants={variants(0.4)}
         icon=#lighting
         innerRef>
-        {j`Pré lançamento`}
+        {j`Pré-Lançamento`}
       </Title>
       <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
         {Content.releasingText}

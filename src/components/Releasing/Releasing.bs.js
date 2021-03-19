@@ -48,7 +48,7 @@ function Releasing(Props) {
               children: React.createElement("div", {
                     className: Releasing_Styles.content
                   }, React.createElement(Title.make, {
-                        children: "Pré lançamento",
+                        children: "Pré-Lançamento",
                         innerRef: match[0],
                         animate: {
                           NAME: "controlled",

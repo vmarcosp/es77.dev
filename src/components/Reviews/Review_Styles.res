@@ -135,7 +135,6 @@ let translateButton = style(.[
   padding(zero),
   position(absolute),
   right(1.6->rem),
-  bottom(1.6->rem),
   color(Theme.Colors.pink),
   fontFamily(Theme.fontFamily->#custom),
   fontSize(1.4->rem),
@@ -144,6 +143,9 @@ let translateButton = style(.[
   opacity(0.7),
   transition(~duration=300, "opacity"),
   textDecoration(none),
+  Media.xs([bottom(-2.0->rem)]),
+  Media.sm([bottom(-2.0->rem)]),
+  Media.md([bottom(1.6->rem)]),
   hover([
     opacity(1.0),
     transition(~duration=300, "opacity"),

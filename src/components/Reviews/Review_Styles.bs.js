@@ -176,7 +176,6 @@ var translateButton = CssJs.style([
       CssJs.padding(CssJs.zero),
       CssJs.position(CssJs.absolute),
       CssJs.right(CssJs.rem(1.6)),
-      CssJs.bottom(CssJs.rem(1.6)),
       CssJs.color(Theme.Colors.pink),
       CssJs.fontFamily({
             NAME: "custom",
@@ -188,6 +187,9 @@ var translateButton = CssJs.style([
       CssJs.opacity(0.7),
       CssJs.transition(300, undefined, undefined, "opacity"),
       CssJs.textDecoration(CssJs.none),
+      Media.xs([CssJs.bottom(CssJs.rem(-2.0))]),
+      Media.sm([CssJs.bottom(CssJs.rem(-2.0))]),
+      Media.md([CssJs.bottom(CssJs.rem(1.6))]),
       CssJs.hover([
             CssJs.opacity(1.0),
             CssJs.transition(300, undefined, undefined, "opacity"),
