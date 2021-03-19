@@ -17,13 +17,10 @@ var wrapper = CssJs.style([
           ]),
       Media.md([
             CssJs.maxWidth(Theme.Constants.maxWidth),
-            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(23.4), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
-      Media.xl([
-            CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto),
-            CssJs.padding2(CssJs.zero, CssJs.rem(5.6))
-          ]),
+      Media.xl([CssJs.padding2(CssJs.zero, CssJs.rem(5.6))]),
       Media.xxl([CssJs.padding2(CssJs.zero, CssJs.zero)])
     ]);
 

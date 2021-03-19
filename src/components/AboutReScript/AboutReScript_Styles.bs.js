@@ -19,12 +19,11 @@ var wrapper = CssJs.style([
             CssJs.flexDirection("columnReverse")
           ]),
       Media.md([
-            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(23.4), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
       Media.xl([
             CssJs.flexDirection("row"),
-            CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto),
             CssJs.maxWidth(Theme.Constants.maxWidth),
             CssJs.padding2(CssJs.zero, CssJs.rem(5.6))
           ]),

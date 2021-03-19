@@ -13,10 +13,9 @@ let wrapper = style(.[
     after([display(#none)]),
   ]),
   Media.md([
-    margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=23.4->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
   ]),
-  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let _photo = (~isStudentReview) =>
@@ -124,17 +123,16 @@ let subtitle = style(.[
   fontSize(2.4->rem),
   fontFamily(Theme.fontFamily->#custom),
   fontWeight(700->#num),
-  marginTop(11.2->rem),
+  marginTop(7.2->rem),
 ])
 
 let translateButton = style(.[
-  //
   outlineStyle(none),
   background(none),
   borderStyle(none),
   padding(zero),
   position(absolute),
-  right(1.6->rem),
+  left(zero),
   color(Theme.Colors.pink),
   fontFamily(Theme.fontFamily->#custom),
   fontSize(1.4->rem),

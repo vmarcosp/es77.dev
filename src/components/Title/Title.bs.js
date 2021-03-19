@@ -19,7 +19,8 @@ function title(icon) {
               CssJs.fontSize(CssJs.rem(3.2)),
               CssJs.position(CssJs.relative),
               CssJs.paddingLeft(CssJs.rem(4.8)),
-              CssJs.marginBottom(CssJs.rem(3.2)),
+              CssJs.margin(CssJs.zero),
+              CssJs.marginBottom(CssJs.rem(2.4)),
               Media.xs([CssJs.fontSize(CssJs.rem(2.2))]),
               CssJs.after([
                     CssJs.contentRule({

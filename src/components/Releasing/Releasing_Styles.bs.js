@@ -12,8 +12,7 @@ var wrapper = CssJs.style([
       CssJs.padding2(CssJs.rem(7.2), CssJs.zero),
       Media.xs([CssJs.margin4(CssJs.rem(17.2), CssJs.auto, CssJs.zero, CssJs.auto)]),
       Media.sm([CssJs.margin4(CssJs.rem(22.4), CssJs.auto, CssJs.zero, CssJs.auto)]),
-      Media.md([CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.zero, CssJs.auto)]),
-      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
+      Media.md([CssJs.margin4(CssJs.rem(23.4), CssJs.auto, CssJs.zero, CssJs.auto)])
     ]);
 
 var content = CssJs.style([

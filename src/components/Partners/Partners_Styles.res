@@ -18,11 +18,10 @@ let wrapper = style(.[
     after([display(#none)]),
   ]),
   Media.md([
-    margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=23.4->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
   ]),
   Media.lg([after([display(#block)])]),
-  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let link = style(.[cursor(pointer), textDecoration(none)])
@@ -39,7 +38,6 @@ let partner = style(.[
   selector("img", [transitionDuration(400), unsafe("filter", "contrast(0.5%)")]),
   selector("path", [transition(~duration=400, "fill")]),
   hover([
-    Media.lg([background("0f0f0f"->hex)]),
     transition(~duration=400, "background"),
     selector("path", [unsafe("fill", "#ffffff"), transition(~duration=400, "fill")]),
     selector("p", [transition(~duration=400, "color"), color(Theme.Colors.white)]),
@@ -82,7 +80,6 @@ let partner = style(.[
 let partners = style(.[
   width(100.0->pct),
   display(#flex),
-  marginTop(5.2->rem),
   Media.xs([flexDirection(column)]),
   Media.sm([flexDirection(column)]),
   Media.md([flexDirection(row), justifyContent(spaceBetween)]),

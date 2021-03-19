@@ -15,10 +15,7 @@ let wrapper = style(.[
     margin4(~top=5.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=3.2->rem),
   ]),
-  Media.sm([
-    margin4(~top=7.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
-    paddingBottom(12.4->rem),
-  ]),
+  Media.sm([margin4(~top=7.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto)]),
 ])
 
 let symbolWrapper = style(.[Media.xs([width(28.0->rem)]), Media.sm([width(35.0->rem)])])

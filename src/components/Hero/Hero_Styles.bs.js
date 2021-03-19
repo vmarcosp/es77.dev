@@ -20,10 +20,7 @@ var wrapper = CssJs.style([
             CssJs.margin4(CssJs.rem(5.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(3.2))
           ]),
-      Media.sm([
-            CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
-            CssJs.paddingBottom(CssJs.rem(12.4))
-          ])
+      Media.sm([CssJs.margin4(CssJs.rem(7.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto)])
     ]);
 
 var symbolWrapper = CssJs.style([

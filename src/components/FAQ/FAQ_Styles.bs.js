@@ -18,11 +18,10 @@ var wrapper = CssJs.style([
             CssJs.after([CssJs.display("none")])
           ]),
       Media.md([
-            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(23.4), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
-      Media.lg([CssJs.after([CssJs.display("block")])]),
-      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
+      Media.lg([CssJs.after([CssJs.display("block")])])
     ]);
 
 var listWrapper = CssJs.style([

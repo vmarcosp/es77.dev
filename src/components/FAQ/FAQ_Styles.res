@@ -13,11 +13,10 @@ let wrapper = style(.[
     after([display(#none)]),
   ]),
   Media.md([
-    margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
+    margin4(~top=23.4->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=4.6->rem),
   ]),
   Media.lg([after([display(#block)])]),
-  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let listWrapper = style(.[display(#flex), flexWrap(#wrap)])

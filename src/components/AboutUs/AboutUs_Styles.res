@@ -26,9 +26,8 @@ let wrapper = style(.[
     padding2(~v=zero, ~h=4.6->rem),
     after([display(#none)]),
   ]),
-  Media.md([margin4(~top=27.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto)]),
+  Media.md([margin4(~top=23.4->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto)]),
   Media.lg([after([display(#block)])]),
-  Media.xl([margin4(~top=32.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
 let triangle = style(.[position(absolute), zIndex(Theme.ZIndex.base - 1), left(zero)])

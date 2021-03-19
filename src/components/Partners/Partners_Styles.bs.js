@@ -23,11 +23,10 @@ var wrapper = CssJs.style([
             CssJs.after([CssJs.display("none")])
           ]),
       Media.md([
-            CssJs.margin4(CssJs.rem(27.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
+            CssJs.margin4(CssJs.rem(23.4), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(4.6))
           ]),
-      Media.lg([CssJs.after([CssJs.display("block")])]),
-      Media.xl([CssJs.margin4(CssJs.rem(32.4), CssJs.auto, CssJs.zero, CssJs.auto)])
+      Media.lg([CssJs.after([CssJs.display("block")])])
     ]);
 
 var link = CssJs.style([
@@ -50,7 +49,6 @@ var partner = CssJs.style([
           ]),
       CssJs.selector("path", [CssJs.transition(400, undefined, undefined, "fill")]),
       CssJs.hover([
-            Media.lg([CssJs.background(CssJs.hex("0f0f0f"))]),
             CssJs.transition(400, undefined, undefined, "background"),
             CssJs.selector("path", [
                   CssJs.unsafe("fill", "#ffffff"),
@@ -117,7 +115,6 @@ var partner = CssJs.style([
 var partners = CssJs.style([
       CssJs.width(CssJs.pct(100.0)),
       CssJs.display("flex"),
-      CssJs.marginTop(CssJs.rem(5.2)),
       Media.xs([CssJs.flexDirection(CssJs.column)]),
       Media.sm([CssJs.flexDirection(CssJs.column)]),
       Media.md([
