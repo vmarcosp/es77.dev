@@ -63,7 +63,7 @@ let _description = (~isStudentReview) =>
       ],
     ),
     before([
-      contentRule("assets/quotes.svg"->#url),
+      contentRule("assets/quotes.webp"->#url),
       position(absolute),
       top(-3->px),
       left(zero),

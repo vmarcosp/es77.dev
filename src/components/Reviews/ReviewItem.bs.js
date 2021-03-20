@@ -90,7 +90,7 @@ function ReviewItem(Props) {
                             NAME: "controlled",
                             VAL: controls
                           },
-                          children: role
+                          children: Render.str(role)
                         }))), translatedDescription !== undefined ? React.createElement($$Text.P.make, {
                     children: showTranslation ? Caml_option.valFromOption(translatedDescription) : description,
                     className: Review_Styles._description(isStudentReview),

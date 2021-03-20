@@ -51,7 +51,7 @@ let make = (
           initial=#hidden
           variants={variants(index *. 0.6)}
           className=_role>
-          {role->React.string}
+          {role->str}
         </Motion.P>
       </div>
     </div>

@@ -99,7 +99,7 @@ function _description(isStudentReview) {
               CssJs.before([
                     CssJs.contentRule({
                           NAME: "url",
-                          VAL: "assets/quotes.svg"
+                          VAL: "assets/quotes.webp"
                         }),
                     CssJs.position(CssJs.absolute),
                     CssJs.top(CssJs.px(-3)),

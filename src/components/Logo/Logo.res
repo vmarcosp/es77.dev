@@ -1,23 +1,31 @@
 let logo = {
   open CssJs
-  style(.[Media.md([width(28.0->rem)]), Media.sm([width(26.0->rem)]), Media.xs([display(#none)])])
+  style(.[Media.xs([display(#none)])])
 }
 
 let logoMinimal = {
   open CssJs
-  style(.[width(16.2->rem), display(none), Media.xs([display(#block)])])
+  style(.[display(none), Media.xs([display(#block)])])
 }
 
 @react.component
 let make = () => {
   <>
-    <img
-      className={logo} src="assets/white-logo.svg" alt="EcmaScript2077 | Incoming from the future"
-    />
-    <img
-      className={logoMinimal}
-      src="assets/logo-minimal.svg"
-      alt="EcmaScript2077 | Incoming from the future"
-    />
+    <div className=logo>
+      <Next.Image
+        width="260"
+        height="56"
+        src="/assets/white-logo.svg"
+        alt="EcmaScript2077 | Incoming from the future"
+      />
+    </div>
+    <div className=logoMinimal>
+      <Next.Image
+        width="160"
+        height="32"
+        src="/assets/logo-minimal.svg"
+        alt="EcmaScript2077 | Incoming from the future"
+      />
+    </div>
   </>
 }
