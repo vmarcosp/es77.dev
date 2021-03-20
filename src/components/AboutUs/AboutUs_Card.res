@@ -47,6 +47,6 @@ let make = (~name, ~description, ~role, ~photo as src, ~github, ~telegram, ~twit
         <Icons.Twitter />
       </a>
     </div>
-    <Text.P> {description->React.string} </Text.P>
+    <Text.P> {description} </Text.P>
   </Motion.Div>
 }

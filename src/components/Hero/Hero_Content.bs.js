@@ -7,7 +7,7 @@ var Render = require("../../lib/Render.bs.js");
 
 var heroText = React.createElement(React.Fragment, undefined, Render.str("Aprenda uma linguagem"), React.createElement($$Text.Span.make, {
           children: " funcional "
-        }), Render.str("e focada em "), React.createElement($$Text.Span.make, {
+        }), Render.str("focada em "), React.createElement($$Text.Span.make, {
           children: "React"
         }));
 

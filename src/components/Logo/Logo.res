@@ -22,7 +22,7 @@ let make = () => {
     <div className=logoMinimal>
       <Next.Image
         width="160"
-        height="32"
+        height="50"
         src="/assets/logo-minimal.svg"
         alt="EcmaScript2077 | Incoming from the future"
       />

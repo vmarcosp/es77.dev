@@ -31,7 +31,7 @@ var text = CssJs.style([
                   NAME: "num",
                   VAL: 600
                 }),
-            CssJs.color(Theme.Colors.pink)
+            CssJs.color(Theme.Colors.purple)
           ])
     ]);
 
@@ -53,13 +53,9 @@ var form = CssJs.style([
                 }),
             CssJs.outlineStyle(CssJs.none),
             CssJs.fontSize(CssJs.rem(1.6)),
-            CssJs.fontWeight({
-                  NAME: "num",
-                  VAL: 500
-                }),
             CssJs.borderBottomLeftRadius(CssJs.px(6)),
             CssJs.borderTopLeftRadius(CssJs.px(6)),
-            CssJs.placeholder([CssJs.color(CssJs.hex("7D7D7D"))]),
+            CssJs.placeholder([CssJs.color(CssJs.hex("645370"))]),
             CssJs.transition(300, undefined, undefined, "box-shadow"),
             CssJs.focus([
                   CssJs.transition(300, undefined, undefined, "box-shadow"),

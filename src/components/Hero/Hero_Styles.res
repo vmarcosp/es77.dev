@@ -7,6 +7,7 @@ let wrapper = style(.[
   flexDirection(column),
   alignItems(center),
   justifyContent(center),
+  position(relative),
   Media.xs([
     margin4(~top=5.2->rem, ~bottom=0.0->rem, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=3.2->rem),

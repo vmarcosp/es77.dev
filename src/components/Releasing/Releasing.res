@@ -1,4 +1,5 @@
 open Releasing_Styles
+open Render
 module Content = Releasing_Content
 
 let variants = delay => {
@@ -35,6 +36,9 @@ let make = () => {
       </Title>
       <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
         {Content.releasingText}
+      </Text.P>
+      <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
+        <i> {j`Fique tranquilo, nós não enviamos spam!`->str} </i> {j` 😉`->str}
       </Text.P>
       <Motion.Div
         animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=form>

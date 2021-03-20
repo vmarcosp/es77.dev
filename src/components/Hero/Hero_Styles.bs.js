@@ -12,6 +12,7 @@ var wrapper = CssJs.style([
       CssJs.flexDirection(CssJs.column),
       CssJs.alignItems(CssJs.center),
       CssJs.justifyContent(CssJs.center),
+      CssJs.position(CssJs.relative),
       Media.xs([
             CssJs.margin4(CssJs.rem(5.2), CssJs.auto, CssJs.rem(0.0), CssJs.auto),
             CssJs.padding2(CssJs.zero, CssJs.rem(3.2))

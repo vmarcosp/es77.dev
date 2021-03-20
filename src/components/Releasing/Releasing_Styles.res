@@ -16,7 +16,7 @@ let content = style(.[
 
 let text = style(.[
   color("B399C8"->hex),
-  selector("> span", [fontWeight(600->#num), color(Theme.Colors.pink)]),
+  selector("> span", [fontWeight(600->#num), color(Theme.Colors.purple)]),
 ])
 
 let form = style(.[
@@ -36,10 +36,9 @@ let form = style(.[
       fontFamily(Theme.fontFamily->#custom),
       outlineStyle(none),
       fontSize(1.6->rem),
-      fontWeight(500->#num),
       borderBottomLeftRadius(6->px),
       borderTopLeftRadius(6->px),
-      placeholder([color("7D7D7D"->hex)]),
+      placeholder([color("645370"->hex)]),
       transition(~duration=300, "box-shadow"),
       focus([
         transition(~duration=300, "box-shadow"),

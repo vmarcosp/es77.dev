@@ -52,7 +52,7 @@ function AboutRescript_Texts(Props) {
                   variants: variants(3.0)
                 }, Render.str("ReScript"), React.createElement($$Text.Span.make, {
                       children: " (anteriormente ReasonML) "
-                    }), Render.str("é uma linguagem focada em React \n        e no ecossistema JavaScropt. Criada dentro do Facebook, a linguagem tem \n        como objetivo trazer uma síntaxe amigável aos desenvolvedores(as) JavaScript, \n        com um poderoso sistema de tipos e diversas features de programação funcional.")), React.createElement($$Text.P.make, {
+                    }), Render.str("é uma linguagem focada em React e no ecossistema JavaScript. Criada dentro do Facebook, a linguagem tem \n        como objetivo trazer uma síntaxe amigável aos desenvolvedores(as) JavaScript, \n        com um poderoso sistema de tipos e diversas features de programação funcional.")), React.createElement($$Text.P.make, {
                   children: Render.str("Por compartilhar do mesmo criador do React, ReScript possui \n        diversas features pensadas do zero para integração com o mesmo, \n        contando inclusive com um ótimo suporte a JSX nativo no seu compilador."),
                   animate: animate,
                   initial: "hidden",

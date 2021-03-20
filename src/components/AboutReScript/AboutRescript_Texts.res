@@ -35,8 +35,7 @@ let make = () => {
     <Text.P initial=#hidden animate variants={variants(3.0)}>
       {"ReScript"->str}
       <Text.Span> " (anteriormente ReasonML) " </Text.Span>
-      {j`é uma linguagem focada em React 
-        e no ecossistema JavaScropt. Criada dentro do Facebook, a linguagem tem 
+      {j`é uma linguagem focada em React e no ecossistema JavaScript. Criada dentro do Facebook, a linguagem tem 
         como objetivo trazer uma síntaxe amigável aos desenvolvedores(as) JavaScript, 
         com um poderoso sistema de tipos e diversas features de programação funcional.`->str}
     </Text.P>

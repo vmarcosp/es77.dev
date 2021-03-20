@@ -5,6 +5,7 @@ var $$Text = require("../Text/Text.bs.js");
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var Render = require("../../lib/Render.bs.js");
 var FramerMotion = require("framer-motion");
 var Releasing_Styles = require("./Releasing_Styles.bs.js");
 var Releasing_Content = require("./Releasing_Content.bs.js");
@@ -66,7 +67,16 @@ function Releasing(Props) {
                         },
                         initial: "hidden",
                         variants: variants(0.2)
-                      }), React.createElement(Motion.Div.make, {
+                      }), React.createElement($$Text.P.make, {
+                        children: null,
+                        className: Releasing_Styles.text,
+                        animate: {
+                          NAME: "controlled",
+                          VAL: controls
+                        },
+                        initial: "hidden",
+                        variants: variants(0.2)
+                      }, React.createElement("i", undefined, Render.str("Fique tranquilo, nós não enviamos spam!")), Render.str(" 😉")), React.createElement(Motion.Div.make, {
                         className: Releasing_Styles.form,
                         initial: "hidden",
                         variants: variants(0.2),

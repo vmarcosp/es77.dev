@@ -3,6 +3,7 @@
 
 var Title = require("../Title/Title.bs.js");
 var React = require("react");
+var Render = require("../../lib/Render.bs.js");
 var AboutUs_Card = require("./AboutUs_Card.bs.js");
 var FramerMotion = require("framer-motion");
 var AboutUs_Styles = require("./AboutUs_Styles.bs.js");
@@ -61,7 +62,7 @@ function AboutUs(Props) {
                       className: AboutUs_Styles.cardsContainer
                     }, React.createElement(AboutUs_Card.make, {
                           name: "Marcos Oliveira",
-                          description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
+                          description: React.createElement(React.Fragment, undefined, Render.str("Front-End Developer há alguns anos, meio metido a designer e conhecido como o"), React.createElement("i", undefined, Render.str("\"Chatão do ReScript\"")), Render.str(" por onde passa 😂. Sempre envolvido na comunidade JavaScript e ReScript, organizando e criando meetups, eventos, palestras e artigos relacionados a ReScript, JavaScript e programação funcional.")),
                           role: "Developer na Brainn Co.",
                           photo: "/assets/marcos.webp",
                           github: "https://github.com/vmarcosp",
@@ -70,7 +71,7 @@ function AboutUs(Props) {
                           initialX: -40
                         }), React.createElement(AboutUs_Card.make, {
                           name: "Gabriel Rubens",
-                          description: "CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.",
+                          description: Render.str("CTO na Astrocoders, desenvolvedor para toda obra, professor \n            e evangelista de ReScript e Programação Funcional. \n            Já palestra e produz conteúdo sobre Reason e ReScript há mais \n            de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks."),
                           role: "CTO na Astrocoders",
                           photo: "/assets/gabriel.webp",
                           github: "https://github.com/fakenickels",

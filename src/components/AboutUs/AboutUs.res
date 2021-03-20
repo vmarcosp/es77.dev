@@ -1,4 +1,5 @@
 open AboutUs_Styles
+open Render
 
 module Card = AboutUs_Card
 
@@ -46,7 +47,11 @@ let make = () => {
           photo="/assets/marcos.webp"
           name="Marcos Oliveira"
           role="Developer na Brainn Co."
-          description=j`CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`
+          description={<>
+            {j`Front-End Developer há alguns anos, meio metido a designer e conhecido como o`->str}
+            <i> {j`"Chatão do ReScript"`->str} </i>
+            {j` por onde passa 😂. Sempre envolvido na comunidade JavaScript e ReScript, organizando e criando meetups, eventos, palestras e artigos relacionados a ReScript, JavaScript e programação funcional.`->str}
+          </>}
         />
         <Card
           github="https://github.com/fakenickels"
@@ -56,7 +61,10 @@ let make = () => {
           photo="/assets/gabriel.webp"
           name="Gabriel Rubens"
           role="CTO na Astrocoders"
-          description=j`CTO na Astrocoders, desenvolvedor para toda obra, professor e evangelista de ReScript e Programação Funcional. Já palestra e produz conteúdo sobre Reason e ReScript há mais de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`
+          description={j`CTO na Astrocoders, desenvolvedor para toda obra, professor 
+            e evangelista de ReScript e Programação Funcional. 
+            Já palestra e produz conteúdo sobre Reason e ReScript há mais 
+            de 3 anos e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`->str}
         />
       </div>
     </div>

@@ -26,7 +26,7 @@ function Logo(Props) {
                 }, React.createElement($$Image, {
                       src: "/assets/logo-minimal.svg",
                       width: "160",
-                      height: "32",
+                      height: "50",
                       alt: "EcmaScript2077 | Incoming from the future"
                     })));
 }
