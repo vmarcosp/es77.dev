@@ -19,7 +19,7 @@ var highlights = [
   {
     name: "Fernando Daciuk",
     role: "Tech Lead na Brainn Co.",
-    photo: "assets/reviews/daciuk.png",
+    photo: "assets/reviews/daciuk.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua"), React.createElement($$Text.Span.make, {
@@ -30,7 +30,7 @@ var highlights = [
   {
     name: "Guilherme Decampo",
     role: "CEO na Astrocoders",
-    photo: "assets/reviews/guilherme.jpeg",
+    photo: "assets/reviews/guilherme.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o "), React.createElement($$Text.Span.make, {
@@ -41,7 +41,7 @@ var highlights = [
   {
     name: "Gabriel Nordeborn",
     role: "Partner na Arizon Consulting",
-    photo: "assets/reviews/zth.png",
+    photo: "assets/reviews/zth.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built "), React.createElement($$Text.Span.make, {
@@ -60,7 +60,7 @@ var highlights = [
   {
     name: "Vitor Mendrone",
     role: "Head of Engineering na Portolab",
-    photo: "assets/reviews/mendrone.jpeg",
+    photo: "assets/reviews/mendrone.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em "), React.createElement($$Text.Span.make, {
@@ -78,7 +78,7 @@ var studentReviews = [
   {
     name: "João Miguel",
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.png",
+    photo: "assets/reviews/daciuk.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
@@ -87,7 +87,7 @@ var studentReviews = [
   {
     name: "João Miguel",
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.png",
+    photo: "assets/reviews/daciuk.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
@@ -96,7 +96,7 @@ var studentReviews = [
   {
     name: "João Miguel",
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.png",
+    photo: "assets/reviews/daciuk.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
@@ -105,7 +105,7 @@ var studentReviews = [
   {
     name: "João Miguel",
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.png",
+    photo: "assets/reviews/daciuk.webp",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
         }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
