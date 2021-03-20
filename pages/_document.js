@@ -25,8 +25,8 @@ class AppDocument extends Document {
             rel="stylesheet"
           />
         </Head>
+        <SEO />
         <body>
-          <SEO />
           <Main />
           <NextScript />
           <JSONSchema />
