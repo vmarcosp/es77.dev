@@ -1,5 +1,5 @@
 import React from "react";
-import { CourseJsonLd, ProductJsonLd } from "next-seo";
+import { NextSeo, CourseJsonLd, ProductJsonLd } from "next-seo";
 
 const JSONSchema = () => (
   <>
@@ -89,7 +89,8 @@ const SEO = () => (
       url: "https://es2077.dev/",
       title:
         "EcmaScript 2077 | Aprenda programação funcional e ReScript de uma forma prática e descomplicada!",
-      description: "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.",
+      description:
+        "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.",
       images: [{ url: "https://es2077.dev/assets/cover.png" }],
       site_name: "EcmaScript 2077",
       locale: "pt_BR",
