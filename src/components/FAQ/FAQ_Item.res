@@ -24,8 +24,12 @@ let make = (~title, ~description, ~controls, ~id) => {
       className=_title>
       {title->str}
     </Motion.H1>
-    <Text.P animate=#controlled(controls) initial=#hidden variants={variants(index *. 0.6)}>
-      {description->str}
+    <Text.P
+      className=text
+      animate=#controlled(controls)
+      initial=#hidden
+      variants={variants(index *. 0.6)}>
+      {description}
     </Text.P>
   </Motion.Div>
 }

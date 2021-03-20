@@ -3,7 +3,8 @@ const bsconfig = require('./bsconfig.json')
 const transpileModules = ['bs-platform'].concat(bsconfig['bs-dependencies'])
 const withTranspiler = require('next-transpile-modules')(transpileModules)
 
-module.exports = withTranspiler(['bs-platform'], {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 })
 
 const config = {
@@ -15,4 +16,4 @@ const config = {
   }
 }
 
-module.exports = withTranspiler(config)
+module.exports = withTranspiler(withBundleAnalyzer(config))

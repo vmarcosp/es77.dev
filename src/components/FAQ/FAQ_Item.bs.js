@@ -49,7 +49,8 @@ function FAQ_Item(Props) {
                   },
                   children: Render.str(title)
                 }), React.createElement($$Text.P.make, {
-                  children: Render.str(description),
+                  children: description,
+                  className: FAQ_Styles.text,
                   animate: {
                     NAME: "controlled",
                     VAL: controls

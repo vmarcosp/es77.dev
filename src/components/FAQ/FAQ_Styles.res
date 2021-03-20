@@ -37,3 +37,20 @@ let _title = style(.[
   fontWeight(600->#num),
   marginBottom(1.6->rem),
 ])
+
+let text = style(.[
+  selector(
+    "a",
+    [
+      color(Theme.Colors.pink),
+      fontFamily(Theme.fontFamily->#custom),
+      fontWeight(#bold),
+      cursor(pointer),
+      opacity(0.7),
+      transition(~duration=300, "opacity"),
+      textDecoration(none),
+      hover([opacity(1.0), transition(~duration=300, "opacity")]),
+      color(Theme.Colors.purple),
+    ],
+  ),
+])

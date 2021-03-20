@@ -52,8 +52,27 @@ var _title = CssJs.style([
       CssJs.marginBottom(CssJs.rem(1.6))
     ]);
 
+var text = CssJs.style([CssJs.selector("a", [
+            CssJs.color(Theme.Colors.pink),
+            CssJs.fontFamily({
+                  NAME: "custom",
+                  VAL: Theme.fontFamily
+                }),
+            CssJs.fontWeight("bold"),
+            CssJs.cursor(CssJs.pointer),
+            CssJs.opacity(0.7),
+            CssJs.transition(300, undefined, undefined, "opacity"),
+            CssJs.textDecoration(CssJs.none),
+            CssJs.hover([
+                  CssJs.opacity(1.0),
+                  CssJs.transition(300, undefined, undefined, "opacity")
+                ]),
+            CssJs.color(Theme.Colors.purple)
+          ])]);
+
 exports.wrapper = wrapper;
 exports.listWrapper = listWrapper;
 exports.faqWrapper = faqWrapper;
 exports._title = _title;
+exports.text = text;
 /* wrapper Not a pure module */
