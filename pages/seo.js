@@ -1,5 +1,5 @@
 import React from "react";
-import { NextSeo, CourseJsonLd, ProductJsonLd } from "next-seo";
+import { CourseJsonLd, ProductJsonLd } from "next-seo";
 
 const JSONSchema = () => (
   <>
@@ -80,28 +80,5 @@ const JSONSchema = () => (
   </>
 );
 
-const SEO = () => (
-  <NextSeo
-    title="ES2077 | Aprenda programação funcional com React e ReScript"
-    description="Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!."
-    canonical="https://es2077.dev/"
-    openGraph={{
-      url: "https://es2077.dev/",
-      title: "ES2077 | Aprenda programação funcional com React e ReScript",
-      description:
-        "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!.",
-      images: [{ url: "https://es2077-site.vercel.app/assets/cover.png" }],
-      site_name: "EcmaScript 2077",
-      locale: "pt_BR",
-    }}
-    twitter={{
-      handle: "@vmaarcosp",
-      site: "@site",
-      cardType: "summary_large_image",
-    }}
-  />
-);
 
-export { JSONSchema };
-
-export default SEO;
+export default JSONSchema;
