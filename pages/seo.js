@@ -82,15 +82,14 @@ const JSONSchema = () => (
 
 const SEO = () => (
   <NextSeo
-    title="EcmaScript 2077 | Aprenda programação funcional e ReScript de uma forma prática e descomplicada!"
-    description="Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia."
+    title="ES2077 | Aprenda programação funcional com React e ReScript"
+    description="Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!."
     canonical="https://es2077.dev/"
     openGraph={{
       url: "https://es2077.dev/",
-      title:
-        "EcmaScript 2077 | Aprenda programação funcional e ReScript de uma forma prática e descomplicada!",
+      title: "ES2077 | Aprenda programação funcional com React e ReScript",
       description:
-        "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.",
+        "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!.",
       images: [{ url: "https://es2077-site.vercel.app/assets/cover.png" }],
       site_name: "EcmaScript 2077",
       locale: "pt_BR",
