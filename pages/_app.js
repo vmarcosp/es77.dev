@@ -14,7 +14,7 @@ export default function App(props) {
           name="description"
           content="Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!"
         />
-        <meta property="og:url" content="https://es2077-site.vercel.app/" />
+        <meta property="og:url" content="https://es2077.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -29,10 +29,10 @@ export default function App(props) {
           content="https://es2077-site.vercel.app/assets/cover.png/"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="es2077-site.vercel.app/" />
+        <meta property="twitter:domain" content="es2077.vercel.app/" />
         <meta
           property="twitter:url"
-          content="https://es2077-site.vercel.app/"
+          content="https://es2077.vercel.app/"
         />
         <meta
           name="twitter:title"
@@ -44,7 +44,7 @@ export default function App(props) {
         />
         <meta
           name="twitter:image"
-          content="https://es2077-site.vercel.app/assets/cover.png"
+          content="https://es2077.vercel.app/assets/cover.png"
         />
       </Head>
 

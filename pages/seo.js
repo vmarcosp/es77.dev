@@ -6,12 +6,12 @@ const JSONSchema = () => (
     <CourseJsonLd
       courseName="EcmaScript 2077"
       providerName="Gabriel Rubens e Marcos Oliveira"
-      providerUrl="https://es2077.dev/"
+      providerUrl="https://es2077.vercel.app"
       description="Aprenda programação funcional e ReScript do zero de forma prática e descomplicada!"
     />
     <ProductJsonLd
       courseName="EcmaScript 2077"
-      images={["https://es2077-site.vercel.app/assets/cover.png"]}
+      images={[`https://es2077.vercel.app/assets/cover.png`]}
       description="Aprenda programação funcional e ReScript do zero de forma prática e descomplicada!"
       brand="EcmaScript 2077"
       reviews={[

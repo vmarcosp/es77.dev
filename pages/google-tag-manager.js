@@ -1,10 +1,8 @@
-const TRACKING = "GTM-W5687VH";
-
 export const TagManager = () => (
   <>
     <script
       async
-      src={`https://www.googletagmanager.com/gtag/js?id=${TRACKING}`}
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_TRACKING_ID}`}
     />
     <script
       dangerouslySetInnerHTML={{
@@ -12,7 +10,7 @@ export const TagManager = () => (
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${TRACKING}', {
+            gtag('config', '${process.env.NEXT_PUBLIC_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,

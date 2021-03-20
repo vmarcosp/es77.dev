@@ -26,6 +26,15 @@ class AppDocument extends Document {
           <Main />
           <NextScript />
           <JSONSchema />
+          <TagManager />
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_TRACKING_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
         </body>
       </Html>
     );
