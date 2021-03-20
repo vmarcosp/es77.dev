@@ -8,7 +8,9 @@ let make = () => {
       <Logo />
       <p className=madeBy>
         {`Design por`->str}
-        <a href="https://dribbble.com/rebgonzalez"> {` Rebecca Gonzalez`->str} </a>
+        <a rel="noopener noreferrer" href="https://dribbble.com/rebgonzalez">
+          {` Rebecca Gonzalez`->str}
+        </a>
       </p>
     </div>
   </footer>

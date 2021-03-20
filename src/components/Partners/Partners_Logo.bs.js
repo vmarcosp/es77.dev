@@ -41,7 +41,8 @@ var ReasonBR = {
 
 function Partners_Logo$Astrocoders(Props) {
   return React.createElement("img", {
-              src: "assets/astrocoders.png"
+              alt: "Astrocoders",
+              src: "/assets/astrocoders.webp"
             });
 }
 

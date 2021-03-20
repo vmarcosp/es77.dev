@@ -8,6 +8,7 @@ function Menu_BurgerButton(Props) {
   var isOpen = Props.isOpen;
   var onClick = Props.onClick;
   return React.createElement("button", {
+              "aria-label": "bot\xc3\xa3o",
               className: Menu_Styles.burgerButton(isOpen),
               onClick: onClick
             });

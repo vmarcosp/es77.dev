@@ -43,6 +43,7 @@ function AboutUs(Props) {
         }), [inView]);
   return React.createElement(React.Fragment, undefined, React.createElement("img", {
                   className: AboutUs_Styles.triangle,
+                  alt: "|>",
                   src: "assets/triangle-2.svg"
                 }), React.createElement("div", {
                   className: AboutUs_Styles.wrapper,

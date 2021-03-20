@@ -68,6 +68,7 @@ function AboutRescript_Snippet(Props) {
                 }), React.createElement("a", {
                   className: AboutReScript_Styles.playgroundLink,
                   href: link,
+                  rel: "noopener noreferrer",
                   target: "_blank"
                 }, "Abrir no playground"));
 }

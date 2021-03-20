@@ -38,7 +38,7 @@ let make = () => {
   <Motion.Div
     innerRef initial=#hidden animate=#controlled(controls) variants className=snippetWrapper>
     <Snippet showSnippets />
-    <a href=link target="_blank" className=playgroundLink>
+    <a rel="noopener noreferrer" href=link target="_blank" className=playgroundLink>
       {"Abrir no playground"->React.string}
     </a>
   </Motion.Div>

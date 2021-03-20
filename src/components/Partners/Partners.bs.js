@@ -63,7 +63,7 @@ function Partners(Props) {
                 }, React.createElement("a", {
                       className: Partners_Styles.link,
                       href: "https://brainn.co",
-                      rel: "noopeneer noreferrer",
+                      rel: "noopener noreferrer",
                       target: "_blank"
                     }, React.createElement(Motion.Div.make, {
                           className: Partners_Styles.partner,
@@ -77,7 +77,7 @@ function Partners(Props) {
                         }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co."))), React.createElement("a", {
                       className: Partners_Styles.link,
                       href: "https://twitter.com/reasonmlbrasil",
-                      rel: "noopeneer noreferrer",
+                      rel: "noopener noreferrer",
                       target: "_blank"
                     }, React.createElement(Motion.Div.make, {
                           className: Partners_Styles.partner,
@@ -91,7 +91,7 @@ function Partners(Props) {
                         }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR"))), React.createElement("a", {
                       className: Partners_Styles.link,
                       href: "https://astrocoders.com",
-                      rel: "noopeneer noreferrer",
+                      rel: "noopener noreferrer",
                       target: "_blank"
                     }, React.createElement(Motion.Div.make, {
                           className: Partners_Styles.partner,

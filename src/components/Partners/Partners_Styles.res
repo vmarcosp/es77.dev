@@ -41,7 +41,7 @@ let partner = style(.[
     transition(~duration=400, "background"),
     selector("path", [unsafe("fill", "#ffffff"), transition(~duration=400, "fill")]),
     selector("p", [transition(~duration=400, "color"), color(Theme.Colors.white)]),
-    selector("img", [transitionDuration(400), unsafe("filter", "brightness(5.5)")]),
+    selector("img", [transitionDuration(400), unsafe("filter", "none")]),
   ]),
   selector(
     "p",

@@ -60,7 +60,7 @@ var partner = CssJs.style([
                 ]),
             CssJs.selector("img", [
                   CssJs.transitionDuration(400),
-                  CssJs.unsafe("filter", "brightness(5.5)")
+                  CssJs.unsafe("filter", "none")
                 ])
           ]),
       CssJs.selector("p", [

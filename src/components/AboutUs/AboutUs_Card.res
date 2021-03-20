@@ -37,9 +37,15 @@ let make = (~name, ~description, ~role, ~photo as src, ~github, ~telegram, ~twit
     <p className=title> {name->React.string} </p>
     <p className=subtitle> {role->React.string} </p>
     <div className=iconsWrapper>
-      <a className=icon href=github> <Icons.Github /> </a>
-      <a className=icon href=telegram> <Icons.Telegram /> </a>
-      <a className=icon href=twitter> <Icons.Twitter /> </a>
+      <a rel="noopener noreferrer" ariaLabel="github" className=icon href=github>
+        <Icons.Github />
+      </a>
+      <a rel="noopener noreferrer" ariaLabel="telegram" className=icon href=telegram>
+        <Icons.Telegram />
+      </a>
+      <a rel="noopener noreferrer" ariaLabel="twitter " className=icon href=twitter>
+        <Icons.Twitter />
+      </a>
     </div>
     <Text.P> {description->React.string} </Text.P>
   </Motion.Div>

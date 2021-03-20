@@ -32,6 +32,6 @@ module ReasonBR = {
 module Astrocoders = {
   @react.component
   let make = () => {
-    <img src="assets/astrocoders.png" />
+    <img alt="Astrocoders" src="/assets/astrocoders.webp" />
   }
 }

@@ -69,14 +69,20 @@ function AboutUs_Card(Props) {
                 }, role), React.createElement("div", {
                   className: AboutUs_Styles.iconsWrapper
                 }, React.createElement("a", {
+                      "aria-label": "github",
                       className: AboutUs_Styles.icon,
-                      href: github
+                      href: github,
+                      rel: "noopener noreferrer"
                     }, React.createElement(AboutUs_Icons.Github.make, {})), React.createElement("a", {
+                      "aria-label": "telegram",
                       className: AboutUs_Styles.icon,
-                      href: telegram
+                      href: telegram,
+                      rel: "noopener noreferrer"
                     }, React.createElement(AboutUs_Icons.Telegram.make, {})), React.createElement("a", {
+                      "aria-label": "twitter ",
                       className: AboutUs_Styles.icon,
-                      href: twitter
+                      href: twitter,
+                      rel: "noopener noreferrer"
                     }, React.createElement(AboutUs_Icons.Twitter.make, {}))), React.createElement($$Text.P.make, {
                   children: description
                 }));

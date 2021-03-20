@@ -14,7 +14,8 @@ function Footer(Props) {
                 }, React.createElement(Logo.make, {}), React.createElement("p", {
                       className: Footer_Styles.madeBy
                     }, Render.str("Design por"), React.createElement("a", {
-                          href: "https://dribbble.com/rebgonzalez"
+                          href: "https://dribbble.com/rebgonzalez",
+                          rel: "noopener noreferrer"
                         }, Render.str(" Rebecca Gonzalez")))));
 }
 

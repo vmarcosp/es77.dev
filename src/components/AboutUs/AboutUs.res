@@ -32,7 +32,7 @@ let make = () => {
   }, [inView])
 
   <>
-    <img src="assets/triangle-2.svg" className=triangle />
+    <img alt="|>" src="assets/triangle-2.svg" className=triangle />
     <div id="#instrutores" className=wrapper>
       <Title initial=#hidden animate=#controlled(controls) variants=titleVariants innerRef>
         {j`Sobre os instrutores`}
