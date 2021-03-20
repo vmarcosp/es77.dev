@@ -11,7 +11,7 @@ const JSONSchema = () => (
     />
     <ProductJsonLd
       courseName="EcmaScript 2077"
-      images={["https://es2077.dev/assets/cover.png"]}
+      images={["https://es2077-site.vercel.app/assets/cover.png"]}
       description="Aprenda programação funcional e ReScript do zero de forma prática e descomplicada!"
       brand="EcmaScript 2077"
       reviews={[
@@ -91,7 +91,7 @@ const SEO = () => (
         "EcmaScript 2077 | Aprenda programação funcional e ReScript de uma forma prática e descomplicada!",
       description:
         "Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia.",
-      images: [{ url: "https://es2077.dev/assets/cover.png" }],
+      images: [{ url: "https://es2077-site.vercel.app/assets/cover.png" }],
       site_name: "EcmaScript 2077",
       locale: "pt_BR",
     }}
