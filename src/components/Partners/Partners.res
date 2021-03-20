@@ -33,7 +33,12 @@ let make = () => {
       "Nossos parceiros"
     </Title>
     <div className=partners ref=partnersRef>
-      <a className=link href="https://brainn.co" target="_blank" rel="noopener noreferrer">
+      <a
+        ariaLabel="brainnco"
+        className=link
+        href="https://brainn.co"
+        target="_blank"
+        rel="noopener noreferrer">
         <Motion.Div
           initial=#hidden
           animate=#controlled(partnerControls)
@@ -43,6 +48,7 @@ let make = () => {
         </Motion.Div>
       </a>
       <a
+        ariaLabel="reasonbr"
         className=link
         href="https://twitter.com/reasonmlbrasil"
         target="_blank"
@@ -55,7 +61,12 @@ let make = () => {
           <Logos.ReasonBR /> <p> {`ReasonBR`->React.string} </p>
         </Motion.Div>
       </a>
-      <a className=link href="https://astrocoders.com" target="_blank" rel="noopener noreferrer">
+      <a
+        ariaLabel="astrocoders"
+        className=link
+        href="https://astrocoders.com"
+        target="_blank"
+        rel="noopener noreferrer">
         <Motion.Div
           initial=#hidden
           animate=#controlled(partnerControls)

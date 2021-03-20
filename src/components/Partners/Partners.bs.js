@@ -61,6 +61,7 @@ function Partners(Props) {
                   ref: match$1[0],
                   className: Partners_Styles.partners
                 }, React.createElement("a", {
+                      "aria-label": "brainnco",
                       className: Partners_Styles.link,
                       href: "https://brainn.co",
                       rel: "noopener noreferrer",
@@ -75,6 +76,7 @@ function Partners(Props) {
                           },
                           children: null
                         }, React.createElement(Partners_Logo.Brainn.make, {}), React.createElement("p", undefined, "Brainn Co."))), React.createElement("a", {
+                      "aria-label": "reasonbr",
                       className: Partners_Styles.link,
                       href: "https://twitter.com/reasonmlbrasil",
                       rel: "noopener noreferrer",
@@ -89,6 +91,7 @@ function Partners(Props) {
                           },
                           children: null
                         }, React.createElement(Partners_Logo.ReasonBR.make, {}), React.createElement("p", undefined, "ReasonBR"))), React.createElement("a", {
+                      "aria-label": "astrocoders",
                       className: Partners_Styles.link,
                       href: "https://astrocoders.com",
                       rel: "noopener noreferrer",
