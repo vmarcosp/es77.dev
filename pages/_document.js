@@ -60,7 +60,6 @@ class AppDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <SEO />
         <body>
           <Main />
           <NextScript />
