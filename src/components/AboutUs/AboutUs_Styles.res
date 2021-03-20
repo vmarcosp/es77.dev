@@ -52,19 +52,9 @@ let card = style(.[
   Media.lg([maxWidth(40.0->rem), firstChild([marginBottom(zero), marginRight(3.2->rem)])]),
 ])
 
-let photo = style(.[
-  Media.xs([width(10.0->rem), height(10.0->rem)]),
-  Media.sm([
-    //
-    width(13.5->rem),
-    height(13.5->rem),
-  ]),
-  borderRadius(50.0->pct),
-  marginBottom(2.4->rem),
-])
+let photo = style(.[selector("> div", [borderRadius(50.0->pct)]), marginBottom(2.4->rem)])
 
 let cardsContainer = style(.[
-  //
   display(#flex),
   marginTop(5.6->rem),
   flexDirection(#column),

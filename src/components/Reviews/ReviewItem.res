@@ -31,13 +31,13 @@ let make = (
     variants={variants(index *. 0.6)}
     className={review(~isStudentReview)}>
     <div className=header>
-      <Motion.Img
+      <Motion.Div
+        className=_photo
         animate=#controlled(controls)
         initial=#hidden
-        variants={variants(index *. 0.4)}
-        className={_photo(~isStudentReview)}
-        src=photo
-      />
+        variants={variants(index *. 0.4)}>
+        <Next.Image alt=name src=photo width="72" height="72" />
+      </Motion.Div>
       <div>
         <Motion.H2
           animate=#controlled(controls)

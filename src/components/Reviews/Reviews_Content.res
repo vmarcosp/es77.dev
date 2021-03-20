@@ -17,7 +17,7 @@ let highlights = [
   {
     name: "Fernando Daciuk",
     role: "Tech Lead na Brainn Co.",
-    photo: "assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
         {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua`->str}
@@ -30,7 +30,7 @@ let highlights = [
   {
     name: "Guilherme Decampo",
     role: "CEO na Astrocoders",
-    photo: "assets/reviews/guilherme.webp",
+    photo: "/assets/reviews/guilherme.webp",
     description: {
       <TextWrapper>
         {j`Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o `->str}
@@ -43,7 +43,7 @@ let highlights = [
   {
     name: "Gabriel Nordeborn",
     role: "Partner na Arizon Consulting",
-    photo: "assets/reviews/zth.webp",
+    photo: "/assets/reviews/zth.webp",
     description: {
       <TextWrapper>
         {j`Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built `->str}
@@ -66,7 +66,7 @@ let highlights = [
   {
     name: "Vitor Mendrone",
     role: "Head of Engineering na Portolab",
-    photo: "assets/reviews/mendrone.webp",
+    photo: "/assets/reviews/mendrone.webp",
     description: {
       <TextWrapper>
         {j`Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em `->str}
@@ -87,7 +87,7 @@ let studentReviews = [
   {
     name: j`João Miguel`,
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
         {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
@@ -100,7 +100,7 @@ let studentReviews = [
   {
     name: j`João Miguel`,
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
         {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
@@ -113,7 +113,7 @@ let studentReviews = [
   {
     name: j`João Miguel`,
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
         {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
@@ -126,7 +126,7 @@ let studentReviews = [
   {
     name: j`João Miguel`,
     role: "Developer na Lukin",
-    photo: "assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
         {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}

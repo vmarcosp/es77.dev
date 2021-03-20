@@ -4,6 +4,7 @@
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
+var $$Image = require("next/image").default;
 var AboutUs_Icons = require("./AboutUs_Icons.bs.js");
 var FramerMotion = require("framer-motion");
 var AboutUs_Styles = require("./AboutUs_Styles.bs.js");
@@ -54,11 +55,14 @@ function AboutUs_Card(Props) {
               },
               innerRef: match[0],
               children: null
-            }, React.createElement("img", {
-                  className: AboutUs_Styles.photo,
-                  alt: name,
-                  src: src
-                }), React.createElement("p", {
+            }, React.createElement("div", {
+                  className: AboutUs_Styles.photo
+                }, React.createElement($$Image, {
+                      src: src,
+                      width: "120",
+                      height: "120",
+                      alt: name
+                    })), React.createElement("p", {
                   className: AboutUs_Styles.title
                 }, name), React.createElement("p", {
                   className: AboutUs_Styles.subtitle

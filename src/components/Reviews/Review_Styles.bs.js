@@ -25,14 +25,10 @@ var wrapper = CssJs.style([
           ])
     ]);
 
-function _photo(isStudentReview) {
-  return CssJs.style([
-              CssJs.width(isStudentReview ? CssJs.rem(6.0) : CssJs.rem(7.2)),
-              CssJs.height(isStudentReview ? CssJs.rem(6.0) : CssJs.rem(7.2)),
-              CssJs.borderRadius(CssJs.pct(50.0)),
-              CssJs.marginRight(CssJs.rem(2.4))
-            ]);
-}
+var _photo = CssJs.style([
+      CssJs.selector("> div", [CssJs.borderRadius(CssJs.pct(50.0))]),
+      CssJs.marginRight(CssJs.rem(2.4))
+    ]);
 
 var _name = CssJs.style([
       CssJs.color(Theme.Colors.white),

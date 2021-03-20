@@ -18,13 +18,7 @@ let wrapper = style(.[
   ]),
 ])
 
-let _photo = (~isStudentReview) =>
-  style(.[
-    width(isStudentReview ? 6.0->rem : 7.2->rem),
-    height(isStudentReview ? 6.0->rem : 7.2->rem),
-    borderRadius(50.0->pct),
-    marginRight(2.4->rem),
-  ])
+let _photo = style(.[selector("> div", [borderRadius(50.0->pct)]), marginRight(2.4->rem)])
 
 let _name = style(.[
   color(Theme.Colors.white),

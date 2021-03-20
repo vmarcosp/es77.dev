@@ -33,7 +33,7 @@ let make = (~name, ~description, ~role, ~photo as src, ~github, ~telegram, ~twit
     initial=#hidden
     variants={variants(initialX)}
     className=card>
-    <img src alt=name className=photo />
+    <div className=photo> <Next.Image src width="120" height="120" alt=name /> </div>
     <p className=title> {name->React.string} </p>
     <p className=subtitle> {role->React.string} </p>
     <div className=iconsWrapper>

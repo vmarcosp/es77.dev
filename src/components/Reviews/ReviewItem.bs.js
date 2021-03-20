@@ -6,6 +6,7 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
 var Render = require("../../lib/Render.bs.js");
+var $$Image = require("next/image").default;
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var Review_Styles = require("./Review_Styles.bs.js");
 
@@ -58,15 +59,20 @@ function ReviewItem(Props) {
               children: null
             }, React.createElement("div", {
                   className: Review_Styles.header
-                }, React.createElement(Motion.Img.make, {
-                      className: Review_Styles._photo(isStudentReview),
+                }, React.createElement(Motion.Div.make, {
+                      className: Review_Styles._photo,
                       initial: "hidden",
                       variants: variants(index * 0.4),
                       animate: {
                         NAME: "controlled",
                         VAL: controls
                       },
-                      src: photo
+                      children: React.createElement($$Image, {
+                            src: photo,
+                            width: "72",
+                            height: "72",
+                            alt: name
+                          })
                     }), React.createElement("div", undefined, React.createElement(Motion.H2.make, {
                           className: Review_Styles._name,
                           initial: "hidden",

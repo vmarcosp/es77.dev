@@ -75,15 +75,7 @@ var card = CssJs.style([
     ]);
 
 var photo = CssJs.style([
-      Media.xs([
-            CssJs.width(CssJs.rem(10.0)),
-            CssJs.height(CssJs.rem(10.0))
-          ]),
-      Media.sm([
-            CssJs.width(CssJs.rem(13.5)),
-            CssJs.height(CssJs.rem(13.5))
-          ]),
-      CssJs.borderRadius(CssJs.pct(50.0)),
+      CssJs.selector("> div", [CssJs.borderRadius(CssJs.pct(50.0))]),
       CssJs.marginBottom(CssJs.rem(2.4))
     ]);
 
