@@ -44,7 +44,7 @@ export default function App(props) {
         />
         <meta
           name="twitter:image"
-          content="https://es2077.vercel.app/assets/cover.png"
+          content="https://es77.dev/assets/cover.png"
         />
       </Head>
 
