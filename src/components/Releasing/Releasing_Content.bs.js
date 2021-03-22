@@ -7,7 +7,7 @@ var Render = require("../../lib/Render.bs.js");
 
 var releasingText = React.createElement(React.Fragment, undefined, Render.str("Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. \n      No momento, estamos trabalhando nos 2 primeiros módulos e o lançamento oficial deverá ocorrer no dia "), React.createElement($$Text.Span.make, {
           children: "30/05/2021"
-        }), Render.str(". Caso você queira receber mais informações sobre o desenvolvimento do curso, deixa o seu e-mail abaixo para contato."));
+        }), Render.str(". Caso você queira receber mais informações sobre o andamento e lançamento do curso, deixe abaixo seu e-mail para contato."));
 
 exports.releasingText = releasingText;
 /* releasingText Not a pure module */

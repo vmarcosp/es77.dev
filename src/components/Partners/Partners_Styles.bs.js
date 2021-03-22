@@ -54,6 +54,10 @@ var partner = CssJs.style([
                   CssJs.unsafe("fill", "#ffffff"),
                   CssJs.transition(400, undefined, undefined, "fill")
                 ]),
+            CssJs.selector("> .reasonbr path", [
+                  CssJs.unsafe("fill", "#DD1350"),
+                  CssJs.transition(400, undefined, undefined, "fill")
+                ]),
             CssJs.selector("p", [
                   CssJs.transition(400, undefined, undefined, "color"),
                   CssJs.color(Theme.Colors.white)

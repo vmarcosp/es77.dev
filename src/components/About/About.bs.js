@@ -49,7 +49,7 @@ function About(Props) {
                   initial: "hidden",
                   variants: variants(0.2)
                 }), React.createElement($$Text.P.make, {
-                  children: "\n        O objetivo do curso é te ensinar do zero, como desenvolver aplicações com ReScript, \n        utilizando React, bibliotecas JavaScript e outras ferramentas do próprio ecossistema ReScript. \n        Além disso, você irá aprender de forma prática e descomplicada, \n        vários conceitos de programação funcional e como aplicar esses conceitos no desenvolvimento de aplicações reais. \n        Além dos módulos e conteúdo do curso, você terá acesso total ao suporte dos instrutores e acesso ao discord \n        oficial do curso, podendo entrar em contato para tirar dúvidas sempre que necessário.\n      ",
+                  children: "\n        O objetivo do curso é te ensinar do zero, como desenvolver aplicações com ReScript, \n        utilizando React, bibliotecas JavaScript e outras ferramentas do próprio ecossistema ReScript. \n        Além disso, você irá aprender de forma prática e descomplicada, \n        vários conceitos de programação funcional e como aplicar esses conceitos no desenvolvimento de aplicações reais. \n        Além dos módulos e o conteúdo do curso, você terá acesso total ao suporte dos instrutores, discord e telegram\n        oficial do curso, podendo entrar em contato para tirar dúvidas sempre que necessário.\n      ",
                   animate: {
                     NAME: "controlled",
                     VAL: controls

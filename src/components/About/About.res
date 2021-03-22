@@ -32,7 +32,7 @@ let make = () => {
         utilizando React, bibliotecas JavaScript e outras ferramentas do próprio ecossistema ReScript. 
         Além disso, você irá aprender de forma prática e descomplicada, 
         vários conceitos de programação funcional e como aplicar esses conceitos no desenvolvimento de aplicações reais. 
-        Além dos módulos e conteúdo do curso, você terá acesso total ao suporte dos instrutores e acesso ao discord 
+        Além dos módulos e o conteúdo do curso, você terá acesso total ao suporte dos instrutores, discord e telegram
         oficial do curso, podendo entrar em contato para tirar dúvidas sempre que necessário.
       `->React.string}
     </Text.P>

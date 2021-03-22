@@ -40,6 +40,7 @@ let partner = style(.[
   hover([
     transition(~duration=400, "background"),
     selector("path", [unsafe("fill", "#ffffff"), transition(~duration=400, "fill")]),
+    selector("> .reasonbr path", [unsafe("fill", "#DD1350"), transition(~duration=400, "fill")]),
     selector("p", [transition(~duration=400, "color"), color(Theme.Colors.white)]),
     selector("img", [transitionDuration(400), unsafe("filter", "none")]),
   ]),

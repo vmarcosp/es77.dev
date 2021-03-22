@@ -48,7 +48,7 @@ function AboutUs(Props) {
                   src: "assets/triangle-2.svg"
                 }), React.createElement("div", {
                   className: AboutUs_Styles.wrapper,
-                  id: "#instrutores"
+                  id: "instrutores"
                 }, React.createElement(Title.make, {
                       children: "Sobre os instrutores",
                       innerRef: match[0],

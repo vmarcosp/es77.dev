@@ -138,7 +138,6 @@ let burgerButton = (~isOpen) => {
       selector(
         "&:after, &:before",
         [
-          backgroundColor(Theme.Colors.white),
           transitions([
             Transition.shorthand(~duration=200, "transform"),
             Transition.shorthand(~duration=300, "background-color"),
@@ -152,7 +151,7 @@ let burgerButton = (~isOpen) => {
         contentRule(#text(" ")),
         height(2->px),
         width(2.5->rem),
-        backgroundColor(Theme.Colors.shape01),
+        backgroundColor(Theme.Colors.white),
         position(absolute),
         borderRadius(2->px),
         transitions([

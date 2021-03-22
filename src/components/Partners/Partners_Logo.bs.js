@@ -20,6 +20,7 @@ var Brainn = {
 
 function Partners_Logo$ReasonBR(Props) {
   return React.createElement("svg", {
+              className: "reasonbr",
               fill: "none",
               viewBox: "0 0 99 96",
               xmlns: "http://www.w3.org/2000/svg"

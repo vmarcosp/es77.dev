@@ -158,13 +158,10 @@ function burgerButton(isOpen) {
               CssJs.cursor(CssJs.pointer),
               CssJs.overflow(CssJs.visible),
               CssJs.zIndex(Theme.ZIndex.aboveAll),
-              CssJs.hover([CssJs.selector("&:after, &:before", [
-                          CssJs.backgroundColor(Theme.Colors.white),
-                          CssJs.transitions([
+              CssJs.hover([CssJs.selector("&:after, &:before", [CssJs.transitions([
                                 Css_Js_Core.Transition.shorthand(200, undefined, undefined, "transform"),
                                 Css_Js_Core.Transition.shorthand(300, undefined, undefined, "background-color")
-                              ])
-                        ])]),
+                              ])])]),
               CssJs.selector("&:after,&:before", [
                     CssJs.contentRule({
                           NAME: "text",
@@ -172,7 +169,7 @@ function burgerButton(isOpen) {
                         }),
                     CssJs.height(CssJs.px(2)),
                     CssJs.width(CssJs.rem(2.5)),
-                    CssJs.backgroundColor(Theme.Colors.shape01),
+                    CssJs.backgroundColor(Theme.Colors.white),
                     CssJs.position(CssJs.absolute),
                     CssJs.borderRadius(CssJs.px(2)),
                     CssJs.transitions([
