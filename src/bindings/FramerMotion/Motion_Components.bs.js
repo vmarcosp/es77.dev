@@ -2,14 +2,14 @@
 'use strict';
 
 var React = require("react");
-var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Belt_Option = require("rescript/lib/js/belt_Option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function unwrapAnimate(v) {
-  if (typeof v === "string" || v.NAME !== "controlled") {
-    return v;
-  } else {
+  if (typeof v === "object" && v.NAME === "controlled") {
     return v.VAL;
+  } else {
+    return v;
   }
 }
 

@@ -3,7 +3,7 @@
 
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 var Text_Styles = require("./Text_Styles.bs.js");
 
 function Text$Span(Props) {

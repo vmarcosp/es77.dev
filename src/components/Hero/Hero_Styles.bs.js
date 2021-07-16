@@ -4,7 +4,7 @@
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
 var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
-var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
+var Belt_Array = require("rescript/lib/js/belt_Array.js");
 
 var wrapper = CssJs.style([
       CssJs.maxWidth(Theme.Constants.maxWidth),

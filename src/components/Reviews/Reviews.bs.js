@@ -5,7 +5,7 @@ var Title = require("../Title/Title.bs.js");
 var React = require("react");
 var Render = require("../../lib/Render.bs.js");
 var ReviewItem = require("./ReviewItem.bs.js");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 var Review_Styles = require("./Review_Styles.bs.js");
 var FramerMotion = require("framer-motion");
 var Reviews_Content = require("./Reviews_Content.bs.js");
@@ -80,7 +80,7 @@ function Reviews(Props) {
                       }))), React.createElement("h2", {
                   ref: match$1[0],
                   className: Review_Styles.subtitle
-                }, Render.str("Alunos do curso")), React.createElement("div", {
+                }, Render.str("Alunos do curso anterior")), React.createElement("div", {
                   className: Review_Styles.reviews(true)
                 }, Render.map(Reviews_Content.studentReviews, (function (review, id) {
                         return React.createElement(ReviewItem.make, {

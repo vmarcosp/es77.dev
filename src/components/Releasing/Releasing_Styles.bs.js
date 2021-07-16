@@ -2,7 +2,7 @@
 'use strict';
 
 var CssJs = require("bs-css-emotion/src/CssJs.bs.js");
-var Curry = require("bs-platform/lib/js/curry.js");
+var Curry = require("rescript/lib/js/curry.js");
 var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var Polished = require("rescript-polished/src/Polished.bs.js");
