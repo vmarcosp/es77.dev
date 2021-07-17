@@ -1,6 +1,6 @@
 open CssJs
 
-let wrapper = style(.[
+let wrapper = style(. [
   background(Theme.Colors.darkGradient),
   padding2(~h=zero, ~v=7.2->rem),
   Media.xs([margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
@@ -8,18 +8,18 @@ let wrapper = style(.[
   Media.md([margin4(~top=23.4->rem, ~bottom=zero, ~left=auto, ~right=auto)]),
 ])
 
-let content = style(.[
+let content = style(. [
   Media.xs([padding2(~v=zero, ~h=3.2->rem)]),
   Media.sm([padding2(~v=zero, ~h=4.6->rem)]),
   Media.lg([maxWidth(Theme.Constants.maxWidth), margin2(~v=zero, ~h=auto)]),
 ])
 
-let text = style(.[
+let text = style(. [
   color("B399C8"->hex),
   selector("> span", [fontWeight(600->#num), color(Theme.Colors.purple)]),
 ])
 
-let form = style(.[
+let form = style(. [
   display(#flex),
   marginTop(3.2->rem),
   Media.xs([flexDirection(#column)]),
@@ -30,6 +30,7 @@ let form = style(.[
       color(Theme.Colors.white),
       width(100.0->pct),
       padding2(~v=1.2->rem, ~h=1.8->rem),
+      marginLeft(pt(2)),
       backgroundColor("211C2B"->hex),
       borderStyle(none),
       boxShadow(none),
@@ -71,4 +72,5 @@ let form = style(.[
       ]),
     ],
   ),
+  selector("> button:disabled", [opacity(0.6), cursor(wait)]),
 ])
