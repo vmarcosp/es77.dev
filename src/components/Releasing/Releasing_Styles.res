@@ -72,5 +72,12 @@ let form = style(. [
       ]),
     ],
   ),
-  selector("> button:disabled", [opacity(0.6), cursor(wait)]),
+])
+
+let submitButtonSubmitting = style(. [
+  opacity(0.6), cursor(wait)
+])
+
+let submitButtonSent = style(. [
+  pointerEvents(none)
 ])

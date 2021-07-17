@@ -96,7 +96,14 @@ let make = () => {
             required=true
             placeholder="Email"
           />
-          <button disabled={submissionState !== Idle} type_="submit">
+          <button
+            className={switch submissionState {
+            | Idle => ""
+            | Submitting => submitButtonSubmitting
+            | Submitted => submitButtonSent
+            }}
+            disabled={submissionState !== Idle}
+            type_="submit">
             {{
               switch submissionState {
               | Idle => "Enviar"
