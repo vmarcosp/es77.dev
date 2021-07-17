@@ -6,7 +6,7 @@ var Media = require("../../lib/Media.bs.js");
 var Theme = require("../../lib/Theme.bs.js");
 var React = require("react");
 var Motion = require("../../bindings/FramerMotion/Motion.bs.js");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function title(icon) {
   var iconUrl = icon === "triangle" ? "assets/triangle-icon.svg" : "assets/voltage.svg";

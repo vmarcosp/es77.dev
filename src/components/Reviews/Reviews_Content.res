@@ -85,40 +85,42 @@ let highlights = [
 
 let studentReviews = [
   {
-    name: j`João Miguel`,
-    role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    name: j`Celso Bonutti Filho`,
+    role: "Fullstack Dev at Heliax",
+    photo: "/assets/reviews/depos/celso.png",
     description: {
       <TextWrapper>
-        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
-        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
-        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+        <span>
+          {`se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK`->str}
+        </span>
       </TextWrapper>
     },
     translatedDescription: None,
   },
   {
-    name: j`João Miguel`,
+    name: j`Guilherme de Andrade`,
     role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/depos/guilherme.png",
     description: {
       <TextWrapper>
-        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
-        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
-        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+        <span> {`ES2077 is ReasonML é curso muito bem pensado e produzido. `->str} </span>
+        {`Atráves dele, o Gabriel passa sua experiência com ReasonML em produção de uma forma clara e objetiva.
+        Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReasonML.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
   },
   {
-    name: j`João Miguel`,
-    role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    name: j`Arthur Barros`,
+    role: "Full-stack Developer at Provi",
+    photo: "/assets/reviews/depos/arthur.png",
     description: {
       <TextWrapper>
-        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
-        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
-        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+        {`Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason.
+      Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas.`->str}
+        <span>
+          {` Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
+        </span>
       </TextWrapper>
     },
     translatedDescription: None,

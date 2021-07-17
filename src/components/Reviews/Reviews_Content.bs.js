@@ -4,7 +4,7 @@
 var $$Text = require("../Text/Text.bs.js");
 var React = require("react");
 var Render = require("../../lib/Render.bs.js");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function Reviews_Content$TextWrapper(Props) {
   var children = Props.children;
@@ -76,30 +76,30 @@ var highlights = [
 
 var studentReviews = [
   {
-    name: "João Miguel",
-    role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    name: "Celso Bonutti Filho",
+    role: "Fullstack Dev at Heliax",
+    photo: "/assets/reviews/depos/celso.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
-          children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+          children: React.createElement("span", undefined, Render.str("se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK"))
+        }),
     translatedDescription: undefined
   },
   {
-    name: "João Miguel",
+    name: "Guilherme de Andrade",
     role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    photo: "/assets/reviews/depos/guilherme.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+        }, React.createElement("span", undefined, Render.str("ES2077 is ReasonML é curso muito bem pensado e produzido. ")), Render.str("Atráves dele, o Gabriel passa sua experiência com ReasonML em produção de uma forma clara e objetiva.\n        Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReasonML.")),
     translatedDescription: undefined
   },
   {
-    name: "João Miguel",
-    role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    name: "Arthur Barros",
+    role: "Full-stack Developer at Provi",
+    photo: "/assets/reviews/depos/arthur.png",
     description: React.createElement(Reviews_Content$TextWrapper, {
           children: null
-        }, Render.str("O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem "), React.createElement("span", undefined, Render.str("programação funcional de uma maneira prática e descomplicada")), Render.str(". Certamente a próxima versão será ainda melhor que a primeira!")),
+        }, Render.str("Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason.\n      Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas."), React.createElement("span", undefined, Render.str(" Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado."))),
     translatedDescription: undefined
   },
   {

@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn bsb:build && next build",
+    "build": "yarn res:build && next build",
     "start": "next start",
-    "bsb": "bsb -w",
-    "bsb:build": "bsb -make-world",
-    "bsb:clean": "bsb -clean"
+    "res:watch": "rescript build -w",
+    "res:build": "rescript build",
+    "res:clean": "rescript clean"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^10.0.9",
@@ -25,9 +25,7 @@
     "react-intersection-observer": "8.31.0",
     "react-slick": "0.28.1",
     "react-typist": "2.0.5",
+    "rescript": "^9.1.4",
     "rescript-polished": "1.10.0"
-  },
-  "devDependencies": {
-    "bs-platform": "8.4.2"
   }
 }
