@@ -101,7 +101,7 @@ let highlights = [
   },
   {
     name: "Diogo Mafra",
-    role: "co-CTO na T10 Digital",
+    role: "Co-Founder na T10 Digital",
     photo: "/assets/reviews/diogo.jpg",
     description: {
       <TextWrapper>
