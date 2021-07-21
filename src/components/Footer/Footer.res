@@ -8,7 +8,7 @@ let make = () => {
       <Logo />
       <p className=madeBy>
         {`Design por`->str}
-        <a rel="noopener noreferrer" href="https://dribbble.com/rebgonzalez">
+        <a rel="noopener noreferrer" href="https://dribbble.com/rebeccagonzalez">
           {` Rebecca Gonzalez`->str}
         </a>
       </p>

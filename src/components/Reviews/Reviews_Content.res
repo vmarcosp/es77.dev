@@ -69,14 +69,14 @@ let highlights = [
     photo: "/assets/reviews/mendrone.webp",
     description: {
       <TextWrapper>
-        {j`Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em `->str}
+        {`Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em `->str}
         <Text.Span> {j`ReScript`} </Text.Span>
-        {j` e `->str}
+        {` e `->str}
         <Text.Span> {j`Programação Funcional`} </Text.Span>
-        {j` como um todo é impressionante, muito acima da média e`->str}
-        <Text.Span>
-          {j` caminha de mãos dadas com a boa didática que ele desenvolveu sendo um evangelizador informal da linguagem. `}
-        </Text.Span>
+        {` como um todo é impressionante, muito acima da média e`->str}
+        {` caminha de mãos dadas com a `->str}
+        <Text.Span> {`boa didática`} </Text.Span>
+        {` que ele desenvolveu sendo um evangelizador informal da linguagem. `->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -85,55 +85,55 @@ let highlights = [
 
 let studentReviews = [
   {
-    name: j`Celso Bonutti Filho`,
-    role: "Fullstack Dev at Heliax",
-    photo: "/assets/reviews/depos/celso.png",
-    description: {
-      <TextWrapper>
-        <span>
-          {`se esse curso já existisse quando eu comecei a aprender reason, eu n teria gasto 2 semanas tentando descobrir como fazer setup de um projeto APOKDOPKWDPOKAWPORK`->str}
-        </span>
-      </TextWrapper>
-    },
-    translatedDescription: None,
-  },
-  {
     name: j`Guilherme de Andrade`,
-    role: "Developer na Lukin",
+    role: "Software Engineer na New Work Se",
     photo: "/assets/reviews/depos/guilherme.png",
     description: {
       <TextWrapper>
-        <span> {`ES2077 is ReasonML é curso muito bem pensado e produzido. `->str} </span>
-        {`Atráves dele, o Gabriel passa sua experiência com ReasonML em produção de uma forma clara e objetiva.
-        Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReasonML.`->str}
+        <span> {`ES2077 é um curso muito bem pensado e produzido. `->str} </span>
+        {`Atráves dele, o Gabriel passa sua experiência com ReScript em produção de uma forma clara e objetiva.
+        Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReScript.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
   },
   {
-    name: j`Arthur Barros`,
-    role: "Full-stack Developer at Provi",
+    name: j`Celso Bonutti`,
+    role: "Full-Stack Developer na Heliax",
+    photo: "/assets/reviews/depos/celso.png",
+    description: {
+      <TextWrapper>
+        {`Se o curso ES2077 existisse quando comecei a estudar ReScript, certamente minha trajetória de aprendizado teria sido muito melhor, tendo em vista que o curso entrega todo o material e os recursos necessários para sair do zero ao avançado em ReScript.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Arthur Barroso`,
+    role: "Full-stack Developer na Brainn Co.",
     photo: "/assets/reviews/depos/arthur.png",
     description: {
       <TextWrapper>
-        {`Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em Reason.
+        {`Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em ReScript.
       Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas.`->str}
-        <span>
-          {` Posso dizer que se hoje sou um programador melhor devo em muito ao Reason e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
-        </span>
+        {` Posso dizer que se hoje`->str}
+        <span> {` sou um programador melhor `->str} </span>
+        {`devo em muito ao ReScript e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
   },
   {
-    name: j`João Miguel`,
-    role: "Developer na Lukin",
-    photo: "/assets/reviews/daciuk.webp",
+    name: j`Arthur Barroso`,
+    role: "Full-Stack Developer na Brainn Co.",
+    photo: "/assets/reviews/depos/arthur.png",
     description: {
       <TextWrapper>
-        {j`O curso foi incrível! Não encontrei nenhum curso que ensinasse tão bem `->str}
-        <span> {j`programação funcional de uma maneira prática e descomplicada`->str} </span>
-        {j`. Certamente a próxima versão será ainda melhor que a primeira!`->str}
+        {`Pouco antes de começar o curso do Gabriel eu havia dado inicio aos meus estudos em ReScript.
+      Meu principal objetivo com isso era poder me aprofundar em uma linguagem diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas.`->str}
+        <span>
+          {` Posso dizer que se hoje sou um programador melhor devo em muito ao ReScript e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
+        </span>
       </TextWrapper>
     },
     translatedDescription: None,

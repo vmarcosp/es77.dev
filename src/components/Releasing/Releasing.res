@@ -2,6 +2,16 @@ open Releasing_Styles
 open Render
 module Content = Releasing_Content
 
+@scope("window") @val external setTimeout: (. unit => unit, int) => unit = "setTimeout"
+@scope("window") @val external fetch: (string, {..}) => Js.Promise.t<unit> = "fetch"
+
+type subscribeForm = {
+  name: string,
+  email: string,
+}
+
+type submissionState = Idle | Submitting | Submitted | Error
+
 let variants = delay => {
   open FramerMotion
   {
@@ -10,22 +20,17 @@ let variants = delay => {
   }
 }
 
-type subscribeForm = {
-  name: string,
-  email: string,
-}
-
-type submissionState = Idle | Submitting | Submitted
-
-let submitToDark: subscribeForm => Js.Promise.t<unit> = %raw(`function(state){
- return fetch('https://es2077.builtwithdark.com/subscribe', {
-   method: 'POST',
-   headers: {
-     'Content-type': 'appplication/json',
-   },
-   body: JSON.stringify(state),
- })
-}`)
+let submitForm = state =>
+  fetch(
+    "https://es2077.builtwithdark.com/subscribes",
+    {
+      "method": "POST",
+      "headers": {
+        "Content-type": "appplication/json",
+      },
+      "body": Js.Json.stringifyAny(state)->Belt.Option.getWithDefault("{}"),
+    },
+  )
 
 @react.component
 let make = () => {
@@ -39,10 +44,23 @@ let make = () => {
 
   let handleSubmit = () => {
     setSubmissionState(_ => Submitting)
-    let _: Js.Promise.t<'a> = submitToDark(formState) |> Js.Promise.then_(() => {
+    submitForm(formState)
+    ->Promise.then(() => {
+      setTimeout(. () => {
+        setFormState(_ => {name: "", email: ""})
+        setSubmissionState(_ => Idle)
+      }, 3000)
       setSubmissionState(_ => Submitted)
-      Js.Promise.resolve()
+      Promise.resolve()
     })
+    ->Promise.then(() => {
+      setSubmissionState(_ => Error)
+      setTimeout(. () => {
+        setSubmissionState(_ => Idle)
+      }, 3000)
+      Promise.resolve()
+    })
+    ->ignore
   }
 
   React.useEffect1(() => {
@@ -56,20 +74,24 @@ let make = () => {
   <Motion.Div
     animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=wrapper>
     <div className=content>
-      <Title
-        animate=#controlled(controls)
-        initial=#hidden
-        variants={variants(0.4)}
-        icon=#lighting
-        innerRef>
-        {j`Pré-Lançamento`}
-      </Title>
-      <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
-        {Content.releasingText}
-      </Text.P>
-      <Text.P animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
-        <i> {j`Fique tranquilo, nós não enviamos spam!`->str} </i> {j` 😉`->str}
-      </Text.P>
+      <div className=textWrapper>
+        <Title
+          animate=#controlled(controls)
+          initial=#hidden
+          variants={variants(0.4)}
+          icon=#lighting
+          innerRef>
+          {`Pré-Lançamento`}
+        </Title>
+        <Text.P
+          animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
+          {Content.releasingText}
+        </Text.P>
+        <Text.P
+          animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
+          <i> {`Fique tranquilo, nós não enviamos spam!`->str} </i> {` 😉`->str}
+        </Text.P>
+      </div>
       <form
         onSubmit={e => {
           e->ReactEvent.Form.preventDefault
@@ -98,17 +120,18 @@ let make = () => {
           />
           <button
             className={switch submissionState {
-            | Idle => ""
             | Submitting => submitButtonSubmitting
             | Submitted => submitButtonSent
+            | _ => ""
             }}
             disabled={submissionState !== Idle}
             type_="submit">
             {{
               switch submissionState {
               | Idle => "Enviar"
-              | Submitting => "Enviando"
-              | Submitted => "Cadastrado"
+              | Submitting => "Enviando..."
+              | Submitted => `Tudo certo, confira seu e-mail 😃`
+              | Error => `Ocorreu um erro, tente novamente`
               }
             }->React.string}
           </button>

@@ -9,24 +9,28 @@ let wrapper = style(. [
 ])
 
 let content = style(. [
-  Media.xs([padding2(~v=zero, ~h=3.2->rem)]),
-  Media.sm([padding2(~v=zero, ~h=4.6->rem)]),
+  display(#flex),
+  Media.xs([padding2(~v=zero, ~h=3.2->rem), flexDirection(column), justifyContent(#center)]),
+  Media.sm([padding2(~v=zero, ~h=4.6->rem), flexDirection(column), justifyContent(#center)]),
+  Media.md([flexDirection(row), justifyContent(spaceBetween), alignItems(center)]),
   Media.lg([maxWidth(Theme.Constants.maxWidth), margin2(~v=zero, ~h=auto)]),
 ])
 
+let textWrapper = style(. [Media.md([flexBasis(60.0->pct)])])
+
 let text = style(. [
   color("B399C8"->hex),
-  selector("> span", [fontWeight(600->#num), color(Theme.Colors.purple)]),
+  selector("> span", [fontWeight(500->#num), color(Theme.Colors.purple)]),
 ])
 
 let form = style(. [
   display(#flex),
-  marginTop(3.2->rem),
-  Media.xs([flexDirection(#column)]),
-  Media.sm([maxWidth(52.0->rem)]),
+  flexDirection(column),
+  Media.md([flexBasis(40.0->pct)]),
   selector(
     "> input",
     [
+      marginBottom(1.6->rem),
       color(Theme.Colors.white),
       width(100.0->pct),
       padding2(~v=1.2->rem, ~h=1.8->rem),
@@ -37,9 +41,8 @@ let form = style(. [
       fontFamily(Theme.fontFamily->#custom),
       outlineStyle(none),
       fontSize(1.6->rem),
-      borderBottomLeftRadius(6->px),
-      borderTopLeftRadius(6->px),
-      placeholder([color("645370"->hex)]),
+      borderRadius(6->px),
+      placeholder([color("877B87"->hex)]),
       transition(~duration=300, "box-shadow"),
       focus([
         transition(~duration=300, "box-shadow"),
@@ -51,6 +54,7 @@ let form = style(. [
   selector(
     "> button",
     [
+      padding2(~v=1.2->rem, ~h=1.8->rem),
       textTransform(uppercase),
       cursor(pointer),
       color(Theme.Colors.white),
@@ -59,11 +63,8 @@ let form = style(. [
       borderStyle(none),
       fontWeight(600->#num),
       background(Theme.Colors.purple),
-      padding2(~v=zero, ~h=3.2->rem),
       transition(~duration=300, "background"),
-      borderBottomRightRadius(6->px),
-      borderTopRightRadius(6->px),
-      Media.xs([padding2(~v=1.2->rem, ~h=1.8->rem), borderRadius(6->px)]),
+      borderRadius(6->px),
       hover([
         transition(~duration=300, "background"),
         background(
@@ -74,10 +75,6 @@ let form = style(. [
   ),
 ])
 
-let submitButtonSubmitting = style(. [
-  opacity(0.6), cursor(wait)
-])
+let submitButtonSubmitting = style(. [opacity(0.6), cursor(wait)])
 
-let submitButtonSent = style(. [
-  pointerEvents(none)
-])
+let submitButtonSent = style(. [pointerEvents(none)])

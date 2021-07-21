@@ -48,9 +48,9 @@ let make = () => {
         </Motion.Div>
       </a>
       <a
-        ariaLabel="reasonbr"
+        ariaLabel="t10"
         className=link
-        href="https://twitter.com/reasonmlbrasil"
+        href="https://t10.digital"
         target="_blank"
         rel="noopener noreferrer">
         <Motion.Div
@@ -58,7 +58,7 @@ let make = () => {
           animate=#controlled(partnerControls)
           variants={variants(0.6)}
           className=partner>
-          <Logos.ReasonBR /> <p> {`ReasonBR`->React.string} </p>
+          <Logos.T10 /> <p> {`T10`->React.string} </p>
         </Motion.Div>
       </a>
       <a

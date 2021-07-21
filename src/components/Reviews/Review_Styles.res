@@ -1,6 +1,6 @@
 open CssJs
 
-let wrapper = style(.[
+let wrapper = style(. [
   Media.xs([
     margin4(~top=17.2->rem, ~bottom=zero, ~left=auto, ~right=auto),
     padding2(~v=zero, ~h=3.2->rem),
@@ -18,9 +18,9 @@ let wrapper = style(.[
   ]),
 ])
 
-let _photo = style(.[selector("> div", [borderRadius(50.0->pct)]), marginRight(2.4->rem)])
+let _photo = style(. [selector("> div", [borderRadius(50.0->pct)]), marginRight(2.4->rem)])
 
-let _name = style(.[
+let _name = style(. [
   color(Theme.Colors.white),
   fontSize(1.8->rem),
   fontWeight(700->#num),
@@ -28,7 +28,7 @@ let _name = style(.[
   margin(zero),
 ])
 
-let _role = style(.[
+let _role = style(. [
   color(Theme.Colors.gray1),
   fontSize(1.6->rem),
   fontWeight(500->#num),
@@ -37,12 +37,12 @@ let _role = style(.[
   letterSpacing(-0.03->em),
 ])
 
-let header = style(.[display(#flex), alignItems(center)])
+let header = style(. [display(#flex), alignItems(center)])
 
 let _description = (~isStudentReview) =>
-  style(.[
+  style(. [
     fontSize(isStudentReview ? 1.8->rem : 2.0->rem),
-    fontWeight(isStudentReview ? 500->#num : 600->#num),
+    fontWeight(isStudentReview ? 500->#num : 500->#num),
     position(relative),
     marginTop(3.2->rem),
     color("A6A6A6"->hex),
@@ -75,7 +75,7 @@ let _description = (~isStudentReview) =>
   ])
 
 let reviews = (~isStudentReview) =>
-  style(.[
+  style(. [
     display(#flex),
     flexWrap(#wrap),
     Media.xs([marginTop(isStudentReview ? 3.2->rem : 9.2->rem)]),
@@ -83,7 +83,7 @@ let reviews = (~isStudentReview) =>
   ])
 
 let review = (~isStudentReview) =>
-  style(.[
+  style(. [
     position(relative),
     borderRadius(6->px),
     display(#flex),
@@ -112,7 +112,7 @@ let review = (~isStudentReview) =>
     ]),
   ])
 
-let subtitle = style(.[
+let subtitle = style(. [
   color(Theme.Colors.white),
   fontSize(2.4->rem),
   fontFamily(Theme.fontFamily->#custom),
@@ -120,7 +120,7 @@ let subtitle = style(.[
   marginTop(7.2->rem),
 ])
 
-let translateButton = style(.[
+let translateButton = style(. [
   outlineStyle(none),
   background(none),
   borderStyle(none),
