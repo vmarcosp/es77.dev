@@ -26,7 +26,7 @@ let text = style(. [
 let form = style(. [
   display(#flex),
   flexDirection(column),
-  Media.md([flexBasis(40.0->pct)]),
+  Media.md([flexBasis(35.0->pct)]),
   selector(
     "> input",
     [

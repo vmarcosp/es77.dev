@@ -15,6 +15,7 @@ type motionProps = {
   @optional initial: initial,
   @optional variants: FramerMotion.variants,
   @optional animate: FramerMotion.animateValue,
+  @optional onSubmit: ReactEvent.Form.t => unit,
 }
 
 external identity: 'a => FramerMotion.animateValue = "%identity"
@@ -46,9 +47,11 @@ module MakeElement = (M: IMakeElement) => {
     ~innerRef=?,
     ~id=?,
     ~href=?,
+    ~onSubmit=?,
     ~children,
   ) => {
     let props = motionProps(
+      ~onSubmit?,
       ~className?,
       ~innerRef?,
       ~id?,

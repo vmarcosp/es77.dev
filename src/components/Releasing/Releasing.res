@@ -92,51 +92,52 @@ let make = () => {
           <i> {`Fique tranquilo, nós não enviamos spam!`->str} </i> {` 😉`->str}
         </Text.P>
       </div>
-      <form
+      <Motion.Form
+        animate=#controlled(controls)
+        initial=#hidden
+        variants={variants(0.2)}
+        className=form
         onSubmit={e => {
           e->ReactEvent.Form.preventDefault
           handleSubmit()
         }}>
-        <Motion.Div
-          animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=form>
-          <input
-            value=formState.name
-            onChange={e => {
-              let value = (e->ReactEvent.Form.target)["value"]
-              setFormState(state => {...state, name: value})
-            }}
-            required=true
-            placeholder="Nome"
-          />
-          <input
-            value=formState.email
-            type_="email"
-            onChange={e => {
-              let value = (e->ReactEvent.Form.target)["value"]
-              setFormState(state => {...state, email: value})
-            }}
-            required=true
-            placeholder="Email"
-          />
-          <button
-            className={switch submissionState {
-            | Submitting => submitButtonSubmitting
-            | Submitted => submitButtonSent
-            | _ => ""
-            }}
-            disabled={submissionState !== Idle}
-            type_="submit">
-            {{
-              switch submissionState {
-              | Idle => "Enviar"
-              | Submitting => "Enviando..."
-              | Submitted => `Tudo certo, confira seu e-mail 😃`
-              | Error => `Ocorreu um erro, tente novamente`
-              }
-            }->React.string}
-          </button>
-        </Motion.Div>
-      </form>
+        <input
+          value=formState.name
+          onChange={e => {
+            let value = (e->ReactEvent.Form.target)["value"]
+            setFormState(state => {...state, name: value})
+          }}
+          required=true
+          placeholder="Nome"
+        />
+        <input
+          value=formState.email
+          type_="email"
+          onChange={e => {
+            let value = (e->ReactEvent.Form.target)["value"]
+            setFormState(state => {...state, email: value})
+          }}
+          required=true
+          placeholder="Email"
+        />
+        <button
+          className={switch submissionState {
+          | Submitting => submitButtonSubmitting
+          | Submitted => submitButtonSent
+          | _ => ""
+          }}
+          disabled={submissionState !== Idle}
+          type_="submit">
+          {{
+            switch submissionState {
+            | Idle => "Enviar"
+            | Submitting => "Enviando..."
+            | Submitted => `Tudo certo, confira seu e-mail 😃`
+            | Error => `Ocorreu um erro, tente novamente`
+            }
+          }->React.string}
+        </button>
+      </Motion.Form>
     </div>
   </Motion.Div>
 }
