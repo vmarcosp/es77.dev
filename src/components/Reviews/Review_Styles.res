@@ -135,9 +135,9 @@ let translateButton = style(. [
   opacity(0.7),
   transition(~duration=300, "opacity"),
   textDecoration(none),
-  Media.xs([bottom(-2.0->rem)]),
-  Media.sm([bottom(-2.0->rem)]),
-  Media.md([bottom(1.6->rem)]),
+  Media.xs([bottom(zero)]),
+  Media.sm([bottom(zero)]),
+  Media.md([bottom(zero)]),
   hover([
     opacity(1.0),
     transition(~duration=300, "opacity"),

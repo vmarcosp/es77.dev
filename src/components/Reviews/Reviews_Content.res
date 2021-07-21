@@ -20,7 +20,7 @@ let highlights = [
     photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e Rescript. Esse curso é a sua `->str}
+        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e ReScript. Esse curso é a sua `->str}
         <Text.Span> {j`oportunidade de aprender de verdade`} </Text.Span>
         {j` com quem entende do assunto 😄`->str}
       </TextWrapper>
@@ -36,7 +36,11 @@ let highlights = [
         {`Não existem pessoas mais experientes em ReScript no Brasil que o Marcos e Gabriel. Ambos são apaixonados por programação funcional e 
         você consegue ver esse amor em cada explicação e trabalho que é feito por eles. 
         Tendo trabalhado como instrutor por tantos anos, eu consigo ver claramente quem realmente 
-        tem paixão pelo ensino e didática de quem não tem, e posso aprovar que você vai aprender muito com os dois.`->str}
+        tem `->str}
+        <Text.Span> {`paixão pelo ensino`} </Text.Span>
+        {` e `->str}
+        <Text.Span> `didática` </Text.Span>
+        {` de quem não tem, e posso afirmar que você vai aprender muito com os dois.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -48,8 +52,8 @@ let highlights = [
     description: {
       <TextWrapper>
         {j`Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o `->str}
-        <Text.Span> {j`melhor material de aprendizado disponível no mercado `} </Text.Span>
-        {`🚀`->str}
+        <Text.Span> {j`melhor material de aprendizado`} </Text.Span>
+        {` disponível no mercado  🚀`->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -97,8 +101,8 @@ let highlights = [
   },
   {
     name: "Diogo Mafra",
-    role: "CVO na T10 Digital",
-    photo: "/assets/reviews/daciuk.webp",
+    role: "co-CTO na T10 Digital",
+    photo: "/assets/reviews/diogo.jpg",
     description: {
       <TextWrapper>
         {j`Foi através da ajuda de Gabriel e Marcos que me aprofundei em 
@@ -144,7 +148,10 @@ let studentReviews = [
     photo: "/assets/reviews/celso.webp",
     description: {
       <TextWrapper>
-        {`Se o curso ES2077 existisse quando comecei a estudar ReScript, certamente minha trajetória de aprendizado teria sido muito melhor, tendo em vista que o curso entrega todo o material e os recursos necessários para sair do zero ao avançado em ReScript.`->str}
+        {`Se o curso ES2077 existisse quando comecei os meus estudos de ReScript, certamente minha jornada de aprendizado teria sido muito melhor.
+        O curso entrega todo o material e os recursos necessários para sair do `->str}
+        <Text.Span> {`zero ao avançado`} </Text.Span>
+        {` na linguagem.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -156,8 +163,8 @@ let studentReviews = [
     description: {
       <TextWrapper>
         {`Meu principal objetivo em aprender ReScript era poder me aprofundar em uma linguagem 
-        diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje `->str}
-        <span> {`sou um programador melhor`->str} </span>
+        diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou `->str}
+        <span> {`um programador melhor`->str} </span>
         {` devo em muito ao ReScript e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
       </TextWrapper>
     },
