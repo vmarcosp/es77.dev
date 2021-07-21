@@ -45,7 +45,7 @@ let items = [
         `->str}
         <a href={makeTelegramUrl("vmarcosp")}> {j` Marcos`->str} </a>
         {j` e o`->str}
-        <a href={makeTelegramUrl("gabriel")}> {j` Gabriel`->str} </a>
+        <a href={makeTelegramUrl("fakenickels")}> {j` Gabriel`->str} </a>
         {j` pelo telegram.`->str}
       </>
     },
