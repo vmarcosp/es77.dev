@@ -129,20 +129,6 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Guilherme de Andrade`,
-    role: "Software Engineer na New Work Se",
-    photo: "/assets/reviews/andrade.webp",
-    description: {
-      <TextWrapper>
-        {`ES2077 é um curso muito bem pensado e produzido. 
-        Atráves dele, o Gabriel passa sua experiência com ReScript em produção de uma `->str}
-        <Text.Span> {`forma clara e objetiva`} </Text.Span>
-        {`. Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReScript.`->str}
-      </TextWrapper>
-    },
-    translatedDescription: None,
-  },
-  {
     name: j`Celso Bonutti`,
     role: "Full-Stack Developer na Heliax",
     photo: "/assets/reviews/celso.webp",
@@ -152,6 +138,20 @@ let studentReviews = [
         O curso entrega todo o material e os recursos necessários para sair do `->str}
         <Text.Span> {`zero ao avançado`} </Text.Span>
         {` na linguagem.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Guilherme de Andrade`,
+    role: "Software Engineer na New Work Se",
+    photo: "/assets/reviews/andrade.webp",
+    description: {
+      <TextWrapper>
+        {`ES2077 é um curso muito bem pensado e produzido. 
+        Atráves dele, o Gabriel passa sua experiência com ReScript em produção de uma `->str}
+        <Text.Span> {`forma clara e objetiva`} </Text.Span>
+        {`. Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReScript.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
