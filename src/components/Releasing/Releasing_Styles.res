@@ -34,7 +34,6 @@ let form = style(. [
       color(Theme.Colors.white),
       width(100.0->pct),
       padding2(~v=1.2->rem, ~h=1.8->rem),
-      marginLeft(pt(2)),
       backgroundColor("211C2B"->hex),
       borderStyle(none),
       boxShadow(none),
