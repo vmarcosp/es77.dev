@@ -22,7 +22,7 @@ let variants = delay => {
 
 let submitForm = state =>
   fetch(
-    "https://es2077.builtwithdark.com/subscribes",
+    "https://es2077.builtwithdark.com/subscribe",
     {
       "method": "POST",
       "headers": {
