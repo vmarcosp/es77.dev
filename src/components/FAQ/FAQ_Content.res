@@ -32,9 +32,7 @@ let items = [
   {
     title: j`Sou aluno da primeira versão do curso, tenho acesso a esta versão também?`,
     description: {
-      j`Como aluno do primeiro curso, você terá acesso apenas ao primeiro módulo deste curso.
-        Devido a uma limitação da Udemy, você só poderá acessar o 1º módulo através da plataforma disponibilizada na primeira versão do curso.
-      .`->str
+      j`Como aluno do primeiro curso, você terá acesso apenas ao primeiro módulo deste curso, que possui o mesmo conteúdo que a primeira versão, porém com atualizações e novos materiais produzidos para esta versão.`->str
     },
   },
   {

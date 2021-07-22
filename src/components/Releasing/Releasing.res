@@ -53,7 +53,7 @@ let make = () => {
       setSubmissionState(_ => Submitted)
       Promise.resolve()
     })
-    ->Promise.catch(() => {
+    ->Promise.catch((_) => {
       setSubmissionState(_ => Error)
       setTimeout(. () => {
         setSubmissionState(_ => Idle)
