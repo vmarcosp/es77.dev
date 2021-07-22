@@ -1,6 +1,6 @@
 open CssJs
 
-let wrapper = style(.[
+let wrapper = style(. [
   maxWidth(Theme.Constants.maxWidth),
   display(#flex),
   justifyContent(#center),
@@ -24,9 +24,9 @@ let wrapper = style(.[
   Media.lg([after([display(#block)])]),
 ])
 
-let link = style(.[cursor(pointer), textDecoration(none)])
+let link = style(. [cursor(pointer), textDecoration(none)])
 
-let partner = style(.[
+let partner = style(. [
   display(#flex),
   justifyContent(#center),
   alignItems(#center),
@@ -39,8 +39,11 @@ let partner = style(.[
   selector("path", [transition(~duration=400, "fill")]),
   hover([
     transition(~duration=400, "background"),
-    selector("path", [unsafe("fill", "#ffffff"), transition(~duration=400, "fill")]),
-    selector("> .reasonbr path", [unsafe("fill", "#DD1350"), transition(~duration=400, "fill")]),
+    selector("> .brainnco path", [unsafe("fill", "#FAFAFA"), transition(~duration=400, "fill")]),
+    selector(
+      "> .t10 path:nth-child(1)",
+      [unsafe("fill", "#3AB54A"), transition(~duration=400, "fill")],
+    ),
     selector("p", [transition(~duration=400, "color"), color(Theme.Colors.white)]),
     selector("img", [transitionDuration(400), unsafe("filter", "none")]),
   ]),
@@ -78,7 +81,7 @@ let partner = style(.[
   Media.xl([padding(11.8->rem), selector("svg, img", [width(9.2->rem)])]),
 ])
 
-let partners = style(.[
+let partners = style(. [
   width(100.0->pct),
   display(#flex),
   Media.xs([flexDirection(column)]),

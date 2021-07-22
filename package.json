@@ -13,6 +13,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^10.0.9",
     "@rescript/react": "0.10.1",
+    "@ryyppy/rescript-promise": "2.1.0",
     "bs-css-emotion": "2.4.0",
     "framer-motion": "3.10.0",
     "next": "10.0.6",

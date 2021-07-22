@@ -5,6 +5,11 @@ module Div = Components.MakeElement({
   external element: Components.motionElement = "div"
 })
 
+module Form = Components.MakeElement({
+  @module("framer-motion") @scope("motion")
+  external element: Components.motionElement = "form"
+})
+
 module Header = Components.MakeElement({
   @module("framer-motion") @scope("motion")
   external element: Components.motionElement = "header"
