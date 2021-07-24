@@ -41,7 +41,7 @@ let make = () => {
       <div className=cardsContainer>
         <Card
           github="https://github.com/vmarcosp"
-          twitter="https://github.com/vmaarcosp"
+          twitter="https://twitter.com/vmaarcosp"
           telegram={makeTelegramUrl("vmarcosp")}
           initialX={-40}
           photo="/assets/marcos.webp"
@@ -55,7 +55,7 @@ let make = () => {
         />
         <Card
           github="https://github.com/fakenickels"
-          twitter="https://github.com/fakenickels"
+          twitter="https://twitter.com/fakenickels"
           telegram={makeTelegramUrl("fakenickels")}
           initialX={40}
           photo="/assets/gabriel.webp"
