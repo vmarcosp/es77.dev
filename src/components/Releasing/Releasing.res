@@ -5,9 +5,12 @@ module Content = Releasing_Content
 @scope("window") @val external setTimeout: (. unit => unit, int) => unit = "setTimeout"
 @scope("window") @val external fetch: (string, {..}) => Js.Promise.t<unit> = "fetch"
 
+type contactTag = [#"react-conf" | #"heart-conf" | #"landing-page"]
+
 type subscribeForm = {
   name: string,
   email: string,
+  tag: contactTag,
 }
 
 type submissionState = Idle | Submitting | Submitted | Error
@@ -32,14 +35,24 @@ let submitForm = state =>
     },
   )
 
+let tagFromQueryParam = query =>
+  switch query->Js.Dict.get("t") {
+  | Some("react-conf") => #"react-conf"
+  | Some("heart-conf") => #"heart-conf"
+  | _ => #"landing-page"
+  }
+
 @react.component
 let make = () => {
+  let router = Next.Router.useRouter()
+  let tag = tagFromQueryParam(router.query)
   let (innerRef, inView) = IntersectionObserver.useInView()
   let controls = FramerMotion.useAnimation()
   let (submissionState, setSubmissionState) = React.useState(() => Idle)
   let (formState, setFormState) = React.useState(() => {
     name: "",
     email: "",
+    tag: #"landing-page",
   })
 
   let handleSubmit = () => {
@@ -47,13 +60,13 @@ let make = () => {
     submitForm(formState)
     ->Promise.then(() => {
       setTimeout(. () => {
-        setFormState(_ => {name: "", email: ""})
+        setFormState(_ => {name: "", email: "", tag: tagFromQueryParam(router.query)})
         setSubmissionState(_ => Idle)
       }, 3000)
       setSubmissionState(_ => Submitted)
       Promise.resolve()
     })
-    ->Promise.catch((_) => {
+    ->Promise.catch(_ => {
       setSubmissionState(_ => Error)
       setTimeout(. () => {
         setSubmissionState(_ => Idle)
@@ -81,11 +94,18 @@ let make = () => {
           variants={variants(0.4)}
           icon=#lighting
           innerRef>
-          {`Pré-Lançamento`}
+          {switch tag {
+          | #"heart-conf" => `Cupom de desconto He4rt Conf.`
+          | #"react-conf" => `Cupom de desconto React Conf.`
+          | _ => `Pré-Lançamento`
+          }}
         </Title>
         <Text.P
           animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
-          {Content.releasingText}
+          {switch tag {
+          | #"landing-page" => Content.releasingText
+          | partner => Content.partnerText(partner)
+          }}
         </Text.P>
         <Text.P
           animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
