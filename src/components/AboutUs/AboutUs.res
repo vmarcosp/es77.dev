@@ -46,7 +46,7 @@ let make = () => {
           initialX={-40}
           photo="/assets/marcos.webp"
           name="Marcos Oliveira"
-          role="Developer na Brainn Co."
+          role="Tech Lead na Porto Lab"
           description={<>
             {j`Front-End Developer há alguns anos, meio metido a designer e conhecido como o`->str}
             <i> {j`"Chatão do ReScript"`->str} </i>
