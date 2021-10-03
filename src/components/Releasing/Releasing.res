@@ -55,6 +55,8 @@ let make = () => {
     tag: #"landing-page",
   })
 
+  let (registerField, scrollTo) = Hooks.useScrollTo()
+
   let handleSubmit = () => {
     setSubmissionState(_ => Submitting)
     submitForm(formState)
@@ -84,9 +86,16 @@ let make = () => {
     None
   }, [inView])
 
+  React.useEffect1(() => {
+    if(tag !== #"landing-page") {
+      scrollTo()
+    }
+    None;
+  }, [tag])
+
   <Motion.Div
     animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=wrapper>
-    <div className=content>
+    <div className=content ref={registerField()}>
       <div className=textWrapper>
         <Title
           animate=#controlled(controls)
