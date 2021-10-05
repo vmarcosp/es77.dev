@@ -58,8 +58,8 @@ let make = () => {
             <Link href={sectionId} key={id->Render.toString} onClick label />
           )}
         </ul>
-        <a href="mailto:contato@es77.dev" className={classes.email}>
-          {"contato@es77.dev"->React.string}
+        <a href="mailto:ecmascript2077@gmail.com" className={classes.email}>
+          {"ecmascript2077@gmail.com"->React.string}
         </a>
       </div>
     </div>

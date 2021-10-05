@@ -12,7 +12,7 @@ let items = [
   {
     title: j`Quais conhecimentos são necessários para fazer o curso?`,
     description: {
-      j`Não é obrigatório saber React ou JavaScript, no entanto seria interessante ter pelo menos o básico das duas tecnologias para absorver melhor o conteúdo.`->str
+      j`É importante que você tenha conhecimento prévio em JavaScript, React e em ferramentas como yarn e npm para poder absorver melhor o conteúdo do curso.`->str
     },
   },
   {
@@ -27,7 +27,7 @@ let items = [
   },
   {
     title: j`Onde o conteúdo será disponibilizado?`,
-    description: {j`Todo o conteúdo referente ao curso será disponibilizado na Udemy.`->str},
+    description: {j`Todo o conteúdo referente ao curso será disponibilizado na Hotmart.`->str},
   },
   {
     title: j`Sou aluno da primeira versão do curso, tenho acesso a esta versão também?`,

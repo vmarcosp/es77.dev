@@ -37,8 +37,8 @@ let submitForm = state =>
 
 let tagFromQueryParam = query =>
   switch query->Js.Dict.get("t") {
-  | Some("react-conf") => #"react-conf"
-  | Some("heart-conf") => #"heart-conf"
+  // | Some("react-conf") => #"react-conf"
+  // | Some("heart-conf") => #"heart-conf"
   | _ => #"landing-page"
   }
 
@@ -87,10 +87,10 @@ let make = () => {
   }, [inView])
 
   React.useEffect1(() => {
-    if(tag !== #"landing-page") {
+    if tag !== #"landing-page" {
       scrollTo()
     }
-    None;
+    None
   }, [tag])
 
   <Motion.Div
