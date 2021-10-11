@@ -51,8 +51,9 @@ let form = style(. [
     ],
   ),
   selector(
-    "> button",
+    "> button, > a",
     [
+      textAlign(#center),
       padding2(~v=1.2->rem, ~h=1.8->rem),
       textTransform(uppercase),
       cursor(pointer),
