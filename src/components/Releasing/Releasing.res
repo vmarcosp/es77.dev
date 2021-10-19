@@ -25,7 +25,7 @@ let variants = delay => {
 
 let submitForm = state => {
   Mixpanel.track(
-    `Inscrição pelo Formulário`,
+    j`Inscrição pelo Formulário`,
     Some({
       "Name": state.name,
       "Email": state.email,
