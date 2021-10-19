@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import TagManager from "./google-tag-manager";
-import JSONSchema from "./seo";
 
 class AppDocument extends Document {
   static async getInitialProps(ctx) {
@@ -25,7 +24,6 @@ class AppDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <JSONSchema />
           <TagManager />
           <noscript>
             <iframe
