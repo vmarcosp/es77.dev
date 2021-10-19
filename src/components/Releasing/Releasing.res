@@ -23,7 +23,15 @@ let variants = delay => {
   }
 }
 
-let submitForm = state =>
+let submitForm = state => {
+  Mixpanel.track(
+    "Inscrição pelo Formulário",
+    Some({
+      "Name": state.name,
+      "Email": state.email,
+    }),
+  )
+
   fetch(
     "https://es2077.builtwithdark.com/subscribe",
     {
@@ -34,7 +42,7 @@ let submitForm = state =>
       "body": Js.Json.stringifyAny(state)->Belt.Option.getWithDefault("{}"),
     },
   )
-
+}
 let tagFromQueryParam = query =>
   switch query->Js.Dict.get("t") {
   // | Some("react-conf") => #"react-conf"
