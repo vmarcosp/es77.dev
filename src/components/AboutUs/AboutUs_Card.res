@@ -27,6 +27,15 @@ let make = (~name, ~description, ~role, ~photo as src, ~github, ~telegram, ~twit
     None
   }, [inView])
 
+  let trackLinkClick = (url, _) => {
+    Mixpanel.track(
+      "Clicou no Link da Redes Sociais",
+      Some({
+        "URL da Rede Social": url,
+      }),
+    )
+  }
+
   <Motion.Div
     innerRef
     animate=#controlled(controls)
@@ -37,13 +46,31 @@ let make = (~name, ~description, ~role, ~photo as src, ~github, ~telegram, ~twit
     <p className=title> {name->React.string} </p>
     <p className=subtitle> {role->React.string} </p>
     <div className=iconsWrapper>
-      <a target="_blank" rel="noopener noreferrer" ariaLabel="github" className=icon href=github>
+      <a
+        onClick={trackLinkClick(github)}
+        target="_blank"
+        rel="noopener noreferrer"
+        ariaLabel="github"
+        className=icon
+        href=github>
         <Icons.Github />
       </a>
-      <a target="_blank" rel="noopener noreferrer" ariaLabel="telegram" className=icon href=telegram>
+      <a
+        onClick={trackLinkClick(telegram)}
+        target="_blank"
+        rel="noopener noreferrer"
+        ariaLabel="telegram"
+        className=icon
+        href=telegram>
         <Icons.Telegram />
       </a>
-      <a target="_blank" rel="noopener noreferrer" ariaLabel="twitter " className=icon href=twitter>
+      <a
+        onClick={trackLinkClick(twitter)}
+        target="_blank"
+        rel="noopener noreferrer"
+        ariaLabel="twitter "
+        className=icon
+        href=twitter>
         <Icons.Twitter />
       </a>
     </div>
