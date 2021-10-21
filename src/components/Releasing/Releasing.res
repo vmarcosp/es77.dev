@@ -115,7 +115,7 @@ module ReleasingCard = {
             {switch tag {
             | #"heart-conf" => `Cupom de desconto He4rt Conf.`
             | #"react-conf" => `Cupom de desconto React Conf.`
-            | _ => `Pré-Lançamento`
+            | _ => `Cupom de Pré-Lançamento`
             }}
           </Title>
           <Text.P
