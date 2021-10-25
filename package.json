@@ -11,9 +11,12 @@
     "res:clean": "rescript clean"
   },
   "dependencies": {
+    "@emotion/css": "11.5.0",
     "@next/bundle-analyzer": "^10.0.9",
     "@rescript/react": "0.10.1",
+    "@rescriptbr/ancestor": "0.4.4",
     "@ryyppy/rescript-promise": "2.1.0",
+    "@svgr/webpack": "5.5.0",
     "bs-css-emotion": "2.4.0",
     "framer-motion": "3.10.0",
     "mixpanel-browser": "2.41.0",

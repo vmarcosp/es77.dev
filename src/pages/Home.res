@@ -5,6 +5,7 @@ let default = () => {
     <AboutReScript />
     <About />
     <AboutUs />
+    <Modules />
     <Checkout />
     <Reviews />
     <Partners />

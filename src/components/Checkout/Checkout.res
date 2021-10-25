@@ -109,7 +109,7 @@ let items = [
 
 @react.component
 let make = () => {
-  <div className=Styles.wrapper>
+  <div className=Styles.wrapper id="garanta-sua-vaga">
     <div className=Styles.textWrapper>
       <Title icon=#lighting> {`Garanta sua vaga!`} </Title>
       <Text.P>
