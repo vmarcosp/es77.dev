@@ -124,8 +124,8 @@ let make = () => {
     className={css({"fontFamily": Theme.fontFamily})}
     display=[xs(#flex)]
     justifyContent=[xs(#center)]
-    pt=[xs(24)]
-    px=[xs(4)]>
+    pt=[xs(20), md(22), lg(24)]
+    px=[xs(4), md(6)]>
     <Box width=[xs(100.0->#pct)] maxW=[xs(Theme.Constants.maxWidth)]>
       <Title> {`Módulos do curso`} </Title>
       <Grid spacing=[xs(4)] justifyContent=[xs(#center)]>

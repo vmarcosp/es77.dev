@@ -1,4 +1,5 @@
 open Render
+open Ancestor.Default
 
 module Styles = {
   open CssJs
@@ -80,7 +81,9 @@ module Styles = {
   ])
 
   let button = style(. [
-    //
+    textDecoration(none),
+    display(#flex),
+    justifyContent(#center),
     cursor(pointer),
     marginTop(2.4->rem),
     padding2(~v=1.2->rem, ~h=zero),
@@ -128,7 +131,13 @@ let make = () => {
           <li key={key->Js.Int.toString}> <img src="assets/check-icon.svg" /> {item->str} </li>
         })}
       </ul>
-      <button className=Styles.button> {`Garantir minha vaga`->str} </button>
+      <Base
+        tag=#a
+        target="_blank"
+        href="https://hotmart.com/product/es77/R59895080O"
+        className=Styles.button>
+        {`Garantir minha vaga`->str}
+      </Base>
     </div>
   </div>
 }
