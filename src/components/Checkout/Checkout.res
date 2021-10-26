@@ -105,9 +105,9 @@ module Styles = {
 
 let items = [
   `Acesso vitalício`,
-  `Acesso ao discord`,
+  `Acesso ao discord dos alunos`,
   `Suporte dos instrutores`,
-  `Lives exclusivas`,
+  `Conteúdos extras`,
 ]
 
 @react.component
@@ -132,6 +132,7 @@ let make = () => {
         })}
       </ul>
       <Base
+        onClick={_ => Mixpanel.track("Clicou no Botão para Comprar", None)}
         tag=#a
         target="_blank"
         href="https://hotmart.com/product/es77/R59895080O"

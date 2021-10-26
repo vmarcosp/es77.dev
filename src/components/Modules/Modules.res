@@ -21,7 +21,7 @@ module Tag = {
 }
 
 module ModuleCard = {
-  type modules = [#1 | #2 | #3 | #4 | #extra]
+  type modules = [#1 | #2 | #3 | #4 | #5 | #extra]
   @react.component
   let make = (~title, ~description, ~number, ~released, ~footer=?) => {
     let src = `/assets/${switch number {
@@ -29,6 +29,7 @@ module ModuleCard = {
       | #2 => `2.png`
       | #3 => `3.png`
       | #4 => `4.png`
+      | #5 => `5.png`
       | #extra => `+.png`
       }}`
 
@@ -78,7 +79,12 @@ module ModuleCard = {
         </Box>
       | true => React.null
       }}
-      <Box ml=[md(11)] position=[xs(#relative)] zIndex=[xs(10)]>
+      <Box
+        display=[xs(#flex)]
+        flexDirection=[xs(#column)]
+        ml=[md(11)]
+        position=[xs(#relative)]
+        zIndex=[xs(10)]>
         <Typography
           tag=#h2
           maxW=[
@@ -100,6 +106,7 @@ module ModuleCard = {
           {title->str}
         </Typography>
         <Typography
+          flexGrow=[xs(#num(3.0))]
           tag=#p
           m=[xs(0)]
           color=[xs(#hex("#cecece"))]
@@ -141,37 +148,48 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Programação Funcional`
-            description=`Aqui vai algum textinho bem legal e tchópe super descritivo sobre o módulo do curso, rsrsrs mais algumas coisinhas e mais e mais e mais e mais um pouquin, quase acabando, deu bjs`
+            description={`
+              Neste módulo você irá aprender diversos conceitos de programação funcional que podem ser aplicados tanto em ReScript como em JavaScript e entender finalmente o que é uma Monad 😆.
+            `}
             number=#2
             released=false
-            footer={() => <Tag> {`Aproxidamente 12h de conteúdo`} </Tag>}
+            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
           />
         </Box>
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`Aqui vai algum textinho bem legal e tchópe super descritivo sobre o módulo do curso, rsrsrs mais algumas coisinhas e mais e mais e mais e mais um pouquin, quase acabando, deu bjs`
+            description=`No primeiro módulo você passou por uma introdução de ReScript. Neste módulo você irá aprender técnicas e conceitos avançados da linguagem, que são importantes para dominar a linguagem.`
             number=#3
             released=false
-            footer={() => <Tag> {`Aproxidamente 12h de conteúdo`} </Tag>}
+            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
           />
         </Box>
         <Box columns=[lg(#6)]>
           <ModuleCard
-            title=`Integrações com APIs`
-            description=`Aqui vai algum textinho bem legal e tchópe super descritivo sobre o módulo do curso, rsrsrs mais algumas coisinhas e mais e mais e mais e mais um pouquin, quase acabando, deu bjs`
+            title=`GraphQL e APIs REST`
+            description=`GraphQl e ReScript são duas combinações poderosas. Neste módulo você irá aprender a utilizar ReScript com Relay e Apollo. Além disso abordaremos utilizar o ReScript para integrações com APIs REST.`
             number=#4
             released=false
-            footer={() => <Tag> {`Aproxidamente 12h de conteúdo`} </Tag>}
+            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
+          />
+        </Box>
+        <Box columns=[lg(#6)]>
+          <ModuleCard
+            title=`Dicas e Truques`
+            description=`ReScript possui uma ótima documentação e canais de de dúvidas. No entanto, existem coisas que só algumas pessoas conhecem sobre a linguagem. Neste módulo vamos te mostrar várias dicas, truques e segredos sobre a linguagem e seu ecossistema, além de te ajudar a encontrar vários recursos e materiais de estudo.`
+            number=#5
+            released=false
+            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
           />
         </Box>
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Conteúdo extras!`
-            description=`Aqui vai algum textinho bem legal e tchópe super descritivo sobre o módulo do curso, rsrsrs mais algumas coisinhas e mais e mais e mais e mais um pouquin, quase acabando, deu bjs`
+            description=`Você vai ter acesso a um Discord exclusivo onde terá acesso a materiais e recursos exclusivos relacionados a ReScript. Além disso, você terá contato direto com os instrutores e outras pessoas que estão participando da mesma jornada de aprendizado de ReScript que você.`
             number=#extra
             released=true
-            footer={() => <Tag> {`Aproxidamente 12h de conteúdo`} </Tag>}
+            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
           />
         </Box>
       </Grid>
