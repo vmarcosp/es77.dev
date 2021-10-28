@@ -159,7 +159,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`No primeiro módulo você passou por uma introdução de ReScript. Neste módulo você irá aprender técnicas e conceitos avançados da linguagem, que são importantes para utilização dela em projetos reais.`
+            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo react, sistema de módulos, ADTs e outros tópicos importantes para utilização de ReScript em projetos reais.`
             number=#3
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -168,7 +168,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`GraphQL e APIs REST`
-            description=`GraphQl e ReScript são duas combinações poderosas. Neste módulo você irá aprender a utilizar ReScript com Relay e Apollo. Além disso abordaremos utilizar o ReScript para integrações com APIs REST.`
+            description=`GraphQl e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porque GraphQL funciona tão bem com ReScript com exemplos práticos com Relay e Apollo. Além disso, também iremos abordar integrações com APIs REST utilizando ReScript.`
             number=#4
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -177,7 +177,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Dicas e Truques`
-            description=`ReScript possui uma ótima documentação e canais de de dúvidas. No entanto, existem coisas que só algumas pessoas conhecem sobre a linguagem. Neste módulo vamos te mostrar várias dicas, truques e segredos sobre a linguagem e seu ecossistema, além de te ajudar a encontrar vários recursos e materiais de estudo.`
+            description=`ReScript possui uma ótima documentação e canais de de dúvidas. No entanto, existem coisas que só algumas pessoas conhecem sobre a linguagem. Neste módulo vamos te mostrar várias dicas, truques e segredos sobre a linguagem e seu ecossistema, além de disponbilizar e ajudar a encontrar vários recursos e materiais de estudo.`
             number=#5
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
