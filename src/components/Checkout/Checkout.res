@@ -117,9 +117,8 @@ let make = () => {
       <Title icon=#lighting> {`Garanta sua vaga!`} </Title>
       <Text.P>
         {`Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. 
-          Agora você já pode garantir a sua vaga no curso, 
-          pois já temos 2 módulos disponíveis para você começar a aprender rescript! Algum textinho aqui falando 
-          sobre o curso etc etc.
+          No entanto, você já pode adquirir o curso, pois lançamos o primeiro módulo.
+          O acesso ao curso é vitalício e conta com um suporte direto dos instrutores do curso.
         `->str}
       </Text.P>
     </div>
