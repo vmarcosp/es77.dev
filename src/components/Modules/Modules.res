@@ -139,7 +139,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Introdução ao ReScript`
-            description=`Este módulo será a base para sua jornada em ReScript. Com ele, você irá aprender as principais features da linguagem e o funcionamento do tooling e ecossistema.`
+            description=`Este módulo será a base para sua jornada com ReScript. Com ele, você irá aprender as principais features da linguagem, funcionamento do tooling e ecossistema.`
             number=#1
             released=true
             footer={() => <> <Tag> {`10 aulas`} </Tag> <Tag> {`12h de conteúdo`} </Tag> </>}
@@ -149,7 +149,7 @@ let make = () => {
           <ModuleCard
             title=`Programação Funcional`
             description={`
-              Neste módulo você irá aprender diversos conceitos de programação funcional que podem ser aplicados tanto em ReScript como em JavaScript e entender finalmente o que é uma Monad 😆.
+              Neste módulo você irá aprender diversos conceitos de programação funcional que podem ser aplicados tanto em ReScript como em JavaScript. Além de finalmente entender o que é uma Monad 😆.
             `}
             number=#2
             released=false
@@ -159,7 +159,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`No primeiro módulo você passou por uma introdução de ReScript. Neste módulo você irá aprender técnicas e conceitos avançados da linguagem, que são importantes para dominar a linguagem.`
+            description=`No primeiro módulo você passou por uma introdução de ReScript. Neste módulo você irá aprender técnicas e conceitos avançados da linguagem, que são importantes para utilização dela em projetos reais.`
             number=#3
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -186,7 +186,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Conteúdo extras!`
-            description=`Você vai ter acesso a um Discord exclusivo onde terá acesso a materiais e recursos exclusivos relacionados a ReScript. Além disso, você terá contato direto com os instrutores e outras pessoas que estão participando da mesma jornada de aprendizado de ReScript que você.`
+            description=`Você vai ter acesso a um Discord exclusivo onde terá acesso a materiais e recursos relacionados a ReScript. Além disso, você terá contato direto com os instrutores e outras pessoas que estão participando da mesma jornada de aprendizado de ReScript que você.`
             number=#extra
             released=true
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
