@@ -168,7 +168,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`GraphQL e APIs REST`
-            description=`GraphQl e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porque GraphQL funciona tão bem com ReScript com exemplos práticos com Relay e Apollo. Além disso, também iremos abordar integrações com APIs REST utilizando ReScript.`
+            description=`GraphQL e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porque GraphQL funciona tão bem com ReScript com exemplos práticos com Relay e Apollo. Além disso, também iremos abordar integrações com APIs REST utilizando ReScript.`
             number=#4
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}

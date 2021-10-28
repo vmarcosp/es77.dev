@@ -34,9 +34,9 @@ let make = () => {
     </Title>
     <div className=partners ref=partnersRef>
       <a
-        ariaLabel="brainnco"
+        ariaLabel="portolab"
         className=link
-        href="https://brainn.co"
+        href="https://portolab.com.br"
         target="_blank"
         rel="noopener noreferrer">
         <Motion.Div
@@ -44,7 +44,7 @@ let make = () => {
           animate=#controlled(partnerControls)
           variants={variants(0.4)}
           className=partner>
-          <Logos.Brainn /> <p> {`Brainn Co.`->React.string} </p>
+          <Logos.Portolab /> <p> {`Portolab`->React.string} </p>
         </Motion.Div>
       </a>
       <a
