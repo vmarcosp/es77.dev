@@ -157,7 +157,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo React, sistema de módulos e outras features avançadas importantes da linguagem para a construção de aplicações reais.`
+            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo React, sistema de módulos e outras features avançadas da linguagem que são importantes para a construção de aplicações reais.`
             number=#3
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -166,7 +166,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`GraphQL, REST e Next`
-            description=`GraphQL e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript, com exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
+            description=`GraphQL, Next e ReScript são combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript, com exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
             number=#4
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
