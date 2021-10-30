@@ -139,7 +139,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Introdução ao ReScript`
-            description=`Este módulo será a base para sua jornada com ReScript. Com ele, você irá aprender as principais features da linguagem, funcionamento do tooling e ecossistema.`
+            description=`Este módulo será a base para sua jornada com ReScript. Com ele, você irá aprender as principais features da linguagem e o ecossistema.`
             number=#1
             released=true
             footer={() => <> <Tag> {`10 aulas`} </Tag> <Tag> {`12h de conteúdo`} </Tag> </>}
@@ -148,9 +148,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Programação Funcional`
-            description={`
-              Neste módulo você irá aprender diversos conceitos de programação funcional que podem ser aplicados tanto em ReScript como em JavaScript. Além de finalmente entender o que é uma Monad 😆.
-            `}
+            description={`Neste módulo, você irá aprender diversas técnicas de programação funcional que podem ser aplicadas tanto em ReScript quanto em JavaScript. Sim, você finalmente vai entender o que é uma Monad.`}
             number=#2
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -159,7 +157,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo react, sistema de módulos, ADTs e outros tópicos importantes para utilização de ReScript em projetos reais.`
+            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo React, sistema de módulos e outras features avançadas importantes da linguagem para a construção de aplicações reais.`
             number=#3
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -167,8 +165,8 @@ let make = () => {
         </Box>
         <Box columns=[lg(#6)]>
           <ModuleCard
-            title=`GraphQL e APIs REST`
-            description=`GraphQL e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porque GraphQL funciona tão bem com ReScript com exemplos práticos com Relay e Apollo. Além disso, também iremos abordar integrações com APIs REST utilizando ReScript.`
+            title=`GraphQL, REST e Next`
+            description=`GraphQL e ReScript são duas combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript, com exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
             number=#4
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -177,7 +175,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Dicas e Truques`
-            description=`ReScript possui uma ótima documentação e canais de de dúvidas. No entanto, existem coisas que só algumas pessoas conhecem sobre a linguagem. Neste módulo vamos te mostrar várias dicas, truques e segredos sobre a linguagem e seu ecossistema, além de disponbilizar e ajudar a encontrar vários recursos e materiais de estudo.`
+            description=`ReScript possui uma ótima documentação e canais de dúvidas. No entanto, existem alguns segredos e truques que apenas pessoas que dominam a linguagem sabem. Neste módulo, vamos te apresentar os principais truques e segredos.`
             number=#5
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
