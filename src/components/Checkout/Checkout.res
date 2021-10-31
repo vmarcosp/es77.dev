@@ -118,7 +118,11 @@ let make = () => {
       <Text.P>
         {`Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. 
           No entanto, você já pode adquirir o curso, pois lançamos o primeiro módulo.
-          O acesso ao curso é vitalício e conta com um suporte direto dos instrutores do curso.
+          O acesso ao curso é vitalício e conta com um suporte direto dos instrutores.
+        `->str}
+      </Text.P>
+      <Text.P>
+        {`*Se você se cadastrou na campanha de pré-lançamento, através do site ou pelos eventos da He4rt Conf e React Conf, confira seu e-mail e utilize o seu cupom para efetuar a compra do curso com desconto.
         `->str}
       </Text.P>
     </div>

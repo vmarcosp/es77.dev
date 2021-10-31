@@ -166,7 +166,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`GraphQL, REST e Next`
-            description=`GraphQL, Next e ReScript são combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript, com exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
+            description=`GraphQL, Next e ReScript são combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript através de exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
             number=#4
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -175,7 +175,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Dicas e Truques`
-            description=`ReScript possui uma ótima documentação e canais de dúvidas. No entanto, existem alguns segredos e truques que apenas pessoas que dominam a linguagem sabem. Neste módulo, vamos te apresentar os principais truques e segredos.`
+            description=`ReScript possui uma ótima documentação e canais de dúvidas. No entanto, existem alguns segredos e truques que apenas pessoas que dominam a linguagem sabem. Neste módulo, vamos te apresentar os principais truques e segredos do ReScript.`
             number=#5
             released=false
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
@@ -184,7 +184,7 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`Conteúdo extras!`
-            description=`Você vai ter acesso a um Discord exclusivo onde terá acesso a materiais e recursos relacionados a ReScript. Além disso, você terá contato direto com os instrutores e outras pessoas que estão participando da mesma jornada de aprendizado de ReScript que você.`
+            description=`Você vai ter acesso a um Discord exclusivo onde terá acesso a materiais e recursos relacionados à ReScript. Além disso, você terá contato direto com os instrutores e outras pessoas que estão participando da mesma jornada de aprendizado de ReScript que você.`
             number=#extra
             released=true
             footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
