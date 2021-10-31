@@ -39,7 +39,7 @@ let partner = style(. [
   selector("path", [transition(~duration=400, "fill")]),
   hover([
     transition(~duration=400, "background"),
-    selector("> .brainnco path", [unsafe("fill", "#FAFAFA"), transition(~duration=400, "fill")]),
+    selector("> .portolab path", [unsafe("fill", "#8ECC00"), transition(~duration=400, "fill")]),
     selector(
       "> .t10 path:nth-child(1)",
       [unsafe("fill", "#3AB54A"), transition(~duration=400, "fill")],

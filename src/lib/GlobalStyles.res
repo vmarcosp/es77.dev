@@ -15,7 +15,6 @@ let addStyles = () => {
   global(.
     "*",
     [
-      //
       boxSizing(#borderBox),
       selection([color(Theme.Colors.purple), background(rgba(116, 58, 240, 10.0->#percent))]),
     ],

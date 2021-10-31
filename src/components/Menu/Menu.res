@@ -16,16 +16,12 @@ let links = [
     label: "Sobre o curso",
   },
   {
-    sectionId: "#instrutores",
-    label: "Instrutores",
+    sectionId: "#modulos",
+    label: `Módulos`,
   },
   {
-    sectionId: "#reviews",
-    label: "Reviews",
-  },
-  {
-    sectionId: "#parceiros",
-    label: "Parceiros",
+    sectionId: "#comprar",
+    label: "Comprar",
   },
   {
     sectionId: "#faq",

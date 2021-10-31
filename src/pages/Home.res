@@ -4,8 +4,9 @@ let default = () => {
     <Hero />
     <AboutReScript />
     <About />
+    <Modules />
     <AboutUs />
-    <Releasing />
+    <Checkout />
     <Reviews />
     <Partners />
     <FAQ />

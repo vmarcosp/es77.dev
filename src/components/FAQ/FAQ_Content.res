@@ -36,6 +36,17 @@ let items = [
     },
   },
   {
+    title: j`Cadastrei meu e-mail na campanha, mas não recebi meu desconto.`,
+    description: {
+      <>
+        {j`Se você se cadastrou na campanha de pré-lançamento, mas não recebeu seu e-mail com o cupom de desconto, entre em contato conosco através do`->str}
+        <a href={makeTelegramUrl("vmarcosp")}> {j` Telegram`->str} </a>
+        {` ou`->str}
+        <a href=`https://twitter.com/vmaarcosp` target="_blank"> {j` Twitter.`->str} </a>
+      </>
+    },
+  },
+  {
     title: j`Tenho outras dúvidas`,
     description: {
       <>
