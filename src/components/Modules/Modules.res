@@ -142,7 +142,7 @@ let make = () => {
             description=`Este módulo será a base para sua jornada com ReScript. Com ele, você irá aprender as principais features da linguagem e o ecossistema.`
             number=#1
             released=true
-            footer={() => <> <Tag> {`10 aulas`} </Tag> <Tag> {`12h de conteúdo`} </Tag> </>}
+            footer={() => <> <Tag> {`15 aulas`} </Tag> <Tag> {`12h de conteúdo`} </Tag> </>}
           />
         </Box>
         <Box columns=[lg(#6)]>
