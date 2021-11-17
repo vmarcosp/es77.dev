@@ -51,7 +51,7 @@ let make = () => {
         />
       )}
     </div>
-    <h2 className=subtitle ref=studentsRef> {`Alunos do curso anterior`->str} </h2>
+    <h2 className=subtitle ref=studentsRef> {`Alunos do curso`->str} </h2>
     <div className={reviews(~isStudentReview=true)}>
       {studentReviews->map((review, id) =>
         <ReviewItem

@@ -16,7 +16,7 @@ module TextWrapper = {
 let highlights = [
   {
     name: "Fernando Daciuk",
-    role: "Tech Lead na Brainn Co.",
+    role: "Tech Lead na Portolab",
     photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
@@ -143,15 +143,16 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Guilherme de Andrade`,
-    role: "Software Engineer na New Work Se",
-    photo: "/assets/reviews/andrade.webp",
+    name: j`Gabriel Teodoro`,
+    role: `Developer na Brainn Co.`,
+    photo: "/assets/reviews/teodoro.jpeg",
     description: {
       <TextWrapper>
-        {`ES2077 é um curso muito bem pensado e produzido. 
-        Atráves dele, o Gabriel passa sua experiência com ReScript em produção de uma `->str}
-        <Text.Span> {`forma clara e objetiva`} </Text.Span>
-        {`. Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReScript.`->str}
+        {`O curso EcmaScript2077 `->str}
+        <span> {`abriu minha cabeça`->str} </span>
+        {` para muitas coisas! Os exemplos que são apresentados no curso são `->str}
+        <span> {`muito bons e a didática é sensacional`->str} </span>
+        {` com certeza me tornei um desenvolvedor melhor depois de adquirir o curso.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -166,6 +167,63 @@ let studentReviews = [
         diferente da utilizada no trabalho e, assim, desenvolver outras linhas de abordagem para os problemas. Posso dizer que se hoje sou `->str}
         <span> {`um programador melhor`->str} </span>
         {` devo em muito ao ReScript e, principalmente ao Gabriel com seu curso e todo o suporte dado.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Mateus Mendes`,
+    role: `Frontend Developer na RaroLabs`,
+    photo: "/assets/reviews/mateusmendes.png",
+    description: {
+      <TextWrapper>
+        {`O curso do ES2077 é uma `->str}
+        <span> {`produção incrível`->str} </span>
+        {` do Marcos e do Gabriel. Com a ajuda do curso estou conseguindo aprender bastante sobre todo o ecossistema do ReScript, desde o básico até coisas mais avançadas. Não posso esquecer do suporte que eles dão para qualquer dúvida tanto na plataforma quanto do discord do curso. Dessa forma, aprofundando mais em todo ecossistema, pretendo implementá-lo onde trabalho e ser minha principal tecnologia para projetos pessoais.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Halian Vilela`,
+    role: `CTO na Verlindo Comunicação`,
+    photo: "/assets/reviews/halian.jpg",
+    description: {
+      <TextWrapper>
+        {`Esse curso é uma das formas mais `->str}
+        <span> {`didáticas e leves`->str} </span>
+        {` de absorver os importantes conceitos da programação funcional aplicados às stacks JavaScript. Tudo isso utilizando como base um dos ferramentais e sistema de tipos mais interessantes, eficientes e amigáveis disponíveis no mercado até o momento. Sem dúvida, um material construído com muito cuidado e que vai mudar sua forma de desenvolver.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Guilherme de Andrade`,
+    role: "Software Engineer na New Work Se",
+    photo: "/assets/reviews/andrade.webp",
+    description: {
+      <TextWrapper>
+        {`ES2077 é um curso muito bem pensado e produzido. 
+    Atráves dele, o Gabriel passa sua experiência com ReScript em produção de uma `->str}
+        <Text.Span> {`forma clara e objetiva`} </Text.Span>
+        {`. Acredito que este curso oferece toda a base necessária para quem deseja desenvolver utilizando ReScript.`->str}
+      </TextWrapper>
+    },
+    translatedDescription: None,
+  },
+  {
+    name: j`Ezequiel Menneck`,
+    role: `Salsa Technology`,
+    photo: "/assets/reviews/menneck.jpeg",
+    description: {
+      <TextWrapper>
+        {`O conteúdo do curso é `->str}
+        <span> {`insano`->str} </span>
+        {`, a proposta do Marcos e do Gabriel é incrível. A didática é `->str}
+        <span> {`muito boa`->str} </span>
+        {` tudo`->str}
+        <span> {` muito bem explicado `->str} </span>
+        {`de maneira simples além disso caso haja alguma dúvida ambos estão sempre dispostos e disponíveis pra te responder dando o melhor suporte na comunidade do discord. Sempre quis aprender funcional e com certeza adquirir esse curso foi um belo investimento.`->str}
       </TextWrapper>
     },
     translatedDescription: None,
