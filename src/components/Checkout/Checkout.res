@@ -44,6 +44,26 @@ module Styles = {
     background(Theme.Colors.darkGradient),
   ])
 
+  let normalPrice = style(. [
+    //
+    margin(zero),
+    position(relative),
+    fontSize(2.4->rem),
+    fontWeight(#num(500)),
+    color(#hex("AD9FC6")),
+    fontFamily(Theme.fontFamily->#custom),
+    after([
+      backgroundColor(#hex("544173")),
+      contentRule(#text(" ")),
+      height(2->px),
+      width(#calc(#add, 100.->pct, 1.6->rem)),
+      position(absolute),
+      left(-0.8->rem),
+      top(50.->pct),
+      transform(translateY(-50.->pct)),
+    ]),
+  ])
+
   let price = style(. [
     margin(zero),
     fontSize(4.8->rem),
@@ -127,7 +147,8 @@ let make = () => {
       </Text.P>
     </div>
     <div className=Styles.card>
-      <p className=Styles.price> {`R$ 350,00`->str} </p>
+      <p className=Styles.normalPrice> {`R$ 350,00`->str} </p>
+      <p className=Styles.price> {`R$ 245,00`->str} </p>
       <div className=Styles.divider />
       <ul className=Styles.items>
         {items->map((item, key) => {
