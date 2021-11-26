@@ -11,6 +11,7 @@ export default function App(props) {
         <title>
           Curso ES2077 - Aprenda programação funcional com React e ReScript ◭
         </title>
+        <meta name="facebook-domain-verification" content="lmawh5bqbh3i70n9yok2yyjkqbcs14" />
         <meta
           name="description"
           content="Aprenda de forma prática e descomplicada, diversos conceitos relacionados a programação funcional e como aplicá-los no seu dia a dia!"
