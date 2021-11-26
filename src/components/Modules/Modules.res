@@ -132,7 +132,8 @@ let make = () => {
     display=[xs(#flex)]
     justifyContent=[xs(#center)]
     pt=[xs(20), md(22), lg(24)]
-    px=[xs(4), md(6)]>
+    px=[xs(4), md(6)]
+    id="modulos">
     <Box width=[xs(100.0->#pct)] maxW=[xs(Theme.Constants.maxWidth)]>
       <Title> {`Módulos do curso`} </Title>
       <Grid spacing=[xs(4)] justifyContent=[xs(#center)]>
