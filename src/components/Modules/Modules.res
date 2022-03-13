@@ -151,8 +151,8 @@ let make = () => {
             title=`Programação Funcional`
             description={`Neste módulo, você irá aprender diversas técnicas de programação funcional que podem ser aplicadas tanto em ReScript quanto em JavaScript. Sim, você finalmente vai entender o que é uma Monad.`}
             number=#2
-            released=false
-            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
+            released=true
+            footer={() => <> <Tag> {`9 aulas`} </Tag> <Tag> {`4h de conteúdo`} </Tag> </>}
           />
         </Box>
         <Box columns=[lg(#6)]>
