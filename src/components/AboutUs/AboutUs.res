@@ -60,7 +60,7 @@ let make = () => {
           initialX={40}
           photo="/assets/gabriel.webp"
           name="Gabriel Rubens"
-          role="Software Engineer na Walnut"
+          role="Tech Lead na Walnut"
           description={j`Software Engineer na Walnut, desenvolvedor para toda obra, professor 
             e evangelista de ReScript e Programação Funcional. 
             Já palestra e produz conteúdo sobre Reason e ReScript há mais 
