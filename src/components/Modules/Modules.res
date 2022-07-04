@@ -30,7 +30,7 @@ module ModuleCard = {
       | #3 => `3.png`
       | #4 => `4.png`
       | #5 => `5.png`
-      | #extra => `+.png`
+      | #extra => `plus.png`
       }}`
 
     <Box
