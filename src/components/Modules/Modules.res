@@ -158,10 +158,10 @@ let make = () => {
         <Box columns=[lg(#6)]>
           <ModuleCard
             title=`ReScript Avançado`
-            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo React, sistema de módulos e outras features avançadas da linguagem que são importantes para a construção de aplicações reais.`
+            description=`Neste módulo, você irá aprender técnicas e conceitos avançados de ReScript envolvendo React, sistema de módulos e outras features avançadas da linguagem para ir além do CRUD.`
             number=#3
             released=false
-            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
+            footer={() => <> <Tag> {`4 aulas`} </Tag> <Tag> {`1h e 16min de conteúdo`} </Tag> </>}
           />
         </Box>
         <Box columns=[lg(#6)]>
