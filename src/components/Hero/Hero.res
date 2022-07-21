@@ -31,9 +31,9 @@ let make = () => {
       initial=#hidden
       animate=#controlled(controls)
       variants={variants(2.0)}
-      href="#garanta-sua-vaga"
+      href="#garantir-vaga"
       className=button>
-      {"GARANTA SUA VAGA"->React.string}
+      {"GARANTIR MINHA VAGA"->React.string}
     </Motion.A>
   </section>
 }

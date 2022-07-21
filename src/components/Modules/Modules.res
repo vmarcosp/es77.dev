@@ -170,7 +170,7 @@ let make = () => {
             description=`GraphQL, Next e ReScript são combinações poderosas. Neste módulo você irá aprender o porquê GraphQL funciona tão bem com ReScript através de exemplos práticos utilizando Relay, Apollo e Next. E claro, abordaremos  também integrações com APIs REST.`
             number=#4
             released=false
-            footer={() => <Tag> {`Em desenvolvimento`} </Tag>}
+            footer={() => <Tag> {`Primeiras aulas já disponíveis`} </Tag>}
           />
         </Box>
         <Box columns=[lg(#6)]>

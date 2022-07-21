@@ -52,6 +52,15 @@ module Styles = {
     fontFamily(Theme.fontFamily->#custom),
   ])
 
+  let originalPrice = style(. [
+    margin(zero),
+    fontSize(2.4->rem),
+    fontWeight(#num(600)),
+    color(#hex("615378")),
+    selector("> span", [textDecoration(#lineThrough), textDecorationColor(#hex("8A7AA4"))]),
+    fontFamily(Theme.fontFamily->#custom),
+  ])
+
   let divider = style(. [
     height(1->px),
     width(100.0->pct),
@@ -112,22 +121,21 @@ let items = [
 
 @react.component
 let make = () => {
-  <div className=Styles.wrapper id="comprar">
+  <div id="garantir-vaga" className=Styles.wrapper>
     <div className=Styles.textWrapper>
       <Title icon=#lighting> {`Garanta sua vaga!`} </Title>
       <Text.P>
         {`Este será um curso vivo, onde os módulos serão lançados conforme o desenvolvimento. 
-          No entanto, você já pode adquirir o curso, pois lançamos o primeiro módulo.
+          No entanto, você já pode adquirir o curso, com os três primeiros módulos já disponíveis.
           O acesso ao curso é vitalício e conta com um suporte direto dos instrutores.
-        `->str}
-      </Text.P>
-      <Text.P>
-        {`*Se você se cadastrou na campanha de pré-lançamento, através do site ou pelos eventos da He4rt Conf e React Conf, confira seu e-mail e utilize o seu cupom para efetuar a compra do curso com desconto.
         `->str}
       </Text.P>
     </div>
     <div className=Styles.card>
-      <p className=Styles.price> {`R$ 350,00`->str} </p>
+      <p className=Styles.originalPrice>
+        {`De `->str} <span> {`R$ 350,00`->str} </span> {`  por`->str}
+      </p>
+      <p className=Styles.price> {`275,00`->str} </p>
       <div className=Styles.divider />
       <ul className=Styles.items>
         {items->map((item, key) => {
