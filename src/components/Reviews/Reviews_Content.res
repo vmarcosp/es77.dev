@@ -16,7 +16,7 @@ module TextWrapper = {
 let highlights = [
   {
     name: "Fernando Daciuk",
-    role: "Tech Lead na Portolab",
+    role: "OG Teacher at Queroser.ninja",
     photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
@@ -46,21 +46,8 @@ let highlights = [
     translatedDescription: None,
   },
   {
-    name: "Guilherme Decampo",
-    role: "CEO na Astrocoders",
-    photo: "/assets/reviews/guilherme.webp",
-    description: {
-      <TextWrapper>
-        {j`Nos últimos anos, o Gabriel tem liderado a adoção de ReScript na Astrocoders. Sem dúvidas, hoje ele é uma das principais referências que mais domina e conhece ReScript no Brasil. Tenho certeza que se você quer aprender ReScript, este é o `->str}
-        <Text.Span> {j`melhor material de aprendizado`} </Text.Span>
-        {` disponível no mercado  🚀`->str}
-      </TextWrapper>
-    },
-    translatedDescription: None,
-  },
-  {
     name: "Vitor Mendrone",
-    role: "Head of Engineering na Portolab",
+    role: "Founder and SWE",
     photo: "/assets/reviews/mendrone.webp",
     description: {
       <TextWrapper>
@@ -78,7 +65,7 @@ let highlights = [
   },
   {
     name: "Gabriel Nordeborn",
-    role: "Partner na Arizon Consulting",
+    role: "ReScript Core Maintainer",
     photo: "/assets/reviews/zth.webp",
     description: {
       <TextWrapper>
@@ -101,7 +88,7 @@ let highlights = [
   },
   {
     name: "Diogo Mafra",
-    role: "Co-Founder na T10 Digital",
+    role: "SWE At Walnut",
     photo: "/assets/reviews/diogo.jpg",
     description: {
       <TextWrapper>
@@ -130,7 +117,7 @@ let studentReviews = [
   },
   {
     name: j`Celso Bonutti`,
-    role: "Full-Stack Developer na Heliax",
+    role: "SWA at NRI",
     photo: "/assets/reviews/celso.webp",
     description: {
       <TextWrapper>

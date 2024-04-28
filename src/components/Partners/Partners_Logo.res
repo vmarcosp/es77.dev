@@ -31,13 +31,6 @@ module T10 = {
   }
 }
 
-module Astrocoders = {
-  @react.component
-  let make = () => {
-    <img alt="Astrocoders" src="/assets/astrocoders.webp" />
-  }
-}
-
 module Portolab = {
   @react.component
   let make = () => {

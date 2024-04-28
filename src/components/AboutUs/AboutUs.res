@@ -46,7 +46,7 @@ let make = () => {
           initialX={-40}
           photo="/assets/marcos.webp"
           name="Marcos Oliveira"
-          role="Tech Lead na Porto Lab"
+          role="SWE at VTEX"
           description={<>
             {j`Front-End Developer há alguns anos, meio metido a designer e conhecido como o`->str}
             <i> {j`"Chatão do ReScript"`->str} </i>
@@ -60,10 +60,10 @@ let make = () => {
           initialX={40}
           photo="/assets/gabriel.webp"
           name="Gabriel Rubens"
-          role="Tech Lead na Walnut"
+          role="Tech Lead natWalnut"
           description={j`Tech Lead na Walnut, desenvolvedor para toda obra, professor 
             e evangelista de ReScript e Programação Funcional. 
-            Já palestra e produz conteúdo sobre Reason e ReScript desde 2017 e é autor de inúmeras biblitotecas como ReForm e ReasonApolloHooks.`->str}
+            Já palestra e produz conteúdo sobre Reason e ReScript desde 2017 e é autor de inúmeras biblitotecas como ReForm e Epitath.`->str}
         />
       </div>
     </div>

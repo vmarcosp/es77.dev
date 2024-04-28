@@ -61,20 +61,6 @@ let make = () => {
           <Logos.T10 /> <p> {`T10`->React.string} </p>
         </Motion.Div>
       </a>
-      <a
-        ariaLabel="astrocoders"
-        className=link
-        href="https://astrocoders.com"
-        target="_blank"
-        rel="noopener noreferrer">
-        <Motion.Div
-          initial=#hidden
-          animate=#controlled(partnerControls)
-          variants={variants(0.8)}
-          className=partner>
-          <Logos.Astrocoders /> <p> {`Astrocoders`->React.string} </p>
-        </Motion.Div>
-      </a>
     </div>
   </div>
 }
