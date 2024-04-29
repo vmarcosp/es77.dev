@@ -133,9 +133,9 @@ let make = () => {
     </div>
     <div className=Styles.card>
       <p className=Styles.originalPrice>
-        {`De `->str} <span> {`R$ 1200,00`->str} </span> {`  por`->str}
+        {`De `->str} <span> {`R$ 720,00`->str} </span> {`  por`->str}
       </p>
-      <p className=Styles.price> {`978,00`->str} </p>
+      <p className=Styles.price> {`598,00`->str} </p>
       <div className=Styles.divider />
       <ul className=Styles.items>
         {items->map((item, key) => {
