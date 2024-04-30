@@ -8,7 +8,7 @@ module Span = {
 module P = {
   @react.component
   let make = (~children, ~className="", ~animate=?, ~initial=?, ~variants=?) =>
-    <Motion.P ?animate ?initial ?variants className={j`${Styles.paragraph} ${className}`}>
+    <Motion.P ?animate ?initial ?variants className={`${Styles.paragraph} ${className}`}>
       {children}
     </Motion.P>
 }

@@ -27,7 +27,7 @@ let make = () => {
       "Sobre o curso"
     </Title>
     <Text.P initial=#hidden animate=#controlled(controls) variants={variants(0.4)}>
-      {j`
+      {`
         O objetivo do curso é te ensinar do zero, como desenvolver aplicações com ReScript, 
         utilizando React, bibliotecas JavaScript e outras ferramentas do próprio ecossistema ReScript. 
         Além disso, você irá aprender de forma prática e descomplicada, 

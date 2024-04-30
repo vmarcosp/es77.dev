@@ -36,7 +36,7 @@ let make = () => {
     <img alt="|>" src="assets/triangle-2.svg" className=triangle />
     <div id="instrutores" className=wrapper>
       <Title initial=#hidden animate=#controlled(controls) variants=titleVariants innerRef>
-        {j`Sobre os instrutores`}
+        {`Sobre os instrutores`}
       </Title>
       <div className=cardsContainer>
         <Card
@@ -48,9 +48,9 @@ let make = () => {
           name="Marcos Oliveira"
           role="SWE at VTEX"
           description={<>
-            {j`Front-End Developer há alguns anos, meio metido a designer e conhecido como o`->str}
-            <i> {j`"Chatão do ReScript"`->str} </i>
-            {j` por onde passa 😂. Sempre envolvido na comunidade JavaScript e ReScript, organizando e criando meetups, eventos, palestras e artigos relacionados a ReScript, JavaScript e programação funcional.`->str}
+            {`Front-End Developer há alguns anos, meio metido a designer e conhecido como o`->str}
+            <i> {`"Chatão do ReScript"`->str} </i>
+            {` por onde passa 😂. Sempre envolvido na comunidade JavaScript e ReScript, organizando e criando meetups, eventos, palestras e artigos relacionados a ReScript, JavaScript e programação funcional.`->str}
           </>}
         />
         <Card
@@ -61,7 +61,7 @@ let make = () => {
           photo="/assets/gabriel.webp"
           name="Gabriel Rubens"
           role="Tech Lead natWalnut"
-          description={j`Tech Lead na Walnut, desenvolvedor para toda obra, professor 
+          description={`Tech Lead na Walnut, desenvolvedor para toda obra, professor 
             e evangelista de ReScript e Programação Funcional. 
             Já palestra e produz conteúdo sobre Reason e ReScript desde 2017 e é autor de inúmeras biblitotecas como ReForm e Epitath.`->str}
         />

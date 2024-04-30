@@ -24,5 +24,6 @@
   ],
   "warnings": {
     "error": "+102"
-  }
+  },
+  "uncurried": false
 }

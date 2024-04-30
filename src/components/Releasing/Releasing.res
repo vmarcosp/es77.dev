@@ -25,7 +25,7 @@ let variants = delay => {
 
 let submitForm = state => {
   Mixpanel.track(
-    j`Inscrição pelo Formulário`,
+    `Inscrição pelo Formulário`,
     Some({
       "Name": state.name,
       "Email": state.email,
@@ -127,7 +127,8 @@ module ReleasingCard = {
           </Text.P>
           <Text.P
             animate=#controlled(controls) initial=#hidden variants={variants(0.2)} className=text>
-            <i> {`Fique tranquilo, nós não enviamos spam!`->str} </i> {` 😉`->str}
+            <i> {`Fique tranquilo, nós não enviamos spam!`->str} </i>
+            {` 😉`->str}
           </Text.P>
         </div>
         <Motion.Form
@@ -215,7 +216,7 @@ module CheckoutCta = {
         <div className=form>
           <a
             style={ReactDOMStyle.make(~textDecoration="none", ~width="%", ())}
-            href=`https://pay.hotmart.com/R59895080O`
+            href={`https://pay.hotmart.com/R59895080O`}
             target="_blank">
             {`Comprar agora`->str}
           </a>

@@ -10,7 +10,10 @@ type review = {
 
 module TextWrapper = {
   @react.component
-  let make = (~children) => <> {`\u00a0 \u00a0 \u00a0 \u00a0`->str} children </>
+  let make = (~children) => <>
+    {`\u00a0 \u00a0 \u00a0 \u00a0`->str}
+    children
+  </>
 }
 
 let highlights = [
@@ -20,9 +23,9 @@ let highlights = [
     photo: "/assets/reviews/daciuk.webp",
     description: {
       <TextWrapper>
-        {j`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e ReScript. Esse curso é a sua `->str}
-        <Text.Span> {j`oportunidade de aprender de verdade`} </Text.Span>
-        {j` com quem entende do assunto 😄`->str}
+        {`Tive o prazer de trabalhar com o Marcos em projetos recentes, e é impossível não ver o brilho nos olhos quando ele está falando de Programação Funcional, JavaScript, React e ReScript. Esse curso é a sua `->str}
+        <Text.Span> {`oportunidade de aprender de verdade`} </Text.Span>
+        {` com quem entende do assunto 😄`->str}
       </TextWrapper>
     },
     translatedDescription: None,
@@ -39,7 +42,7 @@ let highlights = [
         tem `->str}
         <Text.Span> {`paixão pelo ensino`} </Text.Span>
         {` e `->str}
-        <Text.Span> `didática` </Text.Span>
+        <Text.Span> {`didática`} </Text.Span>
         {` de quem não tem, e posso afirmar que você vai aprender muito com os dois.`->str}
       </TextWrapper>
     },
@@ -52,9 +55,9 @@ let highlights = [
     description: {
       <TextWrapper>
         {`Além de ser um dos desenvolvedores mais brilhantes com quem já trabalhei, posso dizer que o conhecimento do Marcos em `->str}
-        <Text.Span> {j`ReScript`} </Text.Span>
+        <Text.Span> {`ReScript`} </Text.Span>
         {` e `->str}
-        <Text.Span> {j`Programação Funcional`} </Text.Span>
+        <Text.Span> {`Programação Funcional`} </Text.Span>
         {` como um todo é impressionante, muito acima da média e`->str}
         {` caminha de mãos dadas com a `->str}
         <Text.Span> {`boa didática`} </Text.Span>
@@ -69,19 +72,19 @@ let highlights = [
     photo: "/assets/reviews/zth.webp",
     description: {
       <TextWrapper>
-        {j`Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built `->str}
-        <Text.Span> {j`excellent libraries like ReForm, lenses-ppx and more`} </Text.Span>
-        {j`. Having Gabriel by your side on your ReScript journey `->str}
-        <Text.Span> {j`means you’re in excellent hands!`} </Text.Span>
+        {`Gabriel does not merely have a fantastic first name (😂), he’s also an integral part of the ReScript community, having built `->str}
+        <Text.Span> {`excellent libraries like ReForm, lenses-ppx and more`} </Text.Span>
+        {`. Having Gabriel by your side on your ReScript journey `->str}
+        <Text.Span> {`means you’re in excellent hands!`} </Text.Span>
       </TextWrapper>
     },
     translatedDescription: {
       Some(
         <TextWrapper>
-          {j`Gabriel não tem apenas um nome incrível (😂), ele também é parte integrante da comunidade ReScript, tendo construído `->str}
-          <Text.Span> {j`bibliotecas excelentes como ReForm, lenses-ppx e muito mais`} </Text.Span>
-          {j`. Ter Gabriel ao seu lado em sua jornada ReScript `->str}
-          <Text.Span> {j`significa que você está em excelentes mãos!`} </Text.Span>
+          {`Gabriel não tem apenas um nome incrível (😂), ele também é parte integrante da comunidade ReScript, tendo construído `->str}
+          <Text.Span> {`bibliotecas excelentes como ReForm, lenses-ppx e muito mais`} </Text.Span>
+          {`. Ter Gabriel ao seu lado em sua jornada ReScript `->str}
+          <Text.Span> {`significa que você está em excelentes mãos!`} </Text.Span>
         </TextWrapper>,
       )
     },
@@ -92,7 +95,7 @@ let highlights = [
     photo: "/assets/reviews/diogo.jpg",
     description: {
       <TextWrapper>
-        {j`Foi através da ajuda de Gabriel e Marcos que me aprofundei em 
+        {`Foi através da ajuda de Gabriel e Marcos que me aprofundei em 
         ReScript e conseguimos começar a adoção na T10. Além de serem membros 
         super ativos na comunidade, com contribuições relevantes para o ecossistema, 
         são excelentes professores para a sua jornada de aprendizado.`->str}
@@ -104,7 +107,7 @@ let highlights = [
 
 let studentReviews = [
   {
-    name: j`Caio Henrique`,
+    name: `Caio Henrique`,
     role: "Front-End Developer na Accenture",
     photo: "/assets/reviews/caio.webp",
     description: {
@@ -116,7 +119,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Celso Bonutti`,
+    name: `Celso Bonutti`,
     role: "SWA at NRI",
     photo: "/assets/reviews/celso.webp",
     description: {
@@ -130,7 +133,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Gabriel Teodoro`,
+    name: `Gabriel Teodoro`,
     role: `Developer na Brainn Co.`,
     photo: "/assets/reviews/teodoro.jpeg",
     description: {
@@ -145,7 +148,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Arthur Barroso`,
+    name: `Arthur Barroso`,
     role: "Full-stack Developer na Brainn Co.",
     photo: "/assets/reviews/arthur.webp",
     description: {
@@ -159,7 +162,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Mateus Mendes`,
+    name: `Mateus Mendes`,
     role: `Frontend Developer na RaroLabs`,
     photo: "/assets/reviews/mateusmendes.png",
     description: {
@@ -172,7 +175,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Halian Vilela`,
+    name: `Halian Vilela`,
     role: `CTO na Verlindo Comunicação`,
     photo: "/assets/reviews/halian.jpg",
     description: {
@@ -185,7 +188,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Guilherme de Andrade`,
+    name: `Guilherme de Andrade`,
     role: "Software Engineer na New Work Se",
     photo: "/assets/reviews/andrade.webp",
     description: {
@@ -199,7 +202,7 @@ let studentReviews = [
     translatedDescription: None,
   },
   {
-    name: j`Ezequiel Menneck`,
+    name: `Ezequiel Menneck`,
     role: `Salsa Technology`,
     photo: "/assets/reviews/menneck.jpeg",
     description: {

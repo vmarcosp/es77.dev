@@ -51,7 +51,7 @@ let _description = (~isStudentReview) =>
       [
         unsafe(
           "background",
-          j`linear-gradient(to right, ${Theme.ColorsRaw.purple}, ${Theme.ColorsRaw.purple} 50%, transparent 50%)`,
+          `linear-gradient(to right, ${Theme.ColorsRaw.purple}, ${Theme.ColorsRaw.purple} 50%, transparent 50%)`,
         ),
         transition(~duration=200, "background-position"),
         backgroundSize(#size(210.0->pct, 100.0->pct)),

@@ -4,8 +4,8 @@ type mediaQuery =
 
 let ofString = value =>
   switch value {
-  | Max(size) => j`(max-width: ${size->Belt.Float.toString}px )`
-  | Min(size) => j`(min-width: ${size->Belt.Float.toString}px )`
+  | Max(size) => `(max-width: ${size->Belt.Float.toString}px )`
+  | Min(size) => `(min-width: ${size->Belt.Float.toString}px )`
   }
 
 let mediaQuery = (kind, rules) => kind->ofString->CssJs.media(rules)

@@ -4,14 +4,14 @@ module Content = About_Content
 let toFloat = Js.Int.toFloat
 
 let concepts = [
-  j`Filosofia e conceitos da linguagem`,
-  j`Setup e Tooling de projetos`,
-  j`Type Driven Development`,
-  j`Interoperabilidade com JavaScript`,
-  j`Integrações REST e GraphQL`,
-  j`CSS in ReScript`,
-  j`Integração com React`,
-  j`Programação Funcional`,
+  `Filosofia e conceitos da linguagem`,
+  `Setup e Tooling de projetos`,
+  `Type Driven Development`,
+  `Interoperabilidade com JavaScript`,
+  `Integrações REST e GraphQL`,
+  `CSS in ReScript`,
+  `Integração com React`,
+  `Programação Funcional`,
 ]
 
 let variants = index => {

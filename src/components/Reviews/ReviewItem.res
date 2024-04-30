@@ -78,7 +78,7 @@ let make = (
     | None => React.null
     | Some(_) =>
       <button onClick=toggleTranslation className=translateButton>
-        {showTranslation ? j`Ver original`->str : j`Ver tradução`->str}
+        {showTranslation ? `Ver original`->str : `Ver tradução`->str}
       </button>
     }}
   </Motion.Div>

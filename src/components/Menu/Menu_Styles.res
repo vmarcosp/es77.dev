@@ -7,7 +7,7 @@ type classes = {
 }
 
 let createClasses = (~isOpen) => {
-  let overlay = style(.[
+  let overlay = style(. [
     position(fixed),
     width(100.0->pct),
     height(100.0->pct),
@@ -26,7 +26,7 @@ let createClasses = (~isOpen) => {
     Media.sm([padding2(~v=zero, ~h=4.6->rem)]),
   ])
 
-  let menuWrapper = style(.[
+  let menuWrapper = style(. [
     maxWidth(Theme.Constants.maxWidth),
     width(100.0->pct),
     margin2(~v=zero, ~h=auto),
@@ -52,7 +52,7 @@ let createClasses = (~isOpen) => {
     ]),
   ])
 
-  let email = style(.[
+  let email = style(. [
     color(Theme.Colors.gray1),
     fontFamily(Theme.fontFamily->#custom),
     fontWeight(500->#num),
@@ -63,10 +63,10 @@ let createClasses = (~isOpen) => {
     hover([color(Theme.Colors.white)]),
   ])
 
-  {menuWrapper: menuWrapper, overlay: overlay, email: email}
+  {menuWrapper, overlay, email}
 }
 
-let link = style(.[
+let link = style(. [
   listStyleType(none),
   marginBottom(4.2->rem),
   position(relative),
@@ -84,7 +84,7 @@ let link = style(.[
       overflow(hidden),
       unsafe(
         "background",
-        j`linear-gradient(to right, ${Theme.ColorsRaw.purple}, ${Theme.ColorsRaw.purple} 50%, white 50%)`,
+        `linear-gradient(to right, ${Theme.ColorsRaw.purple}, ${Theme.ColorsRaw.purple} 50%, white 50%)`,
       ),
       unsafe("background-clip", "text"),
       unsafe("-webkit-background-clip", "text"),
@@ -122,7 +122,7 @@ let link = style(.[
 ])
 
 let burgerButton = (~isOpen) => {
-  style(.[
+  style(. [
     padding(zero),
     margin(zero),
     borderStyle(none),

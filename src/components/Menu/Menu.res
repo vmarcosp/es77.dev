@@ -9,7 +9,7 @@ type link = {
 let links = [
   {
     sectionId: "#o-que-e-rescript",
-    label: j`O que é ReScript?`,
+    label: `O que é ReScript?`,
   },
   {
     sectionId: "#sobre-o-curso",
@@ -35,7 +35,9 @@ module Link = {
     let handleClick = _ => {
       onClick()
     }
-    <li className=S.link> <a href onClick={handleClick}> {label->React.string} </a> </li>
+    <li className=S.link>
+      <a href onClick={handleClick}> {label->React.string} </a>
+    </li>
   }
 }
 
