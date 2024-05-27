@@ -48,7 +48,7 @@ let make = () => {
           name="Marcos Oliveira"
           role="SWE at VTEX"
           description={<>
-            {`Front-End Developer há alguns anos com experiência em produtos digitais em diversas áreas como finanças, saúde, logística e ecommerce. Organiza, palestra e evangeliza ReScript há 5 anos, sendo um dos pioneiros do tema no Brasil.`->str}
+            {`Front-End Developer com 10 anos de experiência em produtos digitais em diversas áreas como finanças, saúde, logística e ecommerce. Organiza, palestra e evangeliza sobre ReScript há 5 anos, sendo um dos pioneiros do tema no Brasil.`->str}
           </>}
         />
         <Card
